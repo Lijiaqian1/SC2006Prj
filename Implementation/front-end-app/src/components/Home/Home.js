@@ -6,7 +6,7 @@ class Home extends React.Component{
     render(){
         return(
             <div>
-                <NavigationBar />
+                <h1>Home Page</h1>
             </div>
         )
     }
