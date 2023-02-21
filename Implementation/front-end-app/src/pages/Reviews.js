@@ -1,11 +1,10 @@
 import React from 'react';
 
-function reviews(){
+function Reviews(){
     return(
         <div>
             Reviews Page
         </div>
     )
 }
-
-export default reviews;
+export default Reviews;

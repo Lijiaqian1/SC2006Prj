@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function help(){
+function Help(){
     return(
         <div>
             help Page
@@ -9,4 +9,4 @@ function help(){
     )
 }
 
-export default help;
+export default Help;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function aboutUs(){
+function AboutUs(){
     return(
         <div>
             about us Page
@@ -8,4 +8,4 @@ function aboutUs(){
     )
 }
 
-export default aboutUs;
+export default AboutUs;
