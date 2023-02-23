@@ -1,0 +1,19 @@
+.form-control{
+    justify-content: center;
+    align-items: center;
+    transform: translateY(500%);
+}
+
+.header{
+    color:aqua;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:900;
+    text-align: center;
+    transform: translateY(100%);
+}
+
+
+#btncol{
+    transform: translateY(500%);
+}
+
