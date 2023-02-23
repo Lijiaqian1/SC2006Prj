@@ -1,10 +1,15 @@
 import React from 'react';
 
-function Reviews(){
-    return(
-        <div>
-            Reviews Page
-        </div>
-    )
+class Reviews extends React.Component {
+    render(){
+        return(
+            <div>
+                <h1>Reviews Page</h1>
+            </div>
+        )
+
+    }
+   
 }
+
 export default Reviews;
