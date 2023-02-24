@@ -1,30 +1,32 @@
 import React from 'react'
-import './Enter OTP.css'
-import NavigationBar2 from '../NavigationBar/NavigationBar2'
+import {NavLink} from 'react-router-dom';
 
-
-export default class EnterOTP extends React.Component{
+class EnterOTP extends React.Component{
     render(){
         return(
-            <div>
-                <NavigationBar2 />
-                <div className = "container">
-                    <div className="row justify-content-center">
-                       <h1 className="header" >Enter OTP</h1>
+            <div className="body">
+                        <div className="reset w-25">
+                            <h1 className="text-center mb-5">Enter OTP</h1>
+                            <form mt-2>
+                                <div class="form-group mt-5">
+                                    <label className = "form-label" for="otp">Enter One-time-password</label>
+                                    <input className = "form-control"  type="password" id = "otp" required></input>
+                                </div>
+                                <div className="mt-5">
+                                    <input className = "btn btn-primary w-100" type="submit" value="Verify"></input>
+                                </div>
+
+                                <NavLink to="/">
+                                    <div className = "text text-center mt-3">
+                                        Resend OTP
+                                    </div>
+                                </NavLink>
+                            </form>
+                        </div>
+
                     </div>
-                </div>
-                <form className="row g-3 gx-5 gy-5 mx-5">
-                   <div class = "col-sm-10">
-                      <input type="numeric" class="form-control" id="inputOTP" style = {{width: 500}} />
-                   </div>
-                   <div className="col-12 position-relative">
-                      <div className="col-sm-10">
-                        <a className="link" href="#">Resend OTP</a>
-                      </div>
-                      <button type="submit" className="btn position-absolute w-25 p-3 rounded-pill" id="btncol">Verify</button>
-                   </div>
-                </form>
-            </div>
         )
     }
 }
+
+export default EnterOTP;

@@ -4,7 +4,7 @@ import React from 'react';
 function Help(){
     return(
         <div>
-            help Page
+            <h1>Help</h1>
         </div>
     )
 }

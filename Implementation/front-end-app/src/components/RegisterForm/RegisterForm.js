@@ -49,7 +49,7 @@ class RegisterForm extends React.Component{
 
 
             <div className="col-12 position-relative">
-                <button type="submit" className="btn position-absolute w-25 p-3 top-50 start-50 translate-middle mt-5 rounded-pill" id="btncol">Sign Up</button>
+                <button type="submit" className="btn btn-primary position-absolute w-25 p-3 top-50 start-50 translate-middle mt-5 rounded-pill">Sign Up</button>
             </div>
             
             <div className="col-12 position-relative">

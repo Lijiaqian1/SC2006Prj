@@ -16,7 +16,7 @@ function NavigationBar(){
             <div className="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
                 <ul className="nav justify-content-end d-flex">
                     <li className="nav-item">
-                        <NavLink to="/reviews" className="nav-link" id="nav-desc" aria-current="page">Reviews</NavLink>
+                        <NavLink to="/search" className="nav-link" id="nav-desc" aria-current="page">Search</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to ="/about"className="nav-link" id="nav-desc">About Us</NavLink>
