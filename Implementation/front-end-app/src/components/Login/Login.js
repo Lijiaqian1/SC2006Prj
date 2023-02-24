@@ -26,7 +26,7 @@ class Login extends React.Component{
                         </div>
                     </div>
                     
-                    <NavLink to="/">
+                    <NavLink to="/forgetpassword">
                         <div className = "text">
                             Forgotten your password?
                         </div>
