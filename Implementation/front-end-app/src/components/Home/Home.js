@@ -11,7 +11,7 @@ class Home extends React.Component{
               </div>
               
                 <NavLink to="/search" className="d-grid gap-2 col-3 mx-auto mt-5">
-                  <button className="btn btn-success p-3 rounded-pill" type="button">Compare</button>
+                  <button className="btn btn-success p-3 rounded-pill" type="button">Start Searching!</button>
                 </NavLink>
 
             </div>
