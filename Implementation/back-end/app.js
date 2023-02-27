@@ -39,37 +39,44 @@ app.get('/login', (req, res) =>{
 app.post('/register', (req, res)=> {
     //console.log(req.body);
     var personInfo = req.body;
-    if(personInfo.pwd == personInfo.cpwd){
-        Account.findOne({email:personInfo.email}, function(err, data){
-            if(!data){
-                var newuser= new Account({
-                    name: personInfo.name, 
-                    email: personInfo.email,
-                    password: personInfo.pwd
-                });
-
-                newuser.save(function(err, Person){
-                    if(err){
-                        console.log(err);
-                    }
-                    else{
-                        console.log("successfuly added");
-                        console.log(Person);
-                        res.send("Successfully registered!");
-                    }
-                });
-            }
-            else{
-                //email exists since not null
-                res.json({status: "Error",
-                error: "Email exists already"});
-            }
-        });
+    if(personInfo.email== personInfo.cemail){
+        if(personInfo.pwd == personInfo.cpwd){
+            Account.findOne({email:personInfo.email}, function(err, data){
+                if(!data){
+                    var newuser= new Account({
+                        name: personInfo.name, 
+                        email: personInfo.email,
+                        password: personInfo.pwd
+                    });
+    
+                    newuser.save(function(err, Person){
+                        if(err){
+                            console.log(err);
+                        }
+                        else{
+                            console.log("successfuly added");
+                            console.log(Person);
+                            res.send("Successfully registered!");
+                        }
+                    });
+                }
+                else{
+                    //email exists since not null
+                    res.json({status: "Error",
+                    error: "Email exists already"});
+                }
+            });
+        }
+        else{
+            res.json({status: "Error",
+            error: "Password not matching"});
+        }
     }
     else{
         res.json({status: "Error",
-        error: "Password not matching"});
+        error: "Email not matching"});
     }
+    
 
 });
 
