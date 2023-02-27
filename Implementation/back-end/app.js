@@ -7,6 +7,8 @@ const app= express();
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
+
+//the password for the database. just msg Viral b4 using this so he can allow ur ip address to use the db.
 //hO55WK6wE1a90YS3
 
 //connecting to database
@@ -73,7 +75,8 @@ app.post('/register', (req, res)=> {
 
 app.post('/login', (req, res)=> {
     console.log(req.body);
-
+    //someone do this
+    //also use jwt for session of users also add to register page after successfully logging in.
 });
 
 app.use((req, res) => {
