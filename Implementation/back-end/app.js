@@ -35,7 +35,7 @@ app.get('/login', (req, res) =>{
     res.render('login');
 });
 
-//post login authenticate
+//post register authenticate
 app.post('/register', (req, res)=> {
     //console.log(req.body);
     var personInfo = req.body;

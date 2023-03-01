@@ -12,20 +12,24 @@ class RegisterForm extends React.Component{
             </div>
         <form className="row g-3 gx-5 gy-5 mx-5">
 
+            <div className="col-md-12">
+                <label for="name" className="form-label text-white">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required/>
+            </div>
     
             <div className="col-md-6">
-                <label for="inputEmail4" className="form-label text-white">Email</label>
-                <input type="email" class="form-control" id="inputEmail"/>
+                <label for="email" className="form-label text-white">Email</label>
+                <input type="email" class="form-control" id="email" name="email"/>
             </div>
 
 
             <div className="col-md-6">
-                <label for="inputConfirmEmail" class="form-label text-white">Confirm Email</label>
-                <input type="confirmemail" class="form-control" id="inputConfirmEmail"/>
+                <label for="cemail" class="form-label text-white">Confirm Email</label>
+                <input type="email" class="form-control" id="cemail" name="cemail"/>
             </div>
 
 
-            <div className="col-md-6">
+            {/*<div className="col-md-6">
                 <label for="inputDOB4" class="form-label text-white">Date of Birth</label>
                 <input type="dateofbirth" class="form-control" id="inputDOB"/>
             </div>
@@ -33,18 +37,18 @@ class RegisterForm extends React.Component{
             <div className="col-md-6">
                 <label for="inputPhoneNo4" class="form-label text-white">Phone Number</label>
                 <input type="phonenumber" class="form-control" id="inputPhoneNo"/>
+            </div>*/}
+
+
+            <div className="col-md-6">
+                <label for="pwd" class="form-label text-white">Password</label>
+                <input type="password" class="form-control" id="pwd" name="pwd"/>
             </div>
 
 
             <div className="col-md-6">
-                <label for="inputPassword4" class="form-label text-white">Password</label>
-                <input type="password" class="form-control" id="inputPassword"/>
-            </div>
-
-
-            <div className="col-md-6">
-                <label for="inputConfirmPassword4" class="form-label text-white">Confirm Password</label>
-                <input type="confirmpassword" class="form-control" id="inputConfirmPassword"/>
+                <label for="cpwd" class="form-label text-white">Confirm Password</label>
+                <input type="password" class="form-control" id="cpwd" name="cpwd"/>
             </div>
 
 
