@@ -15,10 +15,10 @@ const bcrypt = require("bcryptjs");
 //hO55WK6wE1a90YS3
 
 //Password for my own DB: sqFXGejkNSXPj7Mu
-const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.net/?retryWrites=true&w=majority';
+//const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.net/?retryWrites=true&w=majority';
 
 //connecting to database
-//const dbURI= 'mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority';
+const dbURI= 'mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI,{
     useNewUrlParser: true
 })
