@@ -2,25 +2,19 @@ const mongoose= require('mongoose');
 
 const Schema= mongoose.Schema;
 
-const accountSchema= new Schema({
-    name: {
-        type: String, 
-        required: true,
+const accountSchema= new Schema(
+    {
+        name:String,
+        email:{type:String, unique:true},
+        //cemail: String,
+        pwd: String,
+        //cpwd: String,
+
     }, 
+    {
+        collection: "Account",
+    }
+);
 
-    email: {
-        type: String, 
-        required: true,
-    }, 
+mongoose.model('Account', accountSchema);
 
-    password: {
-        type: String, 
-        required: true,
-    }, 
-
-}, 
-{timestamps: true});
-
-Account= mongoose.model('Account', accountSchema);
-
-module.exports= Account; 

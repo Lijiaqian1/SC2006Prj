@@ -2,6 +2,44 @@ import React from 'react';
 import './RegisterForm.css';
 
 class RegisterForm extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state={
+            name:"",
+            email:"",
+            cemail:"",
+            pwd:"",
+            cpwd:"",
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+        const{name,email,cemail,pwd,cpwd} = this.state;
+        console.log(name,email,cemail,pwd,cpwd);
+        fetch("http://localhost:5000/register",{
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type":"application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin":"*",
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                cemail,
+                pwd,
+                cpwd,
+            }),
+        }).then((res)=>res.json())
+        .then((data)=>{
+            console.log(data,"userRegister");
+        });
+    }
+
     render(){
         return(
         <div className="register mt-4">
@@ -10,22 +48,25 @@ class RegisterForm extends React.Component{
                     <h1 className="heading">Register</h1>
                 </div>
             </div>
-        <form className="row g-3 gx-5 gy-5 mx-5">
+        <form className="row g-3 gx-5 gy-5 mx-5" onSubmit = {this.handleSubmit}>
 
             <div className="col-md-12">
                 <label for="name" className="form-label text-white">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required/>
+                <input type="text" class="form-control" id="name" name="name"
+                onChange={(e)=>this.setState({name:e.target.value})} />
             </div>
     
             <div className="col-md-6">
                 <label for="email" className="form-label text-white">Email</label>
-                <input type="email" class="form-control" id="email" name="email"/>
+                <input type="email" class="form-control" id="email" name="email"
+                onChange={(e)=>this.setState({email:e.target.value})}/>
             </div>
 
 
             <div className="col-md-6">
                 <label for="cemail" class="form-label text-white">Confirm Email</label>
-                <input type="email" class="form-control" id="cemail" name="cemail"/>
+                <input type="email" class="form-control" id="cemail" name="cemail"
+                onChange={(e)=>this.setState({cemail:e.target.value})}/>
             </div>
 
 
@@ -42,13 +83,15 @@ class RegisterForm extends React.Component{
 
             <div className="col-md-6">
                 <label for="pwd" class="form-label text-white">Password</label>
-                <input type="password" class="form-control" id="pwd" name="pwd"/>
+                <input type="password" class="form-control" id="pwd" name="pwd"
+                onChange={(e)=>this.setState({pwd:e.target.value})}/>
             </div>
 
 
             <div className="col-md-6">
                 <label for="cpwd" class="form-label text-white">Confirm Password</label>
-                <input type="password" class="form-control" id="cpwd" name="cpwd"/>
+                <input type="password" class="form-control" id="cpwd" name="cpwd"
+                onChange={(e)=>this.setState({cpwd:e.target.value})}/>
             </div>
 
 
