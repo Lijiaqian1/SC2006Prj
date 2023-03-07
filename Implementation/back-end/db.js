@@ -60,4 +60,4 @@ async function saveData() {
 }
 
 saveData();
-model.exports=mongoose;
+module.exports=mongoose;
