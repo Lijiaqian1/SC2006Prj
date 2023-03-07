@@ -11,6 +11,7 @@ import RegisterForm from '../components/RegisterForm/RegisterForm'
 import RecoverPassword from '../components/RecoverPassword/RecoverPassword';
 import EnterOTP from '../components/EnterOTP/EnterOTP';
 import ForgetPassword from '../components/ForgetPassword/ForgetPassword';
+import UserDetails from '../components/UserDetails/UserDetails';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root/>}>
@@ -23,6 +24,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path='recoverpassword' element={<RecoverPassword />} />
       <Route path='enterotp' element={<EnterOTP />} />
       <Route path='forgetpassword' element={<ForgetPassword />} />
+      <Route path='userdata' element={<UserDetails />}/>
   </Route>
 
 ));
