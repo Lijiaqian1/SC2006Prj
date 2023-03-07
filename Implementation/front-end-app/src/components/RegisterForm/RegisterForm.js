@@ -1,9 +1,11 @@
 import React from 'react';
 import './RegisterForm.css';
+import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
-class RegisterForm extends React.Component{
+const RegisterForm = () =>{
 
-    constructor(props){
+    /*constructor(props){
         super(props);
         this.state={
             name:"",
@@ -13,11 +15,19 @@ class RegisterForm extends React.Component{
             cpwd:"",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    }*/
 
-    handleSubmit(e){
+    const [name,setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [cemail, setCemail] = useState('');
+    const [pwd, setPwd] = useState('');
+    const [cpwd,setCpwd] = useState('');
+
+    const Navigate = useNavigate();
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const{name,email,cemail,pwd,cpwd} = this.state;
+        const accounts = {name,email,cemail,pwd,cpwd};
         console.log(name,email,cemail,pwd,cpwd);
         fetch("http://localhost:5000/register",{
             method: "POST",
@@ -27,20 +37,13 @@ class RegisterForm extends React.Component{
                 Accept: "application/json",
                 "Access-Control-Allow-Origin":"*",
             },
-            body: JSON.stringify({
-                name,
-                email,
-                cemail,
-                pwd,
-                cpwd,
-            }),
+            body: JSON.stringify(accounts),
         }).then((res)=>res.json())
         .then((data)=>{
             console.log(data,"userRegister");
+            Navigate('/login');
         });
     }
-
-    render(){
         return(
         <div className="register mt-4">
             <div className = "container">
@@ -48,25 +51,25 @@ class RegisterForm extends React.Component{
                     <h1 className="heading">Register</h1>
                 </div>
             </div>
-        <form className="row g-3 gx-5 gy-5 mx-5" onSubmit = {this.handleSubmit}>
+        <form className="row g-3 gx-5 gy-5 mx-5" onSubmit = {handleSubmit}>
 
             <div className="col-md-12">
                 <label for="name" className="form-label text-white">Name</label>
                 <input type="text" class="form-control" id="name" name="name"
-                onChange={(e)=>this.setState({name:e.target.value})} />
+                onChange={(e)=>setName(e.target.value)} />
             </div>
     
             <div className="col-md-6">
                 <label for="email" className="form-label text-white">Email</label>
                 <input type="email" class="form-control" id="email" name="email"
-                onChange={(e)=>this.setState({email:e.target.value})}/>
+                onChange={(e)=>setEmail(e.target.value)}/>
             </div>
 
 
             <div className="col-md-6">
                 <label for="cemail" class="form-label text-white">Confirm Email</label>
                 <input type="email" class="form-control" id="cemail" name="cemail"
-                onChange={(e)=>this.setState({cemail:e.target.value})}/>
+                onChange={(e)=>setCemail(e.target.value)}/>
             </div>
 
 
@@ -84,14 +87,14 @@ class RegisterForm extends React.Component{
             <div className="col-md-6">
                 <label for="pwd" class="form-label text-white">Password</label>
                 <input type="password" class="form-control" id="pwd" name="pwd"
-                onChange={(e)=>this.setState({pwd:e.target.value})}/>
+                onChange={(e)=>setPwd(e.target.value)}/>
             </div>
 
 
             <div className="col-md-6">
                 <label for="cpwd" class="form-label text-white">Confirm Password</label>
                 <input type="password" class="form-control" id="cpwd" name="cpwd"
-                onChange={(e)=>this.setState({cpwd:e.target.value})}/>
+                onChange={(e)=>setCpwd(e.target.value)}/>
             </div>
 
 
@@ -111,7 +114,7 @@ class RegisterForm extends React.Component{
 
         )
     }
-}
+
 
 export default RegisterForm;
 
