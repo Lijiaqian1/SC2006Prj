@@ -16,5 +16,5 @@ const accountSchema= new Schema(
     }
 );
 
-mongoose.model('Account', accountSchema);
+module.exports=mongoose.model('Account', accountSchema);
 
