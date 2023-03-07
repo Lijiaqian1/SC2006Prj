@@ -41,6 +41,7 @@ const RegisterForm = () =>{
         }).then((res)=>res.json())
         .then((data)=>{
             console.log(data,"userRegister");
+            alert("Successfully registered");
             Navigate('/login');
         });
     }

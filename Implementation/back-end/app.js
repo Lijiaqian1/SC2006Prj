@@ -1,5 +1,5 @@
 const express= require('express');
-const mongoose= require('./db');
+const mongoose= require('mongoose');
 const morgan= require('morgan');
 const app= express();
 app.use(express.json());
@@ -15,17 +15,17 @@ const bcrypt = require("bcryptjs");
 //hO55WK6wE1a90YS3
 
 //Password for my own DB: sqFXGejkNSXPj7Mu
-//const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.net/?retryWrites=true&w=majority';
 
 //connecting to database
-/*const dbURI= 'mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority';
+//const dbURI= 'mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI,{
     useNewUrlParser: true
 })
     .then(() => {
         console.log("connected to DB");
     })
-    .catch((err)=> console.log(err));*/
+    .catch((err)=> console.log(err));
 
     //Require the mongoDB schema
     require("./models/accounts");
@@ -83,51 +83,6 @@ app.post("/register", async(req,res)=>{
     }
 });
 
-
-//post register authenticate
-/*app.post('/register', (req, res)=> {
-    //console.log(req.body);
-    var personInfo = req.body;
-    if(personInfo.email== personInfo.cemail){
-        if(personInfo.pwd == personInfo.cpwd){
-            Account.findOne({email:personInfo.email}, function(err, data){
-                if(!data){
-                    var newuser= new Account({
-                        name: personInfo.name, 
-                        email: personInfo.email,
-                        password: personInfo.pwd
-                    });
-    
-                    newuser.save(function(err, Person){
-                        if(err){
-                            console.log(err);
-                        }
-                        else{
-                            console.log("successfuly added");
-                            console.log(Person);
-                            res.send("Successfully registered!");
-                        }
-                    });
-                }
-                else{
-                    //email exists since not null
-                    res.json({status: "Error",
-                    error: "Email exists already"});
-                }
-            });
-        }
-        else{
-            res.json({status: "Error",
-            error: "Password not matching"});
-        }
-    }
-    else{
-        res.json({status: "Error",
-        error: "Email not matching"});
-    }
-    
-
-});*/
 
 app.post('/login', (req, res)=> {
     console.log(req.body);
