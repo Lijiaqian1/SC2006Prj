@@ -4,12 +4,12 @@ mongoose.set('strictQuery', false);
 
 mongoose.connect('mongodb://127.0.0.1:27017/cc_rental');
 
-const Schema = mongoose.Schema;
-const accountSchema = require('./models/accounts');
-const carSchema = require('./models/cars');
+//const Schema = mongoose.Schema;
+//const accountSchema = require('./models/accounts');
+//const carSchema = require('./models/cars');
 
-var Account = require('./models/accounts');
-var Car = require('./models/cars');
+//var Account = require('./models/accounts');
+//var Car = require('./models/cars');
 
 // Listen for the 'connected' event to know if the connection was successful
 mongoose.connection.on('connected', () => {
