@@ -1,5 +1,5 @@
 const express= require('express');
-const mongoose= require('mongoose');
+const mongoose= require('./db.js');
 const morgan= require('morgan');
 const app= express();
 app.use(express.json());
