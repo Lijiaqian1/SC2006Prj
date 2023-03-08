@@ -1,5 +1,5 @@
 const express= require('express');
-const mongoose= require('mongoose');
+const mongoose= require('./db');
 const morgan= require('morgan');
 const app= express();
 app.use(express.json());
@@ -23,13 +23,13 @@ const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.n
 
 //connecting to database
 //const dbURI= 'mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority';
-mongoose.connect(dbURI,{
+/*mongoose.connect(dbURI,{
     useNewUrlParser: true
 })
     .then(() => {
         console.log("connected to DB");
     })
-    .catch((err)=> console.log(err));
+    .catch((err)=> console.log(err));*/
 
     //Require the mongoDB schema
     require("./models/accounts");
@@ -137,4 +137,3 @@ app.use((req, res) => {
 app.listen(5000, ()=>{
     console.log("Server Started");
 })
-
