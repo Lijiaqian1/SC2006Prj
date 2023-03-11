@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb://127.0.0.1:27017/cc_rental');
+mongoose.connect('mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority');
 
 //const Schema = mongoose.Schema;
 //const accountSchema = require('./models/accounts');
