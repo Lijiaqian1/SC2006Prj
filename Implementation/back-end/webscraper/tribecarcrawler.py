@@ -5,6 +5,10 @@ from bs4 import BeautifulSoup
 import json
 import requests
 from geopy.geocoders import GoogleV3
+import zlib
+import brotli
+import sys
+
 geolocator = GoogleV3(api_key='AIzaSyCRa8maOVVWwWRYQ_fyUWD5v_F2BDxqWBU')
 import pickle
 with open('locationgps.pkl', 'rb') as f:
@@ -69,8 +73,10 @@ def search(curlocation, pickupdate, pickuptime, duration):
     "x-requested-with": 'XMLHttpRequest'
     }
     responset = requests.get(urlt, headers=header)
-    print(responset.content)
-    data = json.loads(responset.content.decode('utf-16'))
+    content= responset.content
+    #content = brotli.decompress(responset.content)
+    #print(content)
+    data = json.loads(content)
     soup = BeautifulSoup(data['view'], 'html.parser')
     make_model = soup.find_all('div', {'class': 'carDiv'})
     carlist=[]
@@ -101,9 +107,20 @@ def search(curlocation, pickupdate, pickuptime, duration):
 
         except:
             continue
-    
+    print("completed")
     return carlist
-data= search('Jurong Point', '2023-03-12', '18', 1)
+
+incurloc= str(sys.argv[1])
+indate= str(sys.argv[2])
+##date in #Year-#Month-#DayNumber
+intime= str(sys.argv[3])
+induration= int(sys.argv[4])
+data= search(incurloc, indate, intime, induration)
 final = json.dumps(data, indent=2)
 with open("tribecars.json", "w") as outfile:
     outfile.write(final)
+
+'''
+run in terminal
+python tribecarcrawler.py "Jurong Point" "2023-03-13" "13" 1
+'''
