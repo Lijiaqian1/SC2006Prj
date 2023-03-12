@@ -12,7 +12,7 @@ function Help(){
             </Row>
 
             <div className="QuestionSection">
-                <h3 className="ms-2 mb-3 mt-3">Basic FAQ Questions</h3>
+                <h3 className="ms-4 mt-3 p-3 ">Basic FAQ Questions</h3>
             <Accordion>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>What is CCRental about?</Accordion.Header>
@@ -62,6 +62,44 @@ function Help(){
                     CCRental website will take and enforece measures to protect our users' personal information, 
                     such as using encryption and secure servers. We take high priority on our user's personal information, 
                     making sure that it is safe for everyone to use. 
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+
+    </div>
+
+
+    <div className="QuestionSection mt-5 mb-5">
+                <h3 className="ms-4 mt-3 p-3">Search Page FAQ</h3>
+            <Accordion>
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>What is the search page?</Accordion.Header>
+                    <Accordion.Body>
+                    The search page is a page where users are able to input their fields, for example they can input their pick-up location / current location, date, time 
+                    for better filter of the results. After which, users can click the search button to view the displayed results.
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                    <Accordion.Header>How do I refine my search results?</Accordion.Header>
+                    <Accordion.Body>
+                    To refine search results, one can use the filter options at the side of the website on the results page. After filtering out to their own preference, 
+                    a new displayed results will be shown. 
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header>How frequently are the results being updated?</Accordion.Header>
+                    <Accordion.Body>
+                    CCRental comparison strive to provide accurate pricing information, 
+                    but prices can change frequently. 
+                    We strive to attain real-time updates, however, some of the pricing information might changed due to other circumstances.
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="3">
+                    <Accordion.Header>Can I search for content in a specific language?</Accordion.Header>
+                    <Accordion.Body>
+                    CCRental is aiming to seek for improvement to include other language. However, at the moment, CCRental can only display contents in English (US).
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
