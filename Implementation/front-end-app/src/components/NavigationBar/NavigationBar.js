@@ -22,7 +22,7 @@ function NavigationBar(){
                         <NavLink to ="/about"className="nav-link" id="nav-desc">About Us</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/help" className="nav-link" id="nav-desc">Help</NavLink>
+                        <NavLink to="/help" className="nav-link" id="nav-desc">FAQ</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/login"><button type="button" class="btn btn-primary" id="orange-btn">Login</button></NavLink>
