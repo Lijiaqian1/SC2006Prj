@@ -56,7 +56,7 @@ class Login extends React.Component{
                         </div>
                     </div>
 
-                    <div class="form-group was-validated">
+                    <div className="form-group was-validated">
                         <label className = "form-label" for="password">Password</label>
                         <input className = "form-control"  type="password" id = "password" required
                         onChange={(e)=>this.setState({pwd:e.target.value})}></input>

@@ -52,25 +52,32 @@ const RegisterForm = () =>{
                     <h1 className="heading">Register</h1>
                 </div>
             </div>
-        <form className="row g-3 gx-5 gy-5 mx-5" onSubmit = {handleSubmit}>
+        <form className="row g-3 gx-5 gy-5 mx-5 needs-validation" novalidate onSubmit = {handleSubmit}>
 
-            <div className="col-md-12">
+            <div className="col-md-12 form-group was-validated">
                 <label for="name" className="form-label text-white">Name</label>
-                <input type="text" class="form-control" id="name" name="name"
+                <input type="text" class="form-control" id="name" name="name" required
                 onChange={(e)=>setName(e.target.value)} />
+                <div class="valid-feedback text-white">Looks good!</div>
             </div>
     
-            <div className="col-md-6">
+            <div className="col-md-6 form-group was-validated">
                 <label for="email" className="form-label text-white">Email</label>
-                <input type="email" class="form-control" id="email" name="email"
+                <input type="email" class="form-control" id="email" name="email" required
                 onChange={(e)=>setEmail(e.target.value)}/>
+                <div className="invalid-feedback">
+                    Please enter your email address
+                </div>
             </div>
 
 
-            <div className="col-md-6">
+            <div className="col-md-6 form-group was-validated">
                 <label for="cemail" class="form-label text-white">Confirm Email</label>
-                <input type="email" class="form-control" id="cemail" name="cemail"
+                <input type="email" class="form-control" id="cemail" name="cemail" required
                 onChange={(e)=>setCemail(e.target.value)}/>
+                <div className="invalid-feedback">
+                    Please confirm your email address
+                </div>
             </div>
 
 
@@ -85,26 +92,32 @@ const RegisterForm = () =>{
             </div>*/}
 
 
-            <div className="col-md-6">
+            <div className="col-md-6 form-group was-validated">
                 <label for="pwd" class="form-label text-white">Password</label>
-                <input type="password" class="form-control" id="pwd" name="pwd"
+                <input type="password" class="form-control" id="pwd" name="pwd" required
                 onChange={(e)=>setPwd(e.target.value)}/>
+                <div className="invalid-feedback">
+                    Please enter your password
+                </div>
             </div>
 
 
-            <div className="col-md-6">
+            <div className="col-md-6 form-group was-validated">
                 <label for="cpwd" class="form-label text-white">Confirm Password</label>
-                <input type="password" class="form-control" id="cpwd" name="cpwd"
+                <input type="password" class="form-control" id="cpwd" name="cpwd" required
                 onChange={(e)=>setCpwd(e.target.value)}/>
+                <div className="invalid-feedback">
+                    Please confirm your password
+                </div>
             </div>
 
 
             <div className="col-12 position-relative">
-                <button type="submit" className="btn btn-primary position-absolute w-25 p-3 top-50 start-50 translate-middle mt-5 rounded-pill">Sign Up</button>
+                <button type="submit" className="btn btn-primary position-absolute w-25 p-3 top-50 start-50 translate-middle mt-3 rounded-pill">Sign Up</button>
             </div>
             
             <div className="col-12 position-relative">
-                <h6 className="text-white position-absolute top-50 start-50 translate-middle mt-5">By signing up, you agree to the Terms of Use and Privacy Policy</h6>
+                <h6 className="text-white position-absolute top-50 start-50 translate-middle mt-3 mb-5">By signing up, you agree to the Terms of Use and Privacy Policy</h6>
             </div>
             </form>
 
