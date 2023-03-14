@@ -101,7 +101,7 @@ app.post('/login', async(req, res)=> {
         if(await bcrypt.compare(pwd , user.pwd)){
 
             if(res.status(201)){
-                return res.send(req.body);
+                return res.send(user);
             }else{
                 return res.json({error:"error"});
             }
