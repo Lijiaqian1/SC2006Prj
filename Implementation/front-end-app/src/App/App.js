@@ -37,6 +37,8 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <NavigationBar />
+
+        {/*Protected Routes*/}
         <Routes>
           <Route element={<PrivateComponent />}>
             <Route path="search" element={<Search />} />
@@ -45,6 +47,8 @@ export default function App() {
             <Route path='forgetpassword' element={<ForgetPassword />} />
             <Route path='userdata' element={<UserDetails />}/>
           </Route>
+
+          {/*Unprotected Routes*/}
           <Route path="/" element = {<Home />}/>
           <Route path='about' element={<AboutUs/>} />
           <Route path='help' element={<Help/>} />

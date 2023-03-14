@@ -5,18 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () =>{
 
-    /*constructor(props){
-        super(props);
-        this.state={
-            name:"",
-            email:"",
-            cemail:"",
-            pwd:"",
-            cpwd:"",
-        };
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }*/
-
     const [name,setName] = useState('');
     const [email, setEmail] = useState('');
     const [cemail, setCemail] = useState('');
@@ -69,25 +57,6 @@ const RegisterForm = () =>{
             localStorage.setItem("user",JSON.stringify(result))
             Navigate('/');
         }
-
-
-
-        //Navigate('/');
-        /*fetch("http://localhost:5000/register",{
-            method: "POST",
-            crossDomain: true,
-            headers: {
-                "Content-Type":"application/json",
-                Accept: "application/json",
-                "Access-Control-Allow-Origin":"*",
-            },
-            body: JSON.stringify(accounts),
-        }).then((res)=>res.json())
-        .then((data)=>{
-            console.log(data,"userRegister");
-            alert("");
-            //Navigate('/');
-        });*/
     }
         return(
         <div className="register mt-4">

@@ -1,45 +1,57 @@
 import React from 'react';
 import '../Login/Login.css';
-import {NavLink} from 'react-router-dom';
-import {useState} from 'react';
+import {NavLink,useNavigate} from 'react-router-dom';
+import {useState,useEffect} from 'react';
 
 const Login = () => {
-
-    /*constructor(props){
-        super(props);
-        this.state={
-            email:"",
-            pwd:"",
-        };
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }*/
 
     const [email,setEmail] = useState('');
     const [pwd, setPwd] = useState('');
 
-    const handleSubmit = (e) => {
+    const Navigate = useNavigate();
+
+    useEffect(()=>{
+        const auth = localStorage.getItem('user');
+        if(auth){
+            Navigate('/');
+        }
+        
+    })
+
+    const handleSubmit = async(e) => {
         e.preventDefault();
         const logincredentials = {email,pwd};
         console.log(email,pwd);
 
-        fetch("http://localhost:5000/login",{
-            method: "POST",
-            crossDomain: true,
-            headers: {
-                "Content-Type":"application/json",
-                Accept: "application/json",
-                "Access-Control-Allow-Origin":"*",
-            },
+        let result = await fetch("http://localhost:5000/login",{
+            method: 'POST',
             body: JSON.stringify(logincredentials),
-        }).then((res)=>res.json())
-        .then((data)=>{
-            console.log(data,"userRegister");
-            if(data.status=="ok"){
-                alert("Login successful");
-                window.localStorage.setItem("token",data.data);
-                window.location.href="./userData";
+            headers:{
+                'Content-Type' : 'application/json'
             }
         });
+
+        result = await result.json();
+        console.warn(result);
+
+        if(result.error==="User Not Found" || result.error==="Invalid password"){
+            alert("Incorrect email or password! Please try again!");
+        }
+
+        else if(result.error==="Fill in all data"){
+            alert("Please fill in all data!");
+        }
+
+        else if(result.error==="error"){
+            alert("Error");
+        }
+
+        else{
+            localStorage.setItem("user",JSON.stringify(result));
+            Navigate('/');
+        }
+
+
     }
 
         return(
@@ -51,7 +63,7 @@ const Login = () => {
                     <div className="form-group was-validated">
                         <label className = "form-label" for="email">Email address</label>
                         <input className = "form-control" type="email" id = "email" required
-                        onChange={(e)=>setEmail(e.target.value)}></input>
+                        value = {email} onChange={(e)=>setEmail(e.target.value)}></input>
                         <div className="invalid-feedback">
                             Please enter your email address
                         </div>
@@ -60,7 +72,7 @@ const Login = () => {
                     <div className="form-group was-validated">
                         <label className = "form-label" for="password">Password</label>
                         <input className = "form-control"  type="password" id = "password" required
-                        onChange={(e)=>setPwd(e.target.value)}></input>
+                        value = {pwd} onChange={(e)=>setPwd(e.target.value)}></input>
                         <div className="invalid-feedback">
                             Please enter your password
                         </div>
