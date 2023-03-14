@@ -1,9 +1,10 @@
 import React from 'react';
 import './Home.css'
 import NavigationBar from '../NavigationBar/NavigationBar';
-import {NavLink} from 'react-router-dom';
+import {NavLink,useNavigate} from 'react-router-dom';
 const Home = () => {
         const auth = localStorage.getItem('user');
+        const Navigate = useNavigate();
 
         return(
             <div className="d-grid gap-5">
