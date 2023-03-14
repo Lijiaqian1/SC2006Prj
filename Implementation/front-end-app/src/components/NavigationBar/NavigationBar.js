@@ -1,8 +1,14 @@
 import React from 'react';
 import './NavigationBar.css';
-import {NavLink} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 
-function NavigationBar(){
+const NavigationBar = () => {
+    const auth = localStorage.getItem('user');
+    const Navigate = useNavigate();
+    const logout = () => {
+        localStorage.clear();
+        Navigate('/');
+    }
     return(
         <>
              <nav className="navbar navbar-expand-lg " id="navBar">
@@ -25,8 +31,8 @@ function NavigationBar(){
                         <NavLink to="/help" className="nav-link" id="nav-desc">FAQ</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/login"><button type="button" class="btn btn-primary" id="orange-btn">Login</button></NavLink>
-                        
+                        {auth? <NavLink onClick={logout} to="/"><button type="button" className="btn btn-primary" id="orange-btn">Logout</button></NavLink>: 
+                        <NavLink to="/login"><button type="button" className="btn btn-primary" id="orange-btn">Login</button></NavLink>}
                     </li>
                 </ul>
             </div>

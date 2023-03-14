@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 const cors = require("cors");
-app.use(cors());
+app.use(cors()); //Uses cors as a middleware
 const bcrypt = require("bcryptjs");
 
 //Import jsonwebtoken
@@ -31,9 +31,9 @@ const JWT_SECRET = "adkfdksfds2302948djfadfs12490?[]dfsadff1235t61d"
     })
     .catch((err)=> console.log(err));*/
 
-    //Require the mongoDB schema
-    require("./models/accounts");
-    const User = mongoose.model("Account");
+//Require the mongoDB schema
+require("./models/accounts");
+const User = mongoose.model("Account");
 
 
 //root or the index page
@@ -66,12 +66,10 @@ app.post("/register", async(req,res)=>{
                     {
                         name,
                         email,
-                        //cemail,
                         pwd:encryptedPassword,
-                        //cpwd,
                     }
                 );
-                res.send({status:"ok"});
+                res.send(req.body);
             }
             else{
                 return res.send({error:"Password do not match"});

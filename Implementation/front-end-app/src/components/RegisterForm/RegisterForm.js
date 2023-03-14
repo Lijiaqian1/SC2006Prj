@@ -1,6 +1,6 @@
 import React from 'react';
 import './RegisterForm.css';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () =>{
@@ -23,13 +23,57 @@ const RegisterForm = () =>{
     const [pwd, setPwd] = useState('');
     const [cpwd,setCpwd] = useState('');
 
+    useEffect(()=>{
+        const auth = localStorage.getItem('user');
+        if(auth){
+            Navigate('/');
+        }
+        
+    })
+
     const Navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const accounts = {name,email,cemail,pwd,cpwd};
         console.log(name,email,cemail,pwd,cpwd);
-        fetch("http://localhost:5000/register",{
+
+        let result = await fetch("http://localhost:5000/register", {
+            method: "POST",
+            body: JSON.stringify(accounts),
+            headers:{
+                'Content-Type' : 'application/json'
+            }
+        })
+
+        result = await result.json();
+        console.warn(result);
+        //Need to show alert for error 
+        if(result.error === "User Exists"){
+            alert("User Exists, Try again with another email");
+        }
+
+        else if(result.error === "Password do not match"){
+            alert("Password do not match, Try again");
+        }
+
+        else if(result.error==="Email do not match"){
+            alert("Email do not match, Try again");
+        }
+
+        else if(result.status==="error"){
+            alert("Error!");
+        }
+
+        else{
+            localStorage.setItem("user",JSON.stringify(result))
+            Navigate('/');
+        }
+
+
+
+        //Navigate('/');
+        /*fetch("http://localhost:5000/register",{
             method: "POST",
             crossDomain: true,
             headers: {
@@ -41,9 +85,9 @@ const RegisterForm = () =>{
         }).then((res)=>res.json())
         .then((data)=>{
             console.log(data,"userRegister");
-            alert("Successfully registered");
-            Navigate('/login');
-        });
+            alert("");
+            //Navigate('/');
+        });*/
     }
         return(
         <div className="register mt-4">
@@ -57,14 +101,14 @@ const RegisterForm = () =>{
             <div className="col-md-12 form-group was-validated">
                 <label for="name" className="form-label text-white">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required
-                onChange={(e)=>setName(e.target.value)} />
+                value = {name} onChange={(e)=>setName(e.target.value)} />
                 <div class="valid-feedback text-white">Looks good!</div>
             </div>
     
             <div className="col-md-6 form-group was-validated">
                 <label for="email" className="form-label text-white">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required
-                onChange={(e)=>setEmail(e.target.value)}/>
+                value = {email} onChange={(e)=>setEmail(e.target.value)}/>
                 <div className="invalid-feedback">
                     Please enter your email address
                 </div>
@@ -74,7 +118,7 @@ const RegisterForm = () =>{
             <div className="col-md-6 form-group was-validated">
                 <label for="cemail" class="form-label text-white">Confirm Email</label>
                 <input type="email" class="form-control" id="cemail" name="cemail" required
-                onChange={(e)=>setCemail(e.target.value)}/>
+                 value = {cemail} onChange={(e)=>setCemail(e.target.value)}/>
                 <div className="invalid-feedback">
                     Please confirm your email address
                 </div>
@@ -95,7 +139,7 @@ const RegisterForm = () =>{
             <div className="col-md-6 form-group was-validated">
                 <label for="pwd" class="form-label text-white">Password</label>
                 <input type="password" class="form-control" id="pwd" name="pwd" required
-                onChange={(e)=>setPwd(e.target.value)}/>
+                 value = {pwd} onChange={(e)=>setPwd(e.target.value)}/>
                 <div className="invalid-feedback">
                     Please enter your password
                 </div>
@@ -105,7 +149,7 @@ const RegisterForm = () =>{
             <div className="col-md-6 form-group was-validated">
                 <label for="cpwd" class="form-label text-white">Confirm Password</label>
                 <input type="password" class="form-control" id="cpwd" name="cpwd" required
-                onChange={(e)=>setCpwd(e.target.value)}/>
+                 value = {cpwd} onChange={(e)=>setCpwd(e.target.value)}/>
                 <div className="invalid-feedback">
                     Please confirm your password
                 </div>

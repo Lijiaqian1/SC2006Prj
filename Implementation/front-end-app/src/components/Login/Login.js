@@ -1,21 +1,25 @@
 import React from 'react';
 import '../Login/Login.css';
 import {NavLink} from 'react-router-dom';
+import {useState} from 'react';
 
-class Login extends React.Component{
+const Login = () => {
 
-    constructor(props){
+    /*constructor(props){
         super(props);
         this.state={
             email:"",
             pwd:"",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    }*/
 
-    handleSubmit(e){
+    const [email,setEmail] = useState('');
+    const [pwd, setPwd] = useState('');
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const {email,pwd} = this.state;
+        const logincredentials = {email,pwd};
         console.log(email,pwd);
 
         fetch("http://localhost:5000/login",{
@@ -26,10 +30,7 @@ class Login extends React.Component{
                 Accept: "application/json",
                 "Access-Control-Allow-Origin":"*",
             },
-            body: JSON.stringify({
-                email,
-                pwd,
-            }),
+            body: JSON.stringify(logincredentials),
         }).then((res)=>res.json())
         .then((data)=>{
             console.log(data,"userRegister");
@@ -40,17 +41,17 @@ class Login extends React.Component{
             }
         });
     }
-    render(){
+
         return(
         <div className="body">
              <div className="login">
                 <h1 className="text-center">Sign In</h1>
 
-                <form className = "needs-validation" novalidate onSubmit={this.handleSubmit}>
+                <form className = "needs-validation" novalidate onSubmit={handleSubmit}>
                     <div className="form-group was-validated">
                         <label className = "form-label" for="email">Email address</label>
                         <input className = "form-control" type="email" id = "email" required
-                        onChange={(e)=>this.setState({email:e.target.value})}></input>
+                        onChange={(e)=>setEmail(e.target.value)}></input>
                         <div className="invalid-feedback">
                             Please enter your email address
                         </div>
@@ -59,7 +60,7 @@ class Login extends React.Component{
                     <div className="form-group was-validated">
                         <label className = "form-label" for="password">Password</label>
                         <input className = "form-control"  type="password" id = "password" required
-                        onChange={(e)=>this.setState({pwd:e.target.value})}></input>
+                        onChange={(e)=>setPwd(e.target.value)}></input>
                         <div className="invalid-feedback">
                             Please enter your password
                         </div>
@@ -86,6 +87,6 @@ class Login extends React.Component{
            
 
         )
-    }
+    
 }
 export default Login;
