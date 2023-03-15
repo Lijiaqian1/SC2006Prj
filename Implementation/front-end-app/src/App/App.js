@@ -1,5 +1,6 @@
 import './App.css';
-import { RouterProvider, createBrowserRouter, Route, createRoutesFromElements } from 'react-router-dom';
+//import { RouterProvider, createBrowserRouter, Route, createRoutesFromElements } from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import AboutUs from '../pages/AboutUs';
 import Reviews from '../pages/Reviews';
 import Help from '../pages/Help';
@@ -12,8 +13,10 @@ import RecoverPassword from '../components/RecoverPassword/RecoverPassword';
 import EnterOTP from '../components/EnterOTP/EnterOTP';
 import ForgetPassword from '../components/ForgetPassword/ForgetPassword';
 import UserDetails from '../components/UserDetails/UserDetails';
+import NavigationBar from '../components/NavigationBar/NavigationBar';
+import PrivateComponent from '../components/PrivateComponent';
 
-const router = createBrowserRouter(createRoutesFromElements(
+/*const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root/>}>
       <Route path="/" element = {<Home />}/>
       <Route path="search" element={<Search />} />
@@ -26,11 +29,34 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path='forgetpassword' element={<ForgetPassword />} />
       <Route path='userdata' element={<UserDetails />}/>
   </Route>
+));*/
 
-));
+
 export default function App() {
   return (
-    <RouterProvider router={router} />
+    <div className="App">
+      <BrowserRouter>
+        <NavigationBar />
+
+        {/*Protected Routes*/}
+        <Routes>
+          <Route element={<PrivateComponent />}>
+            <Route path="search" element={<Search />} />
+            <Route path='recoverpassword' element={<RecoverPassword />} />
+            <Route path='enterotp' element={<EnterOTP />} />
+            <Route path='userdata' element={<UserDetails />}/>
+          </Route>
+
+          {/*Unprotected Routes*/}
+          <Route path="/" element = {<Home />}/>
+          <Route path='about' element={<AboutUs/>} />
+          <Route path='help' element={<Help/>} />
+          <Route path='register' element={<RegisterForm />} />
+          <Route path='login' element={<Login/>} />
+          <Route path='forgetpassword' element={<ForgetPassword />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
 
 
   );

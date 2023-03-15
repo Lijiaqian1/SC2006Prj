@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://Lim:Lim123@cluster0.4ejvdiv.mongodb.net/CC_Rental?retryWrites=true&w=majority');
 
 //const Schema = mongoose.Schema;
 //const accountSchema = require('./models/accounts');
 //const carSchema = require('./models/cars');
 
-//var Account = require('./models/accounts');
-//var Car = require('./models/cars');
+var Account = require('./models/accounts');
+var Car = require('./models/cars');
 
 // Listen for the 'connected' event to know if the connection was successful
 mongoose.connection.on('connected', () => {
@@ -21,7 +21,7 @@ mongoose.connection.on('error', (err) => {
   console.error('Error connecting to database:', err);
 });
 
-async function saveData() {
+/*async function saveData() {
   try {
     const account = new Account({
       name: 'John Doe',
@@ -59,5 +59,5 @@ async function saveData() {
   }
 }
 
-saveData();
+saveData();*/
 module.exports=mongoose;

@@ -7,19 +7,22 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 const cors = require("cors");
-app.use(cors());
+app.use(cors()); //Uses cors as a middleware
 const bcrypt = require("bcryptjs");
 
-//Import jsonwebtoken
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "adkfdksfds2302948djfadfs12490?[]dfsadff1235t61d"
+const jwtKey = 'CCRental';
+
+//Import jsonwebtoken
+//const jwt = require("jsonwebtoken");
+//const JWT_SECRET = "adkfdksfds2302948djfadfs12490?[]dfsadff1235t61d"
 
 
 //the password for the database. just msg Viral b4 using this so he can allow ur ip address to use the db.
 //hO55WK6wE1a90YS3
 
 //Password for my own DB: sqFXGejkNSXPj7Mu
-const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.net/?retryWrites=true&w=majority';
+//const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.net/?retryWrites=true&w=majority';
 
 //connecting to database
 //const dbURI= 'mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority';
@@ -31,9 +34,9 @@ const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.n
     })
     .catch((err)=> console.log(err));*/
 
-    //Require the mongoDB schema
-    require("./models/accounts");
-    const User = mongoose.model("Account");
+//Require the mongoDB schema
+require("./models/accounts");
+const User = mongoose.model("Account");
 
 
 //root or the index page
@@ -66,12 +69,10 @@ app.post("/register", async(req,res)=>{
                     {
                         name,
                         email,
-                        //cemail,
                         pwd:encryptedPassword,
-                        //cpwd,
                     }
                 );
-                res.send({status:"ok"});
+                res.send(req.body);
             }
             else{
                 return res.send({error:"Password do not match"});
@@ -92,25 +93,46 @@ app.post('/login', async(req, res)=> {
     console.log(req.body);
     const {email,pwd} = req.body;
 
-    //Find if user exist
-    const user = await User.findOne({email});
+    if(email && pwd){
+        //Find if user exist
+        const user = await User.findOne({email});
 
-    if(!user){
-        return res.send({error:"User Not Found"});
-    }
-
-    if(await bcrypt.compare(pwd , user.pwd)){
-        //Create a token with the JWT_SECRET
-        const token = jwt.sign({email:user.email},JWT_SECRET);
-
-        if(res.status(201)){
-            return res.json({status:"ok",data:token});
-        }else{
-            return res.json({error:"error"});
+        if(!user){
+            return res.send({error:"User Not Found"});
         }
+
+        if(await bcrypt.compare(pwd , user.pwd)){
+
+            const token = jwt.sign(
+                {
+                    name: user.name,
+                    email: user.email,
+                    pwd: user.pwd
+                },
+                jwtKey,
+                {expiresIn: "24h"}
+            );
+
+            if(res.status(201)){
+                return res.send({
+                    message: "Login Successful",
+                    email: user.email,
+                    token,
+                });
+            }
+            
+            else{
+                return res.json({error:"error"});
+            }
+        }
+
+        res.json({status:"error",error:"Invalid password"});
+    }
+    
+    else{
+        res.send({error:"Fill in all data"});
     }
 
-    res.json({status:"error",error:"Invalid password"});
 });
 
 app.post("/userData",async(req,res)=>{
