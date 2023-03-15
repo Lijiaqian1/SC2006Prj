@@ -10,6 +10,9 @@ const cors = require("cors");
 app.use(cors()); //Uses cors as a middleware
 const bcrypt = require("bcryptjs");
 
+const jwt = require("jsonwebtoken");
+const jwtKey = 'CCRental';
+
 //Import jsonwebtoken
 //const jwt = require("jsonwebtoken");
 //const JWT_SECRET = "adkfdksfds2302948djfadfs12490?[]dfsadff1235t61d"
@@ -100,15 +103,33 @@ app.post('/login', async(req, res)=> {
 
         if(await bcrypt.compare(pwd , user.pwd)){
 
+            const token = jwt.sign(
+                {
+                    name: user.name,
+                    email: user.email,
+                    pwd: user.pwd
+                },
+                jwtKey,
+                {expiresIn: "24h"}
+            );
+
             if(res.status(201)){
-                return res.send(user);
-            }else{
+                return res.send({
+                    message: "Login Successful",
+                    email: user.email,
+                    token,
+                });
+            }
+            
+            else{
                 return res.json({error:"error"});
             }
         }
 
         res.json({status:"error",error:"Invalid password"});
-    }else{
+    }
+    
+    else{
         res.send({error:"Fill in all data"});
     }
 

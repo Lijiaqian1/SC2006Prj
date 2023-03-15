@@ -44,7 +44,6 @@ export default function App() {
             <Route path="search" element={<Search />} />
             <Route path='recoverpassword' element={<RecoverPassword />} />
             <Route path='enterotp' element={<EnterOTP />} />
-            <Route path='forgetpassword' element={<ForgetPassword />} />
             <Route path='userdata' element={<UserDetails />}/>
           </Route>
 
@@ -54,6 +53,7 @@ export default function App() {
           <Route path='help' element={<Help/>} />
           <Route path='register' element={<RegisterForm />} />
           <Route path='login' element={<Login/>} />
+          <Route path='forgetpassword' element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>
     </div>
