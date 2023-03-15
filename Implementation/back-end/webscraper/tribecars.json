@@ -1,0 +1,62 @@
+[
+  {
+    "model": "Mazda 2 Sedan (2016-2020)",
+    "type": "Car Club Select Sedan (Fuel-Included)",
+    "transmission": "Automatic",
+    "seats": "5 Seater",
+    "location": "Queenstown",
+    "duration": [
+      "Duration",
+      " 1 hr"
+    ],
+    "price": "$6.00"
+  },
+  {
+    "model": "Opel Insignia (Diesel)",
+    "type": "Standard Sedan",
+    "transmission": "Automatic",
+    "seats": "5 Seater",
+    "location": "Queenstown",
+    "duration": [
+      "Duration",
+      " 1 hr"
+    ],
+    "price": "$5.50"
+  },
+  {
+    "model": "Toyota Wish (2009-2018)",
+    "type": "Standard MPV",
+    "transmission": "Automatic",
+    "seats": "7 Seater",
+    "location": "Queenstown",
+    "duration": [
+      "Duration",
+      " 1 hr"
+    ],
+    "price": "$8.00"
+  },
+  {
+    "model": "Yamaha Aerox 155",
+    "type": "Standard Motorcycle",
+    "transmission": "Automatic",
+    "seats": "1 Seater",
+    "location": "Queenstown",
+    "duration": [
+      "Duration",
+      " 1 hr"
+    ],
+    "price": "$3.50"
+  },
+  {
+    "model": "Toyota Hiace (Diesel, Manual, Class 3 Licence ONLY)",
+    "type": "Standard Van (Manual)",
+    "transmission": "Manual",
+    "seats": "2 Seater",
+    "location": "Queenstown",
+    "duration": [
+      "Duration",
+      " 1 hr"
+    ],
+    "price": "$5.50"
+  }
+]

@@ -2,13 +2,52 @@ import React from 'react';
 import '../Login/Login.css';
 import {NavLink,useNavigate} from 'react-router-dom';
 import {useState,useEffect} from 'react';
+import axios from 'react';
+import { useContext } from 'react';
+import {RecoverContext} from 'react';
 
 const Login = () => {
 
     const [email,setEmail] = useState('');
     const [pwd, setPwd] = useState('');
+    const [otp, setOtp] = useState('');
+
 
     const Navigate = useNavigate();
+
+    useEffect(() => {
+        localStorage.setItem('OTP',JSON.stringify(otp), [otp]);
+        localStorage.setItem('Email', JSON.stringify(email),[email]);
+    })
+
+    const navigateToOtp = async() => {
+        if(email){
+            const OTP = Math.floor(Math.random() * 9000 + 1000);
+            //console.log(OTP);
+            setOtp(OTP);
+
+            const info = {email,OTP};
+            console.log(info);
+
+            let result = await fetch("http://localhost:5000/sendEmail", {
+                method: "POST", 
+                body: JSON.stringify(info),
+                headers:{
+                    'Content-Type' : 'application/json'
+                }
+            });
+            
+            console.log(result.statusText);
+
+            if(result.statusText==="OK"){
+                //localStorage.setItem("OTP", JSON.stringify(otp));
+                Navigate('/enterotp');
+            }
+            return;
+        }
+
+        return alert("Please enter your email");
+    }
 
     useEffect(()=>{
         const auth = localStorage.getItem('user');
@@ -78,11 +117,10 @@ const Login = () => {
                         </div>
                     </div>
                     
-                    <NavLink to="/forgetpassword">
-                        <div className = "text">
-                            Forgotten your password?
-                        </div>
-                    </NavLink>
+
+                    <div className = "text" onClick={navigateToOtp}>
+                        Forgotten your password?
+                    </div>
 
                     
                     <input className = "btn btn-primary w-100" type="submit" value="SIGN IN"></input>

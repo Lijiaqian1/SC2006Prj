@@ -4,6 +4,7 @@ import {useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () =>{
+    const Navigate = useNavigate();
 
     const [name,setName] = useState('');
     const [email, setEmail] = useState('');
@@ -19,7 +20,7 @@ const RegisterForm = () =>{
         
     })
 
-    const Navigate = useNavigate();
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();

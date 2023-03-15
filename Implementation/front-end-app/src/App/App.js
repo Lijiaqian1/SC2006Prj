@@ -15,6 +15,8 @@ import ForgetPassword from '../components/ForgetPassword/ForgetPassword';
 import UserDetails from '../components/UserDetails/UserDetails';
 import NavigationBar from '../components/NavigationBar/NavigationBar';
 import PrivateComponent from '../components/PrivateComponent';
+import {useState} from 'react';
+import { createContext } from 'react';
 
 /*const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root/>}>
@@ -31,31 +33,39 @@ import PrivateComponent from '../components/PrivateComponent';
   </Route>
 ));*/
 
+export const RecoveryContext = createContext();
+
 
 export default function App() {
+  //const [page, setPage] = useState("login");
+  //const [emails, setEmails] = useState('');
+  
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavigationBar />
+      
+        <BrowserRouter>
+          <NavigationBar />
+          {/*Protected Routes*/}
+          <Routes>
+            <Route element={<PrivateComponent />}>
+              <Route path="search" element={<Search />} />
+              <Route path='userdata' element={<UserDetails />}/>
+            </Route>
 
-        {/*Protected Routes*/}
-        <Routes>
-          <Route element={<PrivateComponent />}>
-            <Route path="search" element={<Search />} />
+            {/*Unprotected Routes*/}
+            <Route path="/" element = {<Home />}/>
+            <Route path='about' element={<AboutUs/>} />
+            <Route path='help' element={<Help/>} />
+            <Route path='register' element={<RegisterForm />} />
+            <Route path='login' element={<Login/>} />
+            <Route path='forgetpassword' element={<ForgetPassword />} />
             <Route path='recoverpassword' element={<RecoverPassword />} />
             <Route path='enterotp' element={<EnterOTP />} />
-            <Route path='userdata' element={<UserDetails />}/>
-          </Route>
-
-          {/*Unprotected Routes*/}
-          <Route path="/" element = {<Home />}/>
-          <Route path='about' element={<AboutUs/>} />
-          <Route path='help' element={<Help/>} />
-          <Route path='register' element={<RegisterForm />} />
-          <Route path='login' element={<Login/>} />
-          <Route path='forgetpassword' element={<ForgetPassword />} />
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      
+      
     </div>
 
 
