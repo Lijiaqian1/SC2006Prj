@@ -1,0 +1,42 @@
+[
+  {
+    "model": "HondaShuttle Hybrid",
+    "type": "Standard",
+    "tranmission": "Automatic",
+    "seats": 5,
+    "duration": 2,
+    "exp_price": 19.8
+  },
+  {
+    "model": "ToyotaSienta",
+    "type": "Standard",
+    "tranmission": "Automatic",
+    "seats": 7,
+    "duration": 2,
+    "exp_price": 19.8
+  },
+  {
+    "model": "SsangyongTivoli",
+    "type": "Standard",
+    "tranmission": "Automatic",
+    "seats": 5,
+    "duration": 2,
+    "exp_price": 19.8
+  },
+  {
+    "model": "ToyotaSienta Hybrid",
+    "type": "Standard",
+    "tranmission": "Automatic",
+    "seats": 7,
+    "duration": 2,
+    "exp_price": 19.8
+  },
+  {
+    "model": "Mazda3",
+    "type": "Standard",
+    "tranmission": "Automatic",
+    "seats": 5,
+    "duration": 2,
+    "exp_price": 19.8
+  }
+]
