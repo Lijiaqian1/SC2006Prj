@@ -1,0 +1,30 @@
+[
+  {
+    "model": "Vios (Facelift)",
+    "transmission": "automatic",
+    "seats": "5 Seater",
+    "Location": "Tampines - 202A Tampines Street 21 - S521202",
+    "Price": "SGD 8.20"
+  },
+  {
+    "model": "Vios (Facelift)",
+    "transmission": "automatic",
+    "seats": "5 Seater",
+    "Location": "Tampines - 842A Tampines Street 82 - S521842",
+    "Price": "SGD 8.20"
+  },
+  {
+    "model": "NV200 (Petrol)",
+    "transmission": "automatic",
+    "seats": "2 Seater",
+    "Location": "Tampines - 499 Tampines Ave 9 - S521499",
+    "Price": "SGD 7.60"
+  },
+  {
+    "model": "City (5th Gen)",
+    "transmission": "automatic",
+    "seats": "5 Seater",
+    "Location": "Tampines - 609 Tampines North 1 - S520609",
+    "Price": "SGD 8.20"
+  }
+]
