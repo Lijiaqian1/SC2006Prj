@@ -74,7 +74,7 @@ router.post('/cars', async (req, res) => {
     ...filter 
   }).sort({ price: 1 }).exec();
 
-  cars.push(...audiCars, ...bmwCars, ...mercedesCars);
+  cars.push(...carlitecars, ...getgocars, ...tribecars);
 
   res.json(cars);
 });
