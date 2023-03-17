@@ -5,6 +5,7 @@ import AboutUs from '../pages/AboutUs';
 import Reviews from '../pages/Reviews';
 import Help from '../pages/Help';
 import Login from '../components/Login/Login';
+import Results from '../components/Results/Results';
 import Root from '../Root';
 import Home from '../components/Home/Home';
 import Search from '../components/Search/Search';
@@ -57,6 +58,7 @@ export default function App() {
             <Route path="/" element = {<Home />}/>
             <Route path='about' element={<AboutUs/>} />
             <Route path='help' element={<Help/>} />
+            <Route path ='results' element={<Results/>} />
             <Route path='register' element={<RegisterForm />} />
             <Route path='login' element={<Login/>} />
             <Route path='forgetpassword' element={<ForgetPassword />} />
