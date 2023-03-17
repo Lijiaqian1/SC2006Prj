@@ -1,8 +1,8 @@
 import React from 'react';
 import '../Search/Search.css'
 
-class Search extends React.Component{
-    render(){
+const Search = () => {
+
         const myStyle={
             backgroundImage:`url(${process.env.PUBLIC_URL+ "/SearchPage.png"})`
         };
@@ -46,7 +46,7 @@ class Search extends React.Component{
                 </div>
             </div>
         )
-    }
+    
 }
 
 export default Search; 
