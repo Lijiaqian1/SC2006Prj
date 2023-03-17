@@ -1,0 +1,14 @@
+import json
+from pymongo import MongoClient
+
+
+client = MongoClient('mongodb+srv://lijiaqian65:Lk184363@cluster0.4ejvdiv.mongodb.net/CC_Rental?retryWrites=true&w=majority')
+
+db = client['CC_Rental']
+collection = db['tribecars']
+
+with open('../webscraper/tribecars.json') as f:
+    data = json.load(f)
+
+for car in data:
+    collection.insert_one(car)
