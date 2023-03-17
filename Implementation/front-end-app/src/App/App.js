@@ -15,6 +15,7 @@ import ForgetPassword from '../components/ForgetPassword/ForgetPassword';
 import UserDetails from '../components/UserDetails/UserDetails';
 import NavigationBar from '../components/NavigationBar/NavigationBar';
 import PrivateComponent from '../components/PrivateComponent';
+import Results from '../components/Results/Results';
 import {useState} from 'react';
 import { createContext } from 'react';
 
@@ -49,7 +50,7 @@ export default function App() {
           {/*Protected Routes*/}
           <Routes>
             <Route element={<PrivateComponent />}>
-              <Route path="search" element={<Search />} />
+              
               <Route path='userdata' element={<UserDetails />}/>
             </Route>
 
@@ -62,6 +63,10 @@ export default function App() {
             <Route path='forgetpassword' element={<ForgetPassword />} />
             <Route path='recoverpassword' element={<RecoverPassword />} />
             <Route path='enterotp' element={<EnterOTP />} />
+
+            {/*Remember to put this routes back to protected routes*/}
+            <Route path="search" element={<Search />} />
+            <Route path="results" element={<Results />} />
           </Routes>
         </BrowserRouter>
       

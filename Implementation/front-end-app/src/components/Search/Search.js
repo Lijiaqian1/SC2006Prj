@@ -1,51 +1,83 @@
 import React from 'react';
-import '../Search/Search.css'
+import {useState} from 'react';
+import '../Search/Search.css';
+import Datepicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import '../Results/Results.css';
+
 
 const Search = () => {
 
-        const myStyle={
-            backgroundImage:`url(${process.env.PUBLIC_URL+ "/SearchPage.png"})`
-        };
+      const [selectedDate,setSelectedDate] = useState(null);
 
-        return(
-            <div className = "body" style={myStyle} backgroundRepeat = "no-repeat">
-                <div className = "b" style = {{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,128,0.3)'}}>
-    
-                  <form class="row gx-3 gy-2 align-items-center">
-                    <div class="col-sm-3">
-                      <label class="form-label" for="specificSizeInputName"><b>Pick-up Location</b></label>
-                      <input type="text" class="form-control" id="specificSizeInputName" placeholder="Pick-up Location"></input>
-                    </div>
-                    <div class="col-sm-3">
-                      <label class="form-label" for="specificSizeInputGroupUsername"><b>Pick-up Time</b></label>
-                      <div class="input-group">
-                      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Date"></input>
-                        <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Time"></input>
-                      </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <label class="form-label" for="specificSizeSelect"><b>Type of Car</b></label>
-                        <select class="form-select" id="specificSizeSelect">
-                           <option selected>Type</option>
-                           <option value="1">One</option>
-                           <option value="2">Two</option>
-                           <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <div class="col-auto">
-                        <div class="form-check">
-                           <label class="form-label" for="specificSizeSelect"><b>Estimated Duration</b></label>
-                           <input style = {{width: 100}} type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Time"></input>
-                           <button type="submit" class="btn btn-primary">Calculate</button>
-                        </div>
-                    </div>
-                    <div class="col-auto" className = "text mt-4 text-center" >
-                        <button type="submit" class="btn btn-primary">Search</button>
-                    </div>
-                  </form>
-                </div>
+
+       return(
+        <div style={{ 
+          backgroundImage: `url(${process.env.PUBLIC_URL + '/Background.png'})` ,
+          backgroundRepeat: 'no-repeat',
+          width: '100vw',
+          height: '100vh'
+        }} className="position-relative">
+
+          <form className="vw-100 position-absolute top-50 start-50 translate-middle background-darkblue text-emphasis-dark px-5 py-2">
+            <div className="row">
+
+            <div className="col-4">
+              <label for="Location">Pickup Location</label>
+              <input type="text" className="form-control" id="specificSizeInputName" placeholder="Jurong West Street 61"/>
             </div>
-        )
+
+            
+            <div className="col-4">
+              <label for="specificSizeInputGroupUsername">Pickup Time</label>
+              <input type="text" className="form-control" id="specificSizeInputName" placeholder="Time"/>
+            </div>
+
+
+            <div className="datepicker col-4 d-inline">
+              <label for="specificSizeInputGroupUsername">Pickup Date</label>
+              <Datepicker 
+                selected={selectedDate}
+                onChange={date => setSelectedDate(date)}
+                dateFormat="yyyy/MM/dd"
+                minDate={new Date()}
+              />
+            </div>
+
+            <div className="row">
+              <div class="col-4">
+                <label for="specificSizeSelect">Type of Car</label>
+                <select class="form-select" id="specificSizeSelect">
+                  <option selected>Type...</option>
+                  <option value="1">Standard</option>
+                  <option value="2">Hybrid</option>
+                  <option value="3">Automatic</option>
+                </select>
+              </div>
+
+              <div className="input-group col mt-4">
+                <input type="text" class="form-control" placeholder="Estimated Duration" aria-label="Recipient's username" aria-describedby="button-addon2"/>
+                <button class="btn btn-dark" type="button" id="button-addon2">Calculate</button>
+              </div>
+
+            </div>
+            
+
+            </div>
+            
+            <div className="row mt-4 justify-content-center">
+              <div className="col-auto">
+                <button type="submit" className="btn btn-primary px-5">Submit</button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+        
+      
+       )
     
 }
 
