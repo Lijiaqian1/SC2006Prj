@@ -6,7 +6,7 @@ import '../Maps/Maps.css'
 
 export default class Maps extends React.Component {
     render(){
-        const {} = useLoadScript(googleMapsApiKey: "AIzaSyD-p0kwbAhzpsFvTp5UXJrH0YUlpTsnQzc" )
+        const {} = useLoadScript(googleMapsApiKey= "AIzaSyD-p0kwbAhzpsFvTp5UXJrH0YUlpTsnQzc" )
         return(
             <div>
                 <div>
