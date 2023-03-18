@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css'
-import NavigationBar from '../NavigationBar/NavigationBar';
+import NavigationBar from '../NavigationBar/NavigationBar.js';
 import {NavLink,useNavigate} from 'react-router-dom';
 const Home = () => {
         const auth = localStorage.getItem('user');

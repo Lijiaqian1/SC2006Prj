@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import '../App/App.css';
-import Card from 'react-bootstrap/Card';
+import Card from 'react-bootstrap/Card.js';
 import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
 
