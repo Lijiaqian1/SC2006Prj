@@ -16,6 +16,7 @@ import PrivateComponent from '../components/PrivateComponent';
 import {useState} from 'react';
 import { createContext } from 'react';
 import Results from '../components/Results/Results';
+import Footer from '../components/Footer/Footer';
 
 export const RecoveryContext = createContext();
 
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="results" element={<Results />} />
             <Route path="search" element={<Search />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       
       
