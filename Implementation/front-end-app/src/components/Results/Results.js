@@ -3,7 +3,7 @@ import {useState} from 'react';
 import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
-import ResultComponent from '../ResultComponent/ResultComponent';
+import ResultComponent from '../ResultComponent/ResultComponent.js';
 import { Outlet } from 'react-router-dom';
 
 const Results = () => {
