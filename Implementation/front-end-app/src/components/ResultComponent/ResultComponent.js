@@ -5,24 +5,87 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Figure from 'react-bootstrap/Figure';
 import '../Results/Results.css';
+import HondaLogo from '../ResultComponent/HondaLogo.png'
+import MiniCooperLogo from '../ResultComponent/MiniCooper.jpg';
+import ToyotaLogo from '../ResultComponent/Toyota.jpg';
+import MazdaLogo from '../ResultComponent/Mazda.jpg';
+import CarLogo from '../ResultComponent/CarLogo.jpg';
+import BMWLogo from '../ResultComponent/BMW.png';
+import MercedesLogo from '../ResultComponent/Mercedes-Logo.png';
 
 
 const ResultComponent = (props) => {
 
     let carName = props.carsdata.name;
 
+    function CarPicture({name}){
+        if(name.includes("Honda")){
+            return <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src={HondaLogo}/>
+        }
+
+        else if(name.includes("Mini Cooper")){
+            return <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src={MiniCooperLogo}/>
+        }
+
+        else if(name.includes("Toyota")){
+            return <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src={ToyotaLogo}/>
+        }
+
+        else if(name.includes("Mazda")){
+            return <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src={MazdaLogo}/>
+        }
+
+        else if(name.includes("BMW")){
+            return <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src={BMWLogo}/>
+        }
+
+        else if(name.includes("Mercedes")){
+            return <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src={MercedesLogo}/>
+        }
+
+        else{
+            return <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src={CarLogo}/>
+        }
+
+
+    }
+
     return(
-    <Card className="mx-2">
+    <Card className="mx-4 mt-5">
       <Card.Header className="header" as="h5">{props.carsdata.name}</Card.Header>
       <Card.Body>
         <Row>
             <Col>
             <Figure>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src=""/>
+                <CarPicture name={carName}/>
             </Figure>
 
             </Col>
@@ -56,7 +119,7 @@ const ResultComponent = (props) => {
         </Row>
 
         <Row>
-            <Button className="col-md-3 mx-auto" variant="primary">View</Button>
+            <Button className="col-md-3 mx-auto" variant="primary">Let's Go!</Button>
         </Row>
 
       </Card.Body>

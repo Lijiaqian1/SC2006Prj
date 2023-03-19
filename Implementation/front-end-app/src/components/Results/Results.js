@@ -4,14 +4,13 @@ import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
 import ResultComponent from '../ResultComponent/ResultComponent';
-import { Outlet } from 'react-router-dom';
+
 
 const Results = () => {
 
   
     const Cars = {
-      imageSrc: '',
-      name: 'Mini Cooper',
+      name: 'Mercedes',
       location: 'Nanyang Avenue 24, 639811',
       price: 'SGD 45',
       noOfSeats: '4',
@@ -23,7 +22,7 @@ const Results = () => {
     const [selectedDate,setSelectedDate] = useState(null);
     const [location, setLocation] = useState('');
     const [estimateTime, setEstimateTime] = useState('');
-    const [typeofcar, setTypeofcar] = useState('');
+    const [typeofcar, setTypeofcar] = useState('All');
 
     
     const handleSubmit = (e) => {
