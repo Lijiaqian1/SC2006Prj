@@ -5,11 +5,17 @@ import pymongo
 import json
 import hashlib
 import os
+import sys
 
-location= "Jurong Point"
-date= "2023-03-20"
-pickup_time= "17"
-duration= 2
+
+
+
+location= sys.argv[0]
+date= sys.argv[1]
+pickup_time= sys.argv[2]
+duration= sys.argv[3]
+
+
 
 input_str = f"{location}{date}{pickup_time}{duration}"
 
