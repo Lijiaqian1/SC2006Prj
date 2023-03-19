@@ -115,13 +115,13 @@ def showprice(peak, group):
             return (10, 0.29)
 
 
-def calctotalprice( pricepair, durationhour, traveldistkm):
-    return pricepair[0]*durationhour+pricepair[1]*traveldistkm
+def calctotalprice( pricepair, durationhour):
+    return pricepair[0]*durationhour
 
 ##make the output
 ##make the search function
 
-def search(curlocation, pickupdate, pickuptime, duration, traveldistkm):
+def search(curlocation, pickupdate, pickuptime, duration):
     curlocation = geolocator.geocode('National University of Singapore')
     targetloc= nearestplace(curlocation[1][0], curlocation[1][1], data)
     outputdata=[]
@@ -129,17 +129,17 @@ def search(curlocation, pickupdate, pickuptime, duration, traveldistkm):
     for i in targetloc:
         carlist={}
         carlist['model']= i['vehicle_make_name']+i['vehicle_model_name']
-        carlist['type']=i['price_group_name']
-        carlist["tranmission"]= "Automatic"
         carlist['seats']= i['num_seats']
-        carlist['duration']= duration
-        carlist['exp_price']= calctotalprice(showprice(whichpeak(int(pickuptime), pickupdate), i['price_group_name']), duration, traveldistkm)
+        carlist['latitude']= i['latitude']
+        carlist['longitude']=i['longitude']
+        carlist['price']= calctotalprice(showprice(whichpeak(int(pickuptime), pickupdate), i['price_group_name']), duration)
+        carlist['rent_company']= "GetGo"
         outputdata.append(carlist)
 
     return outputdata
 
 
-final= search("Nanyang Technological University", "2023-03-16", '12', 2, 20)
+final= search("Nanyang Technological University", "2023-03-16", '12', 2)
 final = json.dumps(final, indent=2)
 with open("getgocars.json", "w") as outfile:
     outfile.write(final)

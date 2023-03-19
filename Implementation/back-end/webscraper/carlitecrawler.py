@@ -67,8 +67,8 @@ def search(location, pickupdate, pickuptime, durationhours):
                     if (j.text).strip():
                         attrss.append((j.text).strip())
                         #print("attr:", (j.text).strip())
-                carlist['transmission']= attrss[1]
-                carlist['seats']= attrss[2]
+                #carlist['transmission']= attrss[1]
+                carlist['seats']= int(attrss[2][0])
 
             if(i.find('div', attrs={'class': 'pd-b-25'})):
                 block= i.find('div', attrs={'class': 'pd-b-25'})
@@ -76,7 +76,10 @@ def search(location, pickupdate, pickuptime, durationhours):
                     if (j.text).strip():
                         loca= j.text
                         ##print("lcoation:",loca)
-                carlist['Location']= loca
+                locagps = geolocator.geocode(loca)
+
+                carlist['latitude']= locagps[1][0]
+                carlist['longitude']= locagps[1][1]
 
             if(i.find('div', attrs={'class': 'pd-l-60 col-md-3 col-6'})):
                 block= i.find_all('div', attrs={'class': 'pd-l-60 col-md-3 col-6'})
@@ -84,20 +87,22 @@ def search(location, pickupdate, pickuptime, durationhours):
                     txtcont= b.find('h5')
                     if "SGD" in txtcont.text.strip():
                         ##print("Price ", txtcont.text.strip())
-                        carlist['Price']= txtcont.text.strip()
+                        price= txtcont.text.strip()
+                        carlist['price']= float(price[4:])
             available= i.find('div', attrs={'class': 'pos-md-absolute t-0 r-0 pd-md-30 col-md-3 col-12 wd-20p'})
             available= (available.text).strip()
             if 'Not Available' in available:
                 continue
                 #print("not saved")
             else:
+                carlist['rent_company']="CarLite"
                 data.append(carlist)
 
     return data
 
 
 
-final= search("Changi Airport", "2023-03-16", "17", 1)
+final= search("Changi Airport", "2023-03-20", "17", 1)
 
 final = json.dumps(final, indent=2)
 with open("carlitecars.json", "w") as outfile:

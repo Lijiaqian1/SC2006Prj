@@ -1,42 +1,42 @@
 [
   {
     "model": "HondaShuttle Hybrid",
-    "type": "Standard",
-    "tranmission": "Automatic",
     "seats": 5,
-    "duration": 2,
-    "exp_price": 19.8
+    "latitude": 1.3028866235,
+    "longitude": 103.7836853281,
+    "price": 12,
+    "rent_company": "GetGo"
   },
   {
     "model": "ToyotaSienta",
-    "type": "Standard",
-    "tranmission": "Automatic",
     "seats": 7,
-    "duration": 2,
-    "exp_price": 19.8
+    "latitude": 1.3047635677,
+    "longitude": 103.7816971993,
+    "price": 12,
+    "rent_company": "GetGo"
   },
   {
     "model": "SsangyongTivoli",
-    "type": "Standard",
-    "tranmission": "Automatic",
     "seats": 5,
-    "duration": 2,
-    "exp_price": 19.8
+    "latitude": 1.3047807711,
+    "longitude": 103.785186477,
+    "price": 12,
+    "rent_company": "GetGo"
   },
   {
     "model": "ToyotaSienta Hybrid",
-    "type": "Standard",
-    "tranmission": "Automatic",
     "seats": 7,
-    "duration": 2,
-    "exp_price": 19.8
+    "latitude": 1.3036974897,
+    "longitude": 103.7661312947,
+    "price": 12,
+    "rent_company": "GetGo"
   },
   {
     "model": "Mazda3",
-    "type": "Standard",
-    "tranmission": "Automatic",
     "seats": 5,
-    "duration": 2,
-    "exp_price": 19.8
+    "latitude": 1.3007475535,
+    "longitude": 103.7885883273,
+    "price": 12,
+    "rent_company": "GetGo"
   }
 ]

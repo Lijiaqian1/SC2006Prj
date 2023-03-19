@@ -88,21 +88,20 @@ def search(curlocation, pickupdate, pickuptime, duration):
             info= i.find('div', {'class': 'col-md-12'}).text
             info= info.strip()
             info= info.split("\n\n")
-            car_type= info[0]
             xinfo= info[1].split(',')
-            car_transmission= xinfo[0].strip()
             car_seats= xinfo[1].strip()
             location= info[2].strip()
-            duration= i.find('div', {'class': 'col-md-2 col-sm-3 hidden-xs durationLong'}).text
-            duration= (duration.strip()).split('\n')
+            #duration= i.find('div', {'class': 'col-md-2 col-sm-3 hidden-xs durationLong'}).text
+            #duration= (duration.strip()).split('\n')
             price= i.find('p', {'class': "priceLabel text-center"}).text
             car['model']= car_model
-            car['type']= car_type
-            car['transmission']=car_transmission
-            car['seats']=car_seats
-            car['location']= location
-            car['duration']= duration
+            car['seats']=int(car_seats[0])
+            locagps = geolocator.geocode(location)
+            car['latitude']= locagps[1][0]
+            car['longitude']=locagps[1][1]
+            price= float(price[1:])*duration
             car['price']= price
+            car['rent_company']="TribeCar"
             carlist.append(car)
 
         except:
@@ -110,12 +109,7 @@ def search(curlocation, pickupdate, pickuptime, duration):
     print("completed")
     return carlist
 
-incurloc= str(sys.argv[1])
-indate= str(sys.argv[2])
-##date in #Year-#Month-#DayNumber
-intime= str(sys.argv[3])
-induration= int(sys.argv[4])
-data= search(incurloc, indate, intime, induration)
+data= search("Changi Airport", "2023-03-20", "17", 2)
 final = json.dumps(data, indent=2)
 with open("tribecars.json", "w") as outfile:
     outfile.write(final)

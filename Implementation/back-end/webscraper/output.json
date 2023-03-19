@@ -1,0 +1,164 @@
+[
+  {
+    "model": "Mazda 2 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3605525,
+    "longitude": 103.9370231,
+    "price": 7.6,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Altis (11th Gen)",
+    "seats": 5,
+    "latitude": 1.351419,
+    "longitude": 103.933555,
+    "price": 8.2,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "NV200 (Petrol)",
+    "seats": 2,
+    "latitude": 1.3548442,
+    "longitude": 103.9387432,
+    "price": 7.6,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Mazda 2 HB",
+    "seats": 5,
+    "latitude": 1.3560764,
+    "longitude": 103.9568629,
+    "price": 7.6,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Fit",
+    "seats": 5,
+    "latitude": 1.3557553,
+    "longitude": 103.9502476,
+    "price": 8.2,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "NV200 (Petrol)",
+    "seats": 2,
+    "latitude": 1.3593442,
+    "longitude": 103.9561855,
+    "price": 7.6,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Fit",
+    "seats": 5,
+    "latitude": 1.360422,
+    "longitude": 103.9532611,
+    "price": 8.2,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "City (5th Gen)",
+    "seats": 5,
+    "latitude": 1.3634445,
+    "longitude": 103.9347373,
+    "price": 8.2,
+    "rent_company": "CarLite",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "HondaShuttle Hybrid",
+    "seats": 5,
+    "latitude": 1.3028866235,
+    "longitude": 103.7836853281,
+    "price": 12,
+    "rent_company": "GetGo",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "ToyotaSienta",
+    "seats": 7,
+    "latitude": 1.3047635677,
+    "longitude": 103.7816971993,
+    "price": 12,
+    "rent_company": "GetGo",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "SsangyongTivoli",
+    "seats": 5,
+    "latitude": 1.3047807711,
+    "longitude": 103.785186477,
+    "price": 12,
+    "rent_company": "GetGo",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "ToyotaSienta Hybrid",
+    "seats": 7,
+    "latitude": 1.3036974897,
+    "longitude": 103.7661312947,
+    "price": 12,
+    "rent_company": "GetGo",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Mazda3",
+    "seats": 5,
+    "latitude": 1.3007475535,
+    "longitude": 103.7885883273,
+    "price": 12,
+    "rent_company": "GetGo",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Mazda 2 Sedan (2016-2020)",
+    "seats": 5,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 12.0,
+    "rent_company": "TribeCar",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Opel Astra",
+    "seats": 5,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 16.0,
+    "rent_company": "TribeCar",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Toyota Wish (2003-2009)",
+    "seats": 7,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 13.0,
+    "rent_company": "TribeCar",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Honda Fit (2021 onwards)",
+    "seats": 5,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 15.0,
+    "rent_company": "TribeCar",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  },
+  {
+    "model": "Nissan NV350 (Diesel, Auto)",
+    "seats": 2,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 20.0,
+    "rent_company": "TribeCar",
+    "search_id": "2358acae041b6ba571e09d009f37ad09bb9e5e0f8ebcb425bbbbb69afa9e11b3"
+  }
+]

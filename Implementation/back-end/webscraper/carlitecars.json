@@ -1,30 +1,66 @@
 [
   {
-    "model": "Vios (Facelift)",
-    "transmission": "automatic",
-    "seats": "5 Seater",
-    "Location": "Tampines - 202A Tampines Street 21 - S521202",
-    "Price": "SGD 8.20"
+    "model": "Mazda 2 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3605525,
+    "longitude": 103.9370231,
+    "price": 7.6,
+    "rent_company": "CarLite"
   },
   {
-    "model": "Vios (Facelift)",
-    "transmission": "automatic",
-    "seats": "5 Seater",
-    "Location": "Tampines - 842A Tampines Street 82 - S521842",
-    "Price": "SGD 8.20"
+    "model": "Altis (11th Gen)",
+    "seats": 5,
+    "latitude": 1.351419,
+    "longitude": 103.933555,
+    "price": 8.2,
+    "rent_company": "CarLite"
   },
   {
     "model": "NV200 (Petrol)",
-    "transmission": "automatic",
-    "seats": "2 Seater",
-    "Location": "Tampines - 499 Tampines Ave 9 - S521499",
-    "Price": "SGD 7.60"
+    "seats": 2,
+    "latitude": 1.3548442,
+    "longitude": 103.9387432,
+    "price": 7.6,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 2 HB",
+    "seats": 5,
+    "latitude": 1.3560764,
+    "longitude": 103.9568629,
+    "price": 7.6,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Fit",
+    "seats": 5,
+    "latitude": 1.3557553,
+    "longitude": 103.9502476,
+    "price": 8.2,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "NV200 (Petrol)",
+    "seats": 2,
+    "latitude": 1.3593442,
+    "longitude": 103.9561855,
+    "price": 7.6,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Fit",
+    "seats": 5,
+    "latitude": 1.360422,
+    "longitude": 103.9532611,
+    "price": 8.2,
+    "rent_company": "CarLite"
   },
   {
     "model": "City (5th Gen)",
-    "transmission": "automatic",
-    "seats": "5 Seater",
-    "Location": "Tampines - 609 Tampines North 1 - S520609",
-    "Price": "SGD 8.20"
+    "seats": 5,
+    "latitude": 1.3634445,
+    "longitude": 103.9347373,
+    "price": 8.2,
+    "rent_company": "CarLite"
   }
 ]
