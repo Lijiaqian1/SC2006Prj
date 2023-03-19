@@ -11,7 +11,7 @@ const Results = () => {
 
     /*Need to connect with backend to get dynamic result*/
     const Cars = {
-      name: 'Mercedes',
+      name: 'BMW',
       location: 'Nanyang Avenue 24, 639811',
       price: 'SGD 45',
       noOfSeats: '4',
