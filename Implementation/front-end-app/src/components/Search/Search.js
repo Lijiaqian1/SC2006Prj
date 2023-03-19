@@ -8,7 +8,16 @@ import '../Results/Results.css';
 
 const Search = () => {
 
-      const [selectedDate,setSelectedDate] = useState(null);
+  const [selectedDate,setSelectedDate] = useState(null);
+  const [location, setLocation] = useState('');
+  const [estimateTime, setEstimateTime] = useState('');
+  const [typeofcar, setTypeofcar] = useState('');
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(selectedDate,location,estimateTime,typeofcar);
+  }
 
 
        return(
