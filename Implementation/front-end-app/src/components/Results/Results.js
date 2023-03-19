@@ -4,11 +4,12 @@ import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
 import ResultComponent from '../ResultComponent/ResultComponent';
+import ResultList from '../ResultList/ResultList';
 
 
 const Results = () => {
 
-  
+    /*Need to connect with backend to get dynamic result*/
     const Cars = {
       name: 'Mercedes',
       location: 'Nanyang Avenue 24, 639811',
@@ -17,7 +18,7 @@ const Results = () => {
       transmission: 'Automatic',
     }
 
-    const CarArray = [Cars];
+    const CarArray = [Cars,Cars,Cars,Cars,Cars];
 
     const [selectedDate,setSelectedDate] = useState(null);
     const [location, setLocation] = useState('');
@@ -85,7 +86,7 @@ const Results = () => {
 
     </form>
 
-    <ResultComponent carsdata = {Cars}/>
+    <ResultList CarArray = {CarArray}/>
 
   </div>
 )

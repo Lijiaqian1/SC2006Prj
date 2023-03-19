@@ -79,7 +79,7 @@ const ResultComponent = (props) => {
     }
 
     return(
-    <Card className="mx-4 mt-5">
+    <Card className="mx-4 mt-5 mb-3">
       <Card.Header className="header" as="h5">{props.carsdata.name}</Card.Header>
       <Card.Body>
         <Row>
