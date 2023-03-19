@@ -5,9 +5,12 @@ import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
 import ResultComponent from '../ResultComponent/ResultComponent';
 import ResultList from '../ResultList/ResultList';
+import {NavLink,useNavigate} from 'react-router-dom';
 
 
 const Results = () => {
+
+    const Navigate = useNavigate();
 
     /*Need to connect with backend to get dynamic result*/
     const Cars = {
@@ -26,9 +29,12 @@ const Results = () => {
     const [typeofcar, setTypeofcar] = useState('All');
 
     
+    /*Fetch function*/
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log(location, estimateTime, typeofcar, selectedDate);
+
+      Navigate('/results');
     }
 
     return(

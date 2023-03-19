@@ -4,10 +4,11 @@ import '../Search/Search.css';
 import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
-
+import {NavLink,useNavigate} from 'react-router-dom';
 
 const Search = () => {
 
+  const Navigate = useNavigate();
   const [selectedDate,setSelectedDate] = useState(null);
   const [location, setLocation] = useState('');
   const [estimateTime, setEstimateTime] = useState('');
@@ -17,6 +18,8 @@ const Search = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(selectedDate,location,estimateTime,typeofcar);
+
+    Navigate('/results');
   }
 
 
