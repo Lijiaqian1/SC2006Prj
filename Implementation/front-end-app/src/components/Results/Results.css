@@ -1,0 +1,25 @@
+.background-darkblue{
+    background-color: #16215B;
+}
+
+label{
+    color: white;
+}
+
+.priceNumber{
+    font-family: Gill Sans, Verdana;
+	font-size: 24px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: bold;
+    color: #F15A28;
+}
+
+.header{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 24px;
+
+}

@@ -108,6 +108,20 @@ app.post('/sendEmail',(req,res) => {
         .catch(error => res.status(500).send(error.message))
 })
 
+app.post('/sendRecoverEmail',(req,res) => {
+    const {email,otp} = req.body;
+    console.log(email,otp);
+    console.log(otp);
+
+    const lengthOfString = email.length;
+    let newEmail = email.substring(1,lengthOfString-1);
+    sendEmail(newEmail,otp)
+        .then(response => {
+            return res.send(response.message)
+        })
+        .catch(error => res.status(500).send(error.message))
+})
+
 //root or the index page
 app.get('/', (req, res) => {
     res.send('<h1>home page</h1>');

@@ -17,3 +17,7 @@
     transform: translateY(500%);
 }
 
+.resendBtn{
+    text-decoration: underline;
+}
+

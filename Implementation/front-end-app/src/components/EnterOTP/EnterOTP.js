@@ -39,8 +39,9 @@ const EnterOTP = () =>{
         if(email){
             const info = {email,otp};
             console.log(info);
+            console.log(otp);
 
-            let result = await fetch("http://localhost:5000/sendEmail", {
+            let result = await fetch("http://localhost:5000/sendRecoverEmail", {
                 method: "POST", 
                 body: JSON.stringify(info),
                 headers:{
@@ -89,7 +90,7 @@ const EnterOTP = () =>{
 
 
                     <div className = "text text-center mt-3" onClick={resendOTP}>
-                        {disable? `Resend OTP in ${timerCount}s` : "Resend OTP"}
+                        {disable? `Resend OTP in ${timerCount}s` : <button className="btn btn-outline-info">Resend OTP</button>}
                     </div>
 
                 </form>
