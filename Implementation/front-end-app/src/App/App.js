@@ -17,6 +17,7 @@ import { createContext } from 'react';
 import Results from '../components/Results/Results';
 import Footer from '../components/Footer/Footer';
 import CalculateDistance from '../components/CalculateDistance/CalculateDistance';
+import Map from '../components/Map/Map';
 
 export const RecoveryContext = createContext();
 
@@ -49,8 +50,6 @@ export default function App() {
             <Route path='recoverpassword' element={<RecoverPassword />} />
             <Route path='enterotp' element={<EnterOTP />} />
             <Route path='calculatedistance' element={<CalculateDistance />} />
-
-
           </Routes>
           <Footer />
         </BrowserRouter>
