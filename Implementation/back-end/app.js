@@ -9,32 +9,12 @@ app.use(morgan('dev'));
 const cors = require("cors");
 app.use(cors()); //Uses cors as a middleware
 const bcrypt = require("bcryptjs");
+const { spawn } = require('child_process');
 
 const nodemailer = require('nodemailer');
 
 const jwt = require("jsonwebtoken");
 const jwtKey = 'CCRental';
-
-//Import jsonwebtoken
-//const jwt = require("jsonwebtoken");
-//const JWT_SECRET = "adkfdksfds2302948djfadfs12490?[]dfsadff1235t61d"
-
-
-//the password for the database. just msg Viral b4 using this so he can allow ur ip address to use the db.
-//hO55WK6wE1a90YS3
-
-//Password for my own DB: sqFXGejkNSXPj7Mu
-//const dbURI = 'mongodb+srv://keenlim:sqFXGejkNSXPj7Mu@cluster0.zb9ywz9.mongodb.net/?retryWrites=true&w=majority';
-
-//connecting to database
-//const dbURI= 'mongodb+srv://ccradmin:hO55WK6wE1a90YS3@comparecarrentals.uvrqqxu.mongodb.net/?retryWrites=true&w=majority';
-/*mongoose.connect(dbURI,{
-    useNewUrlParser: true
-})
-    .then(() => {
-        console.log("connected to DB");
-    })
-    .catch((err)=> console.log(err));*/
 
 //Require the mongoDB schema
 require("./models/accounts");
@@ -253,20 +233,38 @@ app.post('/login', async(req, res)=> {
 
 });
 
-app.post("/userData",async(req,res)=>{
-    const {token} = req.body;
-    try{
-        const user = jwt.verify(token,JWT_SECRET);
-        //console.log(user);
-        const useremail = user.email;
-        User.findOne({email:useremail}).then((data)=>{
-            res.send({status:"ok",data: data});
-        }).catch((error)=>{
-            res.send({status:"error",data: error});
-        });
-    }catch(error){
+/*Scrape functions*/
 
-    }
+app.get('/scrape', (req, res)=> {
+    res.send('<h1>scrape</h1>');
+});
+
+app.post('/scrape', (req, res) => {
+    // Extract the parameters from the request body
+    locationp= req.body.location;
+    datep= req.body.pickupdate;
+    timep= req.body.pickuptime;
+    durationp= req.body.duration;
+
+    // Call the Python script using child_process.spawn()
+    const scraperProcess = spawn('python3', ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
+
+    // Listen for output from the Python script
+    scraperProcess.stdout.on('data', (data) => {
+        console.log(`Python script output: ${data}`);
+    });
+
+    // Listen for errors from the Python script
+    
+    scraperProcess.stderr.on('data', (data) => {
+        console.error(`Python script error: ${data}`);
+    });
+
+    // Listen for the Python script to exit
+    scraperProcess.on('exit', (code) => {
+        console.log(`Python script exited with code ${code}`);
+        res.status(200).send("Scraping completed successfully");
+    });
 });
 
 

@@ -13,10 +13,10 @@ import ForgetPassword from '../components/ForgetPassword/ForgetPassword';
 import UserDetails from '../components/UserDetails/UserDetails';
 import NavigationBar from '../components/NavigationBar/NavigationBar';
 import PrivateComponent from '../components/PrivateComponent';
-import {useState} from 'react';
 import { createContext } from 'react';
 import Results from '../components/Results/Results';
 import Footer from '../components/Footer/Footer';
+import CalculateDistance from '../components/CalculateDistance/CalculateDistance';
 
 export const RecoveryContext = createContext();
 
@@ -25,6 +25,7 @@ export default function App() {
   //const [page, setPage] = useState("login");
   //const [emails, setEmails] = useState('');
   
+
 
   return (
     <div className="App">
@@ -47,6 +48,8 @@ export default function App() {
             <Route path='forgetpassword' element={<ForgetPassword />} />
             <Route path='recoverpassword' element={<RecoverPassword />} />
             <Route path='enterotp' element={<EnterOTP />} />
+            <Route path='calculatedistance' element={<CalculateDistance />} />
+
 
           </Routes>
           <Footer />
