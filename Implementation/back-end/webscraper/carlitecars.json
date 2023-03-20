@@ -1,26 +1,10 @@
 [
   {
-    "model": "Axio (Facelift)",
+    "model": "Mazda 3 Skyactiv",
     "seats": 5,
-    "latitude": 1.3451469,
-    "longitude": 103.8548685,
-    "price": 12.4,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Fit Hybrid (3rd Gen)",
-    "seats": 5,
-    "latitude": 1.3579846,
-    "longitude": 103.8446775,
-    "price": 13.8,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Kia K3 (3rd Gen)",
-    "seats": 5,
-    "latitude": 1.3575124,
-    "longitude": 103.8467041,
-    "price": 12.4,
+    "latitude": 1.339792,
+    "longitude": 103.701055,
+    "price": 16.4,
     "rent_company": "CarLite"
   }
 ]

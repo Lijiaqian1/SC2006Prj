@@ -21,6 +21,7 @@ app.get('/scrape', (req, res)=> {
 
 app.post('/scrape', (req, res) => {
     // Extract the parameters from the request body
+    console.log("Starting python file");
     locationp= req.body.location;
     datep= req.body.pickupdate;
     timep= req.body.pickuptime;
