@@ -2,41 +2,17 @@
   {
     "model": "Mazda 2 Sedan (2016-2020)",
     "seats": 5,
-    "latitude": 1.3720937,
-    "longitude": 103.9473728,
+    "latitude": 1.3019687,
+    "longitude": 103.8970821,
     "price": 12.0,
-    "rent_company": "TribeCar"
-  },
-  {
-    "model": "Opel Astra",
-    "seats": 5,
-    "latitude": 1.3720937,
-    "longitude": 103.9473728,
-    "price": 16.0,
-    "rent_company": "TribeCar"
-  },
-  {
-    "model": "Toyota Wish (2003-2009)",
-    "seats": 7,
-    "latitude": 1.3720937,
-    "longitude": 103.9473728,
-    "price": 13.0,
     "rent_company": "TribeCar"
   },
   {
     "model": "Honda Fit (2021 onwards)",
     "seats": 5,
-    "latitude": 1.3720937,
-    "longitude": 103.9473728,
-    "price": 15.0,
-    "rent_company": "TribeCar"
-  },
-  {
-    "model": "Nissan NV350 (Diesel, Auto)",
-    "seats": 2,
-    "latitude": 1.3720937,
-    "longitude": 103.9473728,
-    "price": 20.0,
+    "latitude": 1.3019687,
+    "longitude": 103.8970821,
+    "price": 10.0,
     "rent_company": "TribeCar"
   }
 ]

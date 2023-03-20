@@ -11,13 +11,13 @@ import sys
 
 geolocator = GoogleV3(api_key='AIzaSyCRa8maOVVWwWRYQ_fyUWD5v_F2BDxqWBU')
 import pickle
-with open('locationgps.pkl', 'rb') as f:
+with open('webscraper/locationgps.pkl', 'rb') as f:
     locationgps = pickle.load(f)
 
-with open('locationsname.pkl', 'rb') as f:
+with open('webscraper/locationsname.pkl', 'rb') as f:
     locationsname = pickle.load(f)
 
-with open('locationsval.pkl', 'rb') as f:
+with open('webscraper/locationsval.pkl', 'rb') as f:
     locationsval = pickle.load(f)
 
 def calcdist(lat1, lon1, lat2, lon2):
@@ -99,7 +99,7 @@ def search(curlocation, pickupdate, pickuptime, duration):
             locagps = geolocator.geocode(location)
             car['latitude']= locagps[1][0]
             car['longitude']=locagps[1][1]
-            price= float(price[1:])*duration
+            price= float(price[1:])*int(duration)
             car['price']= price
             car['rent_company']="TribeCar"
             carlist.append(car)
@@ -107,12 +107,17 @@ def search(curlocation, pickupdate, pickuptime, duration):
         except:
             continue
     print("completed")
+    final = json.dumps(carlist, indent=2)
+    with open("webscraper/tribecars.json", "w") as outfile:
+        outfile.write(final)
     return carlist
 
+'''
 data= search("Changi Airport", "2023-03-20", "17", 2)
 final = json.dumps(data, indent=2)
 with open("tribecars.json", "w") as outfile:
     outfile.write(final)
+'''
 
 '''
 run in terminal

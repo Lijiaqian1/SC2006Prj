@@ -1,66 +1,26 @@
 [
   {
-    "model": "Mazda 2 (3rd Gen)",
+    "model": "Axio (Facelift)",
     "seats": 5,
-    "latitude": 1.3605525,
-    "longitude": 103.9370231,
-    "price": 7.6,
+    "latitude": 1.3451469,
+    "longitude": 103.8548685,
+    "price": 12.4,
     "rent_company": "CarLite"
   },
   {
-    "model": "Altis (11th Gen)",
+    "model": "Fit Hybrid (3rd Gen)",
     "seats": 5,
-    "latitude": 1.351419,
-    "longitude": 103.933555,
-    "price": 8.2,
+    "latitude": 1.3579846,
+    "longitude": 103.8446775,
+    "price": 13.8,
     "rent_company": "CarLite"
   },
   {
-    "model": "NV200 (Petrol)",
-    "seats": 2,
-    "latitude": 1.3548442,
-    "longitude": 103.9387432,
-    "price": 7.6,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Mazda 2 HB",
+    "model": "Kia K3 (3rd Gen)",
     "seats": 5,
-    "latitude": 1.3560764,
-    "longitude": 103.9568629,
-    "price": 7.6,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Fit",
-    "seats": 5,
-    "latitude": 1.3557553,
-    "longitude": 103.9502476,
-    "price": 8.2,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "NV200 (Petrol)",
-    "seats": 2,
-    "latitude": 1.3593442,
-    "longitude": 103.9561855,
-    "price": 7.6,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Fit",
-    "seats": 5,
-    "latitude": 1.360422,
-    "longitude": 103.9532611,
-    "price": 8.2,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "City (5th Gen)",
-    "seats": 5,
-    "latitude": 1.3634445,
-    "longitude": 103.9347373,
-    "price": 8.2,
+    "latitude": 1.3575124,
+    "longitude": 103.8467041,
+    "price": 12.4,
     "rent_company": "CarLite"
   }
 ]

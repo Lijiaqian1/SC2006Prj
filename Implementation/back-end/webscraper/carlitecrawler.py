@@ -8,13 +8,13 @@ from geopy.geocoders import GoogleV3
 geolocator = GoogleV3(api_key='AIzaSyCRa8maOVVWwWRYQ_fyUWD5v_F2BDxqWBU')
 
 import pickle
-with open('carlitelocations.pkl', 'rb') as f:
+with open('webscraper/carlitelocations.pkl', 'rb') as f:
     locationgps = pickle.load(f)
 
-with open('carlitelocationsname.pkl', 'rb') as f:
+with open('webscraper/carlitelocationsname.pkl', 'rb') as f:
     locationsname = pickle.load(f)
 
-with open('carlitelocationsidl.pkl', 'rb') as f:
+with open('webscraper/carlitelocationsidl.pkl', 'rb') as f:
     locationsid = pickle.load(f)
 
 def calcdist(lat1, lon1, lat2, lon2):
@@ -39,7 +39,7 @@ def nearestplace(curlat, curlong, locationgps, locationsname, locationsval):
 
 
 def search(location, pickupdate, pickuptime, durationhours):
-    endtime= (int(pickuptime)+durationhours)%24
+    endtime= (int(pickuptime)+int(durationhours))%24
     curlocation = geolocator.geocode(location)
     targetloc= nearestplace(curlocation[1][0], curlocation[1][1], locationgps, locationsname, locationsid)
     urlt= f'https://www.carlite.sg/booking-search?from={pickupdate}%20{pickuptime}%3A00%3A00&to={pickupdate}%20{endtime}%3A00%3A00&vehicle_location_id=area-{targetloc[1]}&vehicle_model_id='
@@ -98,12 +98,16 @@ def search(location, pickupdate, pickuptime, durationhours):
                 carlist['rent_company']="CarLite"
                 data.append(carlist)
 
+
+    final = json.dumps(data, indent=2)
+    with open("webscraper/carlitecars.json", "w") as outfile:
+        outfile.write(final)
     return data
 
 
 
-final= search("Changi Airport", "2023-03-20", "17", 1)
+#final= search("Changi Airport", "2023-03-20", "17", 1)
 
-final = json.dumps(final, indent=2)
-with open("carlitecars.json", "w") as outfile:
-    outfile.write(final)
+#final = json.dumps(final, indent=2)
+#with open("webscraper/carlitecars.json", "w") as outfile:
+    #outfile.write(final)

@@ -10,10 +10,10 @@ import sys
 
 
 
-location= sys.argv[0]
-date= sys.argv[1]
-pickup_time= sys.argv[2]
-duration= sys.argv[3]
+location= sys.argv[1]
+date= sys.argv[2]
+pickup_time= sys.argv[3]
+duration= sys.argv[4]
 
 
 
@@ -30,7 +30,7 @@ tc.search(location, date, pickup_time, duration)
 
 
 # List of JSON files to concatenate
-file_list = ['carlitecars.json', 'getgocars.json', 'tribecars.json']
+file_list = ['webscraper/carlitecars.json', 'webscraper/getgocars.json', 'webscraper/tribecars.json']
 
 # Initialize an empty list to store the JSON objects
 json_objects = []
@@ -47,7 +47,7 @@ for file_name in file_list:
         json_objects.extend(data)
 
 # Write the concatenated JSON objects to a new file
-with open('output.json', 'w') as f:
+with open('webscraper/output.json', 'w') as f:
     json.dump(json_objects, f, indent=2)
 
 

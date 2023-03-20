@@ -12,7 +12,7 @@ import sys
 geolocator = GoogleV3(api_key='AIzaSyCRa8maOVVWwWRYQ_fyUWD5v_F2BDxqWBU')
 import pickle
 
-with open('getgocardata.pkl', 'rb') as f:
+with open('webscraper/getgocardata.pkl', 'rb') as f:
     data = pickle.load(f)
 
 def whichpeak(timehour24, pickupdate):
@@ -116,13 +116,13 @@ def showprice(peak, group):
 
 
 def calctotalprice( pricepair, durationhour):
-    return pricepair[0]*durationhour
+    return pricepair[0]*int(durationhour)
 
 ##make the output
 ##make the search function
 
 def search(curlocation, pickupdate, pickuptime, duration):
-    curlocation = geolocator.geocode('National University of Singapore')
+    curlocation = geolocator.geocode(curlocation)
     targetloc= nearestplace(curlocation[1][0], curlocation[1][1], data)
     outputdata=[]
 
@@ -136,10 +136,13 @@ def search(curlocation, pickupdate, pickuptime, duration):
         carlist['rent_company']= "GetGo"
         outputdata.append(carlist)
 
+    final = json.dumps(outputdata, indent=2)
+    with open("webscraper/getgocars.json", "w") as outfile:
+        outfile.write(final)
     return outputdata
 
 
-final= search("Nanyang Technological University", "2023-03-16", '12', 2)
-final = json.dumps(final, indent=2)
-with open("getgocars.json", "w") as outfile:
-    outfile.write(final)
+#final= search("Nanyang Technological University", "2023-03-16", '12', 2)
+##final = json.dumps(final, indent=2)
+#with open("webscraper/getgocars.json", "w") as outfile:
+    #outfile.write(final)
