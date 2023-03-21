@@ -130,7 +130,7 @@ const RegisterForm = () =>{
                 <button type="submit" className="btn btn-primary position-absolute w-25 p-3 top-50 start-50 translate-middle mt-3 rounded-pill">Sign Up</button>
             </div>
             
-            <div className="col-12 position-relative">
+            <div className="col-12 position-relative mb-5">
                 <h6 className="text-white position-absolute top-50 start-50 translate-middle mt-3 mb-5">By signing up, you agree to the Terms of Use and Privacy Policy</h6>
             </div>
             </form>
