@@ -6,6 +6,9 @@ import json
 import hashlib
 import os
 import sys
+import certifi
+ca = certifi.where()
+
 
 
 
@@ -51,7 +54,7 @@ with open('webscraper/output.json', 'w') as f:
     json.dump(json_objects, f, indent=2)
 
 
-client = pymongo.MongoClient("mongodb+srv://Viral:Viral123@cluster0.4ejvdiv.mongodb.net/CC_Rental?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://Viral:Viral123@cluster0.4ejvdiv.mongodb.net/CC_Rental?retryWrites=true&w=majority", tlsCAFile=ca)
 db = client["CC_Rental"]
 
 # Create a new collection

@@ -11,6 +11,9 @@ app.use(cors()); //Uses cors as a middleware
 const bcrypt = require("bcryptjs");
 const { spawn } = require('child_process');
 
+//Comment out if needed
+const pythonpath= "C:/Python310/python.exe";
+
 const nodemailer = require('nodemailer');
 
 const jwt = require("jsonwebtoken");
@@ -246,8 +249,9 @@ app.post('/scrape', (req, res) => {
     timep= req.body.pickuptime;
     durationp= req.body.duration;
 
+    //const scraperProcess = spawn('python3', ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
     // Call the Python script using child_process.spawn()
-    const scraperProcess = spawn('python3', ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
+    const scraperProcess = spawn(pythonpath, ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
 
     // Listen for output from the Python script
     scraperProcess.stdout.on('data', (data) => {

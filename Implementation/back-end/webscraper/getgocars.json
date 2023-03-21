@@ -1,41 +1,41 @@
 [
   {
-    "model": "Mazda3",
+    "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3417196472,
-    "longitude": 103.7071505685,
+    "latitude": 1.3598144675,
+    "longitude": 103.9697005661,
     "price": 18,
     "rent_company": "GetGo"
   },
   {
-    "model": "MitsubishiAttrage",
-    "seats": 5,
-    "latitude": 1.3416050746,
-    "longitude": 103.7080875361,
-    "price": 14,
-    "rent_company": "GetGo"
-  },
-  {
-    "model": "Mazda3",
-    "seats": 5,
-    "latitude": 1.3423655158,
-    "longitude": 103.7058385359,
+    "model": "ToyotaSienta Hybrid",
+    "seats": 7,
+    "latitude": 1.364915572,
+    "longitude": 103.9650337427,
     "price": 18,
     "rent_company": "GetGo"
   },
   {
     "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3414346354,
-    "longitude": 103.7043680252,
+    "latitude": 1.364915572,
+    "longitude": 103.9650337427,
     "price": 18,
     "rent_company": "GetGo"
   },
   {
-    "model": "Mazda3",
+    "model": "ToyotaAxio",
     "seats": 5,
-    "latitude": 1.3395174741,
-    "longitude": 103.7031616069,
+    "latitude": 1.3708325284,
+    "longitude": 103.963392169,
+    "price": 18,
+    "rent_company": "GetGo"
+  },
+  {
+    "model": "SsangyongTivoli",
+    "seats": 5,
+    "latitude": 1.3708325284,
+    "longitude": 103.963392169,
     "price": 18,
     "rent_company": "GetGo"
   }
