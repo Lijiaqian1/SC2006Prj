@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
 import ResultComponent from '../ResultComponent/ResultComponent';
 import ResultList from '../ResultList/ResultList';
+import {format} from 'date-fns';
 import {NavLink,useNavigate} from 'react-router-dom';
 
 
@@ -14,25 +15,50 @@ const Results = () => {
 
     /*Need to connect with backend to get dynamic result*/
     const Cars = {
-      name: 'BMW',
+      model: 'BMW',
       location: 'Nanyang Avenue 24, 639811',
       price: 'SGD 45',
-      noOfSeats: '4',
-      transmission: 'Automatic',
+      seats: '4',
+      rent_company: 'CarLite',
     }
-
-    const CarArray = [Cars,Cars,Cars,Cars,Cars];
 
     const [selectedDate,setSelectedDate] = useState(null);
     const [location, setLocation] = useState('');
     const [estimateTime, setEstimateTime] = useState('');
     const [typeofcar, setTypeofcar] = useState('All');
+    
+    const CarArray = [Cars,Cars];
+ 
 
     
     /*Fetch function*/
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(location, estimateTime, typeofcar, selectedDate);
+      console.log(selectedDate,location,estimateTime,typeofcar);
+
+      //Time formatting 
+      //Correct date formatting
+      let dateformatting = format(new Date(selectedDate), 'yyyy-MM-dd');
+      //Time formatting
+      let timeformatting = (selectedDate.toLocaleTimeString("en-GB")).substring(0,2);
+      console.log(dateformatting);
+      console.log(timeformatting);
+
+      let intDuration = parseInt(estimateTime);
+      console.log(intDuration);
+
+      let result = await fetch("http://localhost:5000/scrape", {
+        method: 'POST',
+        body: JSON.stringify({
+          location : location,
+          pickupdate : dateformatting,
+          pickuptime : timeformatting,
+          duration : intDuration
+        }),
+        headers:{
+          'Content-type' : 'application/json'
+        }
+      });
 
       Navigate('/results');
     }

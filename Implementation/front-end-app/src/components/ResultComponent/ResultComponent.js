@@ -16,10 +16,10 @@ import MercedesLogo from '../ResultComponent/Mercedes-Logo.png';
 
 const ResultComponent = (props) => {
 
-    let carName = props.carsdata.name;
+    let carName = props.carsdata.model;
 
-    function CarPicture({name}){
-        if(name.includes("Honda")){
+    function CarPicture({model}){
+        if(model.includes("Honda")){
             return <Figure.Image
             width={171}
             height={180}
@@ -27,7 +27,7 @@ const ResultComponent = (props) => {
             src={HondaLogo}/>
         }
 
-        else if(name.includes("Mini Cooper")){
+        else if(model.includes("Mini Cooper")){
             return <Figure.Image
             width={171}
             height={180}
@@ -35,7 +35,7 @@ const ResultComponent = (props) => {
             src={MiniCooperLogo}/>
         }
 
-        else if(name.includes("Toyota")){
+        else if(model.includes("Toyota")){
             return <Figure.Image
             width={171}
             height={180}
@@ -43,7 +43,7 @@ const ResultComponent = (props) => {
             src={ToyotaLogo}/>
         }
 
-        else if(name.includes("Mazda")){
+        else if(model.includes("Mazda")){
             return <Figure.Image
             width={171}
             height={180}
@@ -51,7 +51,7 @@ const ResultComponent = (props) => {
             src={MazdaLogo}/>
         }
 
-        else if(name.includes("BMW")){
+        else if(model.includes("BMW")){
             return <Figure.Image
             width={171}
             height={180}
@@ -59,7 +59,7 @@ const ResultComponent = (props) => {
             src={BMWLogo}/>
         }
 
-        else if(name.includes("Mercedes")){
+        else if(model.includes("Mercedes")){
             return <Figure.Image
             width={171}
             height={180}
@@ -80,12 +80,12 @@ const ResultComponent = (props) => {
 
     return(
     <Card className="mx-4 mt-5 mb-3">
-      <Card.Header className="header" as="h5">{props.carsdata.name}</Card.Header>
+      <Card.Header className="header" as="h5">{props.carsdata.model}</Card.Header>
       <Card.Body>
         <Row>
             <Col>
             <Figure>
-                <CarPicture name={carName}/>
+                <CarPicture model={carName}/>
             </Figure>
 
             </Col>
@@ -93,11 +93,11 @@ const ResultComponent = (props) => {
             <Col>
                 <h3>Details</h3>
                 <Row>
-                    <p>Seats: {props.carsdata.noOfSeats}</p>
+                    <p>Seats: {props.carsdata.seats}</p>
                 </Row>
 
                 <Row>
-                    <p>Transmission: {props.carsdata.transmission}</p>
+                    <p>Rent Company: {props.carsdata.rent_company}</p>
                 </Row>
             </Col>
 

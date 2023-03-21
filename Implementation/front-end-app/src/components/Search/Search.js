@@ -4,6 +4,7 @@ import '../Search/Search.css';
 import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
+import {format} from 'date-fns';
 import {NavLink,useNavigate} from 'react-router-dom';
 
 const Search = () => {
@@ -15,11 +16,38 @@ const Search = () => {
   const [typeofcar, setTypeofcar] = useState('All');
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(selectedDate,location,estimateTime,typeofcar);
 
-    Navigate('/results');
+    //Time formatting 
+    //Correct date formatting
+    let dateformatting = format(new Date(selectedDate), 'yyyy-MM-dd');
+    //Time formatting
+    let timeformatting = (selectedDate.toLocaleTimeString("en-GB")).substring(0,2);
+    console.log(dateformatting);
+    console.log(timeformatting);
+
+    let intDuration = parseInt(estimateTime);
+    console.log(intDuration);
+
+    let result = await fetch("http://localhost:5000/scrape", {
+      method: 'POST',
+      body: JSON.stringify({
+        location : location,
+        pickupdate : dateformatting,
+        pickuptime : timeformatting,
+        duration : intDuration
+      }),
+      headers:{
+        'Content-type' : 'application/json'
+      }
+    });
+
+    console.log(result);
+
+
+    {/*Navigate('/results');*/}
   }
 
 
@@ -45,9 +73,11 @@ const Search = () => {
             <div className="datepicker col-4 d-inline">
                 <label for="specificSizeInputGroupUsername">Pickup Date and Time</label>
                 <Datepicker wrapperClassName='datepicker'
+                  showIcon
                   selected={selectedDate}
                   onChange={date => setSelectedDate(date)}
-                  dateFormat = "MM/dd/yyyy  EE hh:mm a"
+                  dateFormat = "yyyy-MM-dd  EE hh:mm a"
+                  timeIntervals = {60}
                   minDate={new Date()}
                   showTimeSelect
                 />
@@ -66,7 +96,7 @@ const Search = () => {
               </div>
 
               <div className="input-group col mt-4">
-            <input type="text" class="form-control" placeholder="Estimated Duration (In hours)" aria-label="Recipient's username" aria-describedby="button-addon2"
+            <input type="number" class="form-control" placeholder="Estimated Duration (In hours)" aria-label="Recipient's username" aria-describedby="button-addon2"
               value = {estimateTime} onChange={(e)=>setEstimateTime(e.target.value)}/>
             <button class="btn btn-dark" type="button" id="button-addon2">Calculate</button>
           </div>

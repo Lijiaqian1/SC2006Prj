@@ -1,58 +1,82 @@
 [
   {
-    "model": "Mazda 2 (3rd Gen)",
+    "model": "Lancer Ex",
     "seats": 5,
-    "latitude": 1.3605525,
-    "longitude": 103.9370231,
+    "latitude": 1.3390798,
+    "longitude": 103.7219436,
     "price": 15.2,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3385893,
+    "longitude": 103.6984964,
+    "price": 16.4,
     "rent_company": "CarLite"
   },
   {
     "model": "Mazda 3 Skyactiv HB",
     "seats": 5,
-    "latitude": 1.3563877,
-    "longitude": 103.9360612,
+    "latitude": 1.3498657,
+    "longitude": 103.7181654,
+    "price": 16.4,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 6 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.339792,
+    "longitude": 103.701055,
+    "price": 18.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Kia K3 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3385893,
+    "longitude": 103.6984964,
+    "price": 15.2,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Elantra (5th Gen)",
+    "seats": 5,
+    "latitude": 1.3423269,
+    "longitude": 103.692069,
+    "price": 13.6,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Axio (Facelift)",
+    "seats": 5,
+    "latitude": 1.3405785,
+    "longitude": 103.7062591,
+    "price": 15.2,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Fit (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3471387,
+    "longitude": 103.6951024,
+    "price": 15.2,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3440511,
+    "longitude": 103.7134162,
     "price": 16.4,
     "rent_company": "CarLite"
   },
   {
     "model": "NV200 (Petrol)",
     "seats": 2,
-    "latitude": 1.3548442,
-    "longitude": 103.9387432,
+    "latitude": 1.3385893,
+    "longitude": 103.6984964,
     "price": 15.2,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Mazda 2 HB",
-    "seats": 5,
-    "latitude": 1.3560764,
-    "longitude": 103.9568629,
-    "price": 15.2,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Fit",
-    "seats": 5,
-    "latitude": 1.3557553,
-    "longitude": 103.9502476,
-    "price": 16.4,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "City (5th Gen)",
-    "seats": 5,
-    "latitude": 1.3634445,
-    "longitude": 103.9347373,
-    "price": 16.4,
-    "rent_company": "CarLite"
-  },
-  {
-    "model": "Mazda 6 (Facelift)",
-    "seats": 5,
-    "latitude": 1.3577785,
-    "longitude": 103.9384748,
-    "price": 18.0,
     "rent_company": "CarLite"
   }
 ]

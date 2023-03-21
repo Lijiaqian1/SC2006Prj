@@ -243,11 +243,21 @@ app.get('/scrape', (req, res)=> {
 });
 
 app.post('/scrape', (req, res) => {
+    console.log(req.body);
     // Extract the parameters from the request body
     locationp= req.body.location;
     datep= req.body.pickupdate;
     timep= req.body.pickuptime;
     durationp= req.body.duration;
+
+
+    const Cars = {
+        name: 'BMW',
+        location: 'Nanyang Avenue 24, 639811',
+        price: 'SGD 45',
+        noOfSeats: '4',
+        transmission: 'Automatic',
+      }
 
     //const scraperProcess = spawn('python3', ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
     // Call the Python script using child_process.spawn()
@@ -269,8 +279,8 @@ app.post('/scrape', (req, res) => {
         console.log(`Python script exited with code ${code}`);
         res.status(200).send("Scraping completed successfully");
     });
-});
 
+});
 
 
 app.use((req, res) => {
