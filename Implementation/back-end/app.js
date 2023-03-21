@@ -250,15 +250,6 @@ app.post('/scrape', (req, res) => {
     timep= req.body.pickuptime;
     durationp= req.body.duration;
 
-
-    const Cars = {
-        name: 'BMW',
-        location: 'Nanyang Avenue 24, 639811',
-        price: 'SGD 45',
-        noOfSeats: '4',
-        transmission: 'Automatic',
-      }
-
     //const scraperProcess = spawn('python3', ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
     // Call the Python script using child_process.spawn()
     const scraperProcess = spawn(pythonpath, ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
@@ -281,6 +272,7 @@ app.post('/scrape', (req, res) => {
     });
 
 });
+
 
 
 app.use((req, res) => {

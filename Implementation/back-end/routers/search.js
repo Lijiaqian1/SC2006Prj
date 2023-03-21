@@ -2,6 +2,7 @@ const { spawn } = require('child_process');
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+require("../models/cars");
 const Car = mongoose.model('cars');
 const crypto = require('crypto');
 

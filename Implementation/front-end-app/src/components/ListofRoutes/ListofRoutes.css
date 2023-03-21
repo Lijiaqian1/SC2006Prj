@@ -1,0 +1,37 @@
+.routeHeader{
+    width: 24rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 217, 255) !important;
+}
+
+.deletebutton{
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+.indexName{
+    font-size: 32px;
+    color: red;
+    background-color: aquamarine;
+    padding: 16px;
+    margin-right: 2rem;
+}
+
+.todo-label{
+    font-size: 1rem;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+.sizeofCard{
+    overflow: auto;
+}
