@@ -33,6 +33,7 @@ router.post('/search', (req, res) => {
             collection.find({ searchid: id }).toArray()
                     .then(function(cars) {
                         if (cars.length === 0) {
+                            console.log("Web scraping in progress....")
                         // If no cars are found with the same ID, start web scraping
                         const scraperProcess = spawn('python', ['../back-end/webscraper/scrape.py', locationp, datep, timep, durationp]);
 
@@ -52,6 +53,7 @@ router.post('/search', (req, res) => {
                             // Now the car with searchid wanted is in the database
                             collection.find({ searchid: id }).toArray()
                             .then(function(cars) {
+                                console.log(cars);
                                 res.status(200).send(cars.sort((a, b) => a.price - b.price));
                             })
                             .catch(function(err) {
@@ -60,7 +62,8 @@ router.post('/search', (req, res) => {
                             });
                         });
                         } else {
-                        res.status(200).send(cars.sort((a, b) => a.price - b.price));
+                            console.log(cars);
+                            res.status(200).send(cars.sort((a, b) => a.price - b.price));
                         }
                     }).catch(function(err) {
                         console.log(err);

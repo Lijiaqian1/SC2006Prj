@@ -8,10 +8,14 @@ import ListofRoutes from '../ListofRoutes/ListofRoutes';
 const CalculateDistance = () => {
 
     return(
-        <div>
-            <ListofRoutes />
-            <Map />
-        </div>
+
+        <div className="flex-container">
+
+            <div className="flex-child-left"><ListofRoutes /></div>
+            <div className="flex-child-right"><Map /></div>
+
+        </div> 
+
         
         
         

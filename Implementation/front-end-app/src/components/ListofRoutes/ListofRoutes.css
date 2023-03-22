@@ -35,3 +35,11 @@
 .sizeofCard{
     overflow: auto;
 }
+
+.calculateButton{
+    margin-left:7rem;
+}
+
+.combobox-input{
+    width: 26rem;
+}
