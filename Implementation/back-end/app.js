@@ -11,6 +11,9 @@ app.use(cors()); //Uses cors as a middleware
 const bcrypt = require("bcryptjs");
 const { spawn } = require('child_process');
 
+const searchRouter = require('./routers/search');
+app.use('/', searchRouter);
+
 //Comment out if needed
 const pythonpath= "C:/Python310/python.exe";
 
