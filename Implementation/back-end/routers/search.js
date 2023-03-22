@@ -6,11 +6,11 @@ require("../models/cars");
 const Car = mongoose.model('cars');
 const crypto = require('crypto');
 
-router.get('/', (req, res)=> {
+router.get('/search', (req, res)=> {
     res.status(200).send('<h1>scrape get!</h1>');
 });
 
-router.post('/', (req, res) => {
+router.post('/search', (req, res) => {
     // Extract the parameters from the request body
     locationp = req.body.location;
     datep = req.body.pickupdate;
