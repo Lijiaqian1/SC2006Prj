@@ -1,6 +1,6 @@
 import React from 'react';
-
-import {GoogleMap, useLoadScript, Marker} from '@react-google-maps/api';
+import { useMemo } from 'react';
+import {GoogleMap, useLoadScript, MarkerF} from '@react-google-maps/api';
 import './Map.css';
 
 const Map = () => {
@@ -16,9 +16,16 @@ const Map = () => {
     )
 
     function Map(){
-        return <GoogleMap
+
+        const center = useMemo(()=> ({lat:1.3526,lng:103.8352}),[]);
+        return (
+                <GoogleMap
                  zoom={10}
-                 center={{lat:44,lng:-80}} mapContainerClassName="map-container"></GoogleMap>
+                 center={center} mapContainerClassName="map-container">
+
+                    <MarkerF position={center} />
+                 </GoogleMap>
+        )
     }
 }
 

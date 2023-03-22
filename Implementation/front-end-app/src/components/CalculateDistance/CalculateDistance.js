@@ -8,7 +8,12 @@ import ListofRoutes from '../ListofRoutes/ListofRoutes';
 const CalculateDistance = () => {
 
     return(
-        <ListofRoutes />
+        <div>
+            <ListofRoutes />
+            <Map />
+        </div>
+        
+        
         
     )
 

@@ -10,6 +10,7 @@ router.get('/search', (req, res)=> {
 
 router.post('/search', (req, res) => {
     // Extract the parameters from the request body
+    console.log(req.body);
     locationp = req.body.location;
     datep = req.body.pickupdate;
     timep = req.body.pickuptime;
@@ -17,6 +18,8 @@ router.post('/search', (req, res) => {
     input_str = `${locationp}${datep}${timep}${durationp}`;
 
     const id = crypto.createHash('sha256').update(input_str).digest('hex');
+    console.log(id);
+
 
     // Connect to the MongoDB database
     const MongoClient = require('mongodb').MongoClient;
@@ -29,12 +32,22 @@ router.post('/search', (req, res) => {
             const db = client.db('CC_Rental');
             const collection = db.collection('cars');
 
+            if(collection.find({searchid : id}) === 0){
+                console.log("Cannot find");
+            }
+
+            else{
+                console.log("FOUND");
+            }
+
             // Find cars with the specified search ID
             collection.find({ searchid: id }).toArray(function(err, cars) {
+                //console.log(cars);
                 if (err) {
-                    console.log(err);
+                    //console.log(err);
                     res.status(500).send("Error finding cars");
                 } else if (cars.length === 0) {
+                    console.log("Webscraping is progress");
                     // If no cars are found with the same ID, start web scraping
                     const scraperProcess = spawn('python', ['../back-end/webscraper/scrape.py', locationp, datep, timep, durationp]);
                 
@@ -57,6 +70,7 @@ router.post('/search', (req, res) => {
                                 console.log(err);
                                 res.status(500).send("Error finding cars");
                             } else {
+                                //console.log(cars);
                                 res.status(200).send(cars.sort((a, b) => a.price - b.price));
                             }
                         });

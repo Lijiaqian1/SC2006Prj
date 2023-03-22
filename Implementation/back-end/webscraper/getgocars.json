@@ -1,41 +1,41 @@
 [
   {
-    "model": "HondaShuttle Hybrid",
+    "model": "HondaVezel Hybrid",
     "seats": 5,
-    "latitude": 1.3370129506,
-    "longitude": 103.6945289947,
+    "latitude": 1.3578479354,
+    "longitude": 103.8316244739,
     "price": 18,
     "rent_company": "GetGo"
   },
   {
-    "model": "ToyotaSienta Hybrid",
+    "model": "ToyotaSienta",
     "seats": 7,
-    "latitude": 1.3370129506,
-    "longitude": 103.6945289947,
+    "latitude": 1.3520255703,
+    "longitude": 103.8369645084,
     "price": 18,
     "rent_company": "GetGo"
   },
   {
-    "model": "Mazda3",
-    "seats": 5,
-    "latitude": 1.3353465782,
-    "longitude": 103.695705125,
+    "model": "ToyotaSienta",
+    "seats": 7,
+    "latitude": 1.3509129626,
+    "longitude": 103.8375851577,
     "price": 18,
     "rent_company": "GetGo"
   },
   {
-    "model": "SsangyongTivoli",
+    "model": "HyundaiIoniq EV",
     "seats": 5,
-    "latitude": 1.3371188339,
-    "longitude": 103.6971562954,
-    "price": 18,
+    "latitude": 1.3689161708,
+    "longitude": 103.834499517,
+    "price": 20,
     "rent_company": "GetGo"
   },
   {
-    "model": "HondaShuttle Hybrid",
+    "model": "ToyotaAxio",
     "seats": 5,
-    "latitude": 1.3386893783,
-    "longitude": 103.6968473938,
+    "latitude": 1.3660480845,
+    "longitude": 103.8381227169,
     "price": 18,
     "rent_company": "GetGo"
   }
