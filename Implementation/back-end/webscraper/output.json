@@ -1,47 +1,74 @@
 [
   {
+    "model": "Axio (Facelift)",
+    "seats": 5,
+    "latitude": 1.3451469,
+    "longitude": 103.8548685,
+    "price": 12.4,
+    "rent_company": "CarLite",
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3491165,
+    "longitude": 103.8490029,
+    "price": 13.8,
+    "rent_company": "CarLite",
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
+  },
+  {
     "model": "HondaVezel Hybrid",
     "seats": 5,
     "latitude": 1.3578479354,
     "longitude": 103.8316244739,
-    "price": 18,
+    "price": 12,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
   },
   {
     "model": "ToyotaSienta",
     "seats": 7,
     "latitude": 1.3520255703,
     "longitude": 103.8369645084,
-    "price": 18,
+    "price": 12,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
   },
   {
     "model": "ToyotaSienta",
     "seats": 7,
     "latitude": 1.3509129626,
     "longitude": 103.8375851577,
-    "price": 18,
+    "price": 12,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
   },
   {
     "model": "HyundaiIoniq EV",
     "seats": 5,
     "latitude": 1.3689161708,
     "longitude": 103.834499517,
-    "price": 20,
+    "price": 14,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
   },
   {
     "model": "ToyotaAxio",
     "seats": 5,
     "latitude": 1.3660480845,
     "longitude": 103.8381227169,
-    "price": 18,
+    "price": 12,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
+  },
+  {
+    "model": "Mazda 2 Sedan (2016-2020)",
+    "seats": 5,
+    "latitude": 1.3019687,
+    "longitude": 103.8970821,
+    "price": 12.0,
+    "rent_company": "TribeCar",
+    "search_id": "499e5e997b3430821251b1efc1530f0ecae8fc9a7f38d225d0b7cde0a61087b1"
   }
 ]

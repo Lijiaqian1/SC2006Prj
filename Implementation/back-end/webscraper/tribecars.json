@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "model": "Mazda 2 Sedan (2016-2020)",
+    "seats": 5,
+    "latitude": 1.3019687,
+    "longitude": 103.8970821,
+    "price": 12.0,
+    "rent_company": "TribeCar"
+  }
+]

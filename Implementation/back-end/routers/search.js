@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 const Car = require("../models/cars");
 const crypto = require('crypto');
+const pythonpath= "C:/Python310/python.exe";
 
 router.get('/search', (req, res)=> {
     res.status(200).send('<h1>scrape get!</h1>');
@@ -24,8 +25,9 @@ router.post('/search', (req, res) => {
             console.log(err);
             res.status(500).send("Error finding cars");
         } else if (cars.length === 0) {
+            console.log("Webscraping in progress...")
             // If no cars are found with the same ID, start web scraping
-            const scraperProcess = spawn('python', ['../webscraper/scrape.py', locationp, datep, timep, durationp]);
+            const scraperProcess = spawn(pythonpath, ['./webscraper/scrape.py', locationp, datep, timep, durationp]);
         
             // Listen for output from the Python script
             scraperProcess.stdout.on('data', (data) => {
@@ -40,17 +42,20 @@ router.post('/search', (req, res) => {
             // Listen for the Python script to exit
             scraperProcess.on('exit', (code) => {
                 console.log(`Python script exited with code ${code}`);
+                
                 // Now the car with searchid wanted is in database
-                Car.find({ searchid: id }, (err, cars) => {
+                Car.find({ search_id: id }, (err, cars) => {
                     if (err) {
                         console.log(err);
                         res.status(500).send("Error finding cars");
                     } else {
+                        console.log(cars);
                         res.status(200).send(cars.sort((a, b) => a.price - b.price));
                     }
                 });
             });
         } else {
+            
             res.status(200).send(cars.sort((a, b) => a.price - b.price));
         }
     });

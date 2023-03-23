@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "model": "Axio (Facelift)",
+    "seats": 5,
+    "latitude": 1.3451469,
+    "longitude": 103.8548685,
+    "price": 12.4,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3491165,
+    "longitude": 103.8490029,
+    "price": 13.8,
+    "rent_company": "CarLite"
+  }
+]
