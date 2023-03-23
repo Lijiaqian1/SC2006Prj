@@ -1,26 +1,59 @@
 const mongoose= require('mongoose');
 
 const carSchema = new mongoose.Schema({
-    carID: String,
-    typeofcar: String,
-    typeofFuel: String,
-    price: Number,
-    location: String,
-    gpscoordinate: String,
-    color: String,
-    available: Boolean,
-    avgRating: {
-        type: Number,
-        integer: true
+  model: {
+    type: String,
+    required: true
+  },
+  type: {
+    type: String,
+    required: false
+  },
+  transmission: {
+    type: String,
+    required: false
+  },
+  seats: {
+    type: String,
+    required: true
+  },
+  location: {
+    type: String,
+    required: false
+  },
+  duration: {
+    type: [{
+      label: {
+        type: String,
+        default: 'Duration'
       },
-    ratings: [{
-        email: String,
-        reviews: String,
-        ratings: {
-          type: Number,
-          integer: true
-        }
-    }]
+      value: {
+        type: String,
+        required: true
+      }
+    }],
+    required: false
+  },
+  price: {
+    type: String,
+    required: true
+  },
+  rent_company:{
+    type: String,
+    required: false
+  },
+  latitude:{
+    type: String,
+    required: false
+  },
+  longtitude:{
+    type: String,
+    required: false
+  },
+  search_id:{
+    type: String,
+    required: false
+  },
 });
  
 
