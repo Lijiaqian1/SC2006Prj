@@ -10,10 +10,8 @@ const CalculateDistance = () => {
     return(
 
         <div className="flex-container">
-
             <div className="flex-child-left"><ListofRoutes /></div>
             <div className="flex-child-right"><Map /></div>
-
         </div> 
 
         

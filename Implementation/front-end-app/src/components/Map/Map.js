@@ -1,6 +1,7 @@
 import React from 'react';
 import { useMemo, useState } from 'react';
 import {GoogleMap, useLoadScript, MarkerF} from '@react-google-maps/api';
+import {Loader} from "@googlemaps/js-api-loader";
 import usePlacesAutocomplete, {
     getGeocode,
     getLatLng,
@@ -25,6 +26,7 @@ const Map = () => {
     if(!isLoaded){
         return <div>Loading</div>
     }
+
     return(
         <div>
             <Maps />

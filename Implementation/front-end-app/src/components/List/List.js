@@ -19,7 +19,7 @@ import {
 import "@reach/combobox/styles.css";
 
 
-const ListofRoutes = () => {
+const List = () => {
     /*const {isLoaded} = useLoadScript({
         googleMapsApiKey: "AIzaSyDmxoahopqb0E8q4PF8KqOft6Q0uRNQJEU",
         libraries: ["places"]
@@ -35,7 +35,7 @@ const ListofRoutes = () => {
 
   const [duration,setDuration] = useState(null);
 
-  const [todos, setTodos ] = useState([]);
+  const [todos, setTodos ] = useState(null);
 
 
   //HANDLE CALCULATE DOSEN"T WORK
@@ -121,13 +121,12 @@ const ListofRoutes = () => {
 
     return (
       <div>
-        <div className="card routeHeader">
-          <div className="card-body">
-              <h3>Route Plan</h3>
-          </div>
+      <div className="card routeHeader">
+        <div className="card-body">
+            <h3>Route Plan</h3>
         </div>
-
-        <form onSubmit={handleAddTodo}>
+    </div>
+      <form onSubmit={handleAddTodo}>
         <div className="input-group mb-4 mx-2" style={{width: '30rem'}}>
             <Combobox onSelect = {handleSelect}>
               <ComboboxInput value={value} onChange={e=>setValue(e.target.value)} disabled={!ready}
@@ -144,50 +143,29 @@ const ListofRoutes = () => {
             <button className="btn btn-info" type="submit">Add</button>
         </div>
       </form>
-
       <ul style={{listStyle:"none"}}>
-            {todos.map((todo, index) => (
-              <li key={index}>
-                <div className="card mb-4 sizeofCard" style={{width:'26rem'}}>
-                    <div className="card-body position-relative">
-                        <div className="indexName d-inline">
-                            {index + 1}
-                        </div>
-                        <p className="d-inline todo-label position-absolute top-50 start-50 translate-middle">{todo}</p>
-                        
-                        
-                        <button className="deletebutton position-absolute top-50 end-0 translate-middle-y mx-2"onClick={() => handleDeleteTodo(index)}>Delete</button>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            <div className="card mb-4 sizeofCard" style={{width:'24rem'}}>
+                <div className="card-body position-relative">
+                    <div className="indexName d-inline">
+                        {index + 1}
                     </div>
-
-                    <div class="input-group mb-3 mt-2">
-                      <input type="text" class="form-control" placeholder="Enter Time needed... (in minutes)" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-                      <button class="btn btn-info" type="button" id="button-addon2">Add Time</button>
-                    </div>
-
-
+                    <p className="d-inline todo-label position-absolute top-50 start-50 translate-middle">{todo}</p>
+                    
+                    
+                    <button className="deletebutton position-absolute top-50 end-0 translate-middle-y mx-2"onClick={() => handleDeleteTodo(index)}>Delete</button>
                 </div>
-              </li>
-            ))}
-          </ul>
-
-        {duration? <div className="badge bg-primary text-wrap ms-3 mt-3 p-3">
-              <h3>Total Travelling Duration : {duration} mins</h3>
-        </div>: 
-        <div className="position-relative">
-          <button type="submit" className="btn btn-primary calculateButton" onClick = {handleCalculate}>Calculate Duration!</button>
-        </div>
-
-        }
-
-        
-
-
-
-
-
-  
+            </div>
+          </li>
+        ))}
+      </ul>
+      <div className="position-relative">
+      <button type="submit" className="btn btn-primary calculateButton" onClick = {handleCalculate}>Calculate Duration!</button>
       </div>
-     
+
+
+    </div>
       );
 }
 
@@ -196,4 +174,4 @@ const ListofRoutes = () => {
     
     
 
-export default ListofRoutes;
+export default List;
