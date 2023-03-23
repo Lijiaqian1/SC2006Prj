@@ -29,11 +29,15 @@ router.post('/search', (req, res) => {
             const db = client.db('CC_Rental');
             const collection = db.collection('cars');
 
+            
+
             // Find cars with the specified search ID
-            collection.find({ searchid: id }).toArray()
+            collection.find({ search_id: id }).toArray()
                     .then(function(cars) {
+                        console.log(cars.length)
                         if (cars.length === 0) {
                             console.log("Web scraping in progress....")
+   
                         // If no cars are found with the same ID, start web scraping
                         const scraperProcess = spawn('python', ['../back-end/webscraper/scrape.py', locationp, datep, timep, durationp]);
 
