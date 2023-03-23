@@ -1,47 +1,164 @@
 [
   {
-    "model": "HondaVezel Hybrid",
+    "model": "Lancer Ex",
     "seats": 5,
-    "latitude": 1.3578479354,
-    "longitude": 103.8316244739,
-    "price": 18,
-    "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "latitude": 1.3390798,
+    "longitude": 103.7219436,
+    "price": 22.0,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
   },
   {
-    "model": "ToyotaSienta",
+    "model": "Wish",
     "seats": 7,
-    "latitude": 1.3520255703,
-    "longitude": 103.8369645084,
-    "price": 18,
-    "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "latitude": 1.3394283,
+    "longitude": 103.7029442,
+    "price": 27.6,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
   },
   {
-    "model": "ToyotaSienta",
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3369176,
+    "longitude": 103.6972198,
+    "price": 25.0,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Mazda 6 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3413414,
+    "longitude": 103.7014976,
+    "price": 27.6,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Elantra (5th Gen)",
+    "seats": 5,
+    "latitude": 1.3403898,
+    "longitude": 103.7089875,
+    "price": 18.8,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Axio (Facelift)",
+    "seats": 5,
+    "latitude": 1.3405785,
+    "longitude": 103.7062591,
+    "price": 22.0,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3440511,
+    "longitude": 103.7134162,
+    "price": 25.0,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "NV200 (Petrol)",
+    "seats": 2,
+    "latitude": 1.339014,
+    "longitude": 103.697349,
+    "price": 22.0,
+    "rent_company": "CarLite",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "HondaShuttle Hybrid",
+    "seats": 5,
+    "latitude": 1.3370129506,
+    "longitude": 103.6945289947,
+    "price": 24,
+    "rent_company": "GetGo",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "ToyotaSienta Hybrid",
     "seats": 7,
-    "latitude": 1.3509129626,
-    "longitude": 103.8375851577,
-    "price": 18,
+    "latitude": 1.3370129506,
+    "longitude": 103.6945289947,
+    "price": 24,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
   },
   {
-    "model": "HyundaiIoniq EV",
+    "model": "Mazda3",
     "seats": 5,
-    "latitude": 1.3689161708,
-    "longitude": 103.834499517,
-    "price": 20,
+    "latitude": 1.3353465782,
+    "longitude": 103.695705125,
+    "price": 24,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
   },
   {
-    "model": "ToyotaAxio",
+    "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3660480845,
-    "longitude": 103.8381227169,
-    "price": 18,
+    "latitude": 1.3371188339,
+    "longitude": 103.6971562954,
+    "price": 24,
     "rent_company": "GetGo",
-    "search_id": "4f85e3ce6de43b469d1733eb54a39222d4357c0a447bcbb738a8a1e74606c8a8"
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "HondaShuttle Hybrid",
+    "seats": 5,
+    "latitude": 1.3386893783,
+    "longitude": 103.6968473938,
+    "price": 24,
+    "rent_company": "GetGo",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Toyota Vios (2007-2013)",
+    "seats": 5,
+    "latitude": 1.3403898,
+    "longitude": 103.7089875,
+    "price": 18.0,
+    "rent_company": "TribeCar",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Mazda 2 Sedan (2016-2020)",
+    "seats": 5,
+    "latitude": 1.3403898,
+    "longitude": 103.7089875,
+    "price": 24.0,
+    "rent_company": "TribeCar",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Opel Astra",
+    "seats": 5,
+    "latitude": 1.3403898,
+    "longitude": 103.7089875,
+    "price": 22.0,
+    "rent_company": "TribeCar",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Toyota Wish (2003-2009)",
+    "seats": 7,
+    "latitude": 1.3403898,
+    "longitude": 103.7089875,
+    "price": 18.0,
+    "rent_company": "TribeCar",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
+  },
+  {
+    "model": "Nissan NV200 (Diesel, Manual, Class 3 Licence ONLY)",
+    "seats": 2,
+    "latitude": 1.3403898,
+    "longitude": 103.7089875,
+    "price": 20.0,
+    "rent_company": "TribeCar",
+    "search_id": "45b51f842458336cc0ad59df4aacef68b377672270f509aba2112e5c63023dae"
   }
 ]

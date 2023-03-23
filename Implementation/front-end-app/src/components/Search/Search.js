@@ -56,7 +56,8 @@ const Search = () => {
           backgroundImage: `url(${process.env.PUBLIC_URL + '/Background.png'})` ,
           backgroundRepeat: 'no-repeat',
           width: '100vw',
-          height: '100vh'
+          height: '100vh',
+          backgroundSize: 'cover'
         }} className="position-relative">
 
           <form className="vw-100 position-absolute top-50 start-50 translate-middle background-darkblue text-emphasis-dark px-5 py-2"
@@ -98,7 +99,9 @@ const Search = () => {
               <div className="input-group col mt-4">
             <input type="number" class="form-control" placeholder="Estimated Duration (In hours)" aria-label="Recipient's username" aria-describedby="button-addon2"
               value = {estimateTime} onChange={(e)=>setEstimateTime(e.target.value)}/>
+              <NavLink to="/calculatedistance">
             <button class="btn btn-dark" type="button" id="button-addon2">Calculate</button>
+              </NavLink>
           </div>
 
             </div>
@@ -108,7 +111,9 @@ const Search = () => {
             
             <div className="row mt-4 justify-content-center">
               <div className="col-auto">
-                <button type="submit" className="btn btn-primary px-5">Submit</button>
+                <NavLink to ="/results">
+                  <button type="submit" className="btn btn-primary px-5">Submit</button>
+                </NavLink>
               </div>
             </div>
 

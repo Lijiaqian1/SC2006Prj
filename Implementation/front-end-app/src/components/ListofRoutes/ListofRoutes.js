@@ -34,7 +34,7 @@ const ListofRoutes = () => {
   } = usePlacesAutocomplete();
 
   const [duration,setDuration] = useState(null);
-  const [totalDuration,setTotalDuration] = useState(null);
+  const [totalDuration,setTotalDuration] = useState(0);
  
 
   const [todos, setTodos ] = useState([]);
@@ -46,7 +46,7 @@ const ListofRoutes = () => {
     console.log(timeValue);
 
     setTotalDuration(timeValue);
-    console.log(totalDuration);
+    //console.log(totalDuration);
 
   };
 
@@ -57,11 +57,20 @@ const ListofRoutes = () => {
 
     console.log("Calculating");
     let totalTime = 0;
+
+    let initialLength = todos.length;
   
     console.log(todos.length);
+    
+
+    let initialPickup = todos[0];
+    todos.push(initialPickup);
+
+    console.log(todos);
+
     let length = todos.length;
 
-    if(length < 2){
+    if(initialLength < 2){
       alert("Add more routes before calculating the distance!")
     }
 
@@ -135,10 +144,15 @@ const ListofRoutes = () => {
 
     const addTiming = () => {
 
-      let totalTime = totalDuration + duration;
-
-      return totalTime;
+      let totalTime = (parseInt(totalDuration) + parseInt(duration))/60;
+      let hoursTime = Math.round(totalTime)
+    
+    
+      return <h3>Total Time Taken : {hoursTime} hours</h3>;
     }
+    
+
+
 
 
 
@@ -203,7 +217,9 @@ const ListofRoutes = () => {
 
         {duration? <div className="badge bg-primary text-wrap ms-3 mt-3 p-3">
               <h3>Total Travelling Duration : {duration} mins</h3>
-              <h3>Total Travelling Duration : {parseInt(totalDuration) + parseInt(duration)} mins</h3>
+              <h3>Total Time Taken : {parseInt(totalDuration) + parseInt(duration)} mins</h3>
+              <h3>Estimated Time Needed : {Math.round((parseInt(totalDuration) + parseInt(duration))/60) + 1} hour</h3>;
+              
         </div>: 
         <div className="position-relative">
           <button type="submit" className="btn btn-primary calculateButton" onClick = {handleCalculate}>Calculate Duration!</button>
@@ -215,6 +231,7 @@ const ListofRoutes = () => {
      
       );
 }
+
 
 
 

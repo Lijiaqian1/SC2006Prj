@@ -1,1 +1,66 @@
-[]
+[
+  {
+    "model": "Lancer Ex",
+    "seats": 5,
+    "latitude": 1.3390798,
+    "longitude": 103.7219436,
+    "price": 22.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Wish",
+    "seats": 7,
+    "latitude": 1.3394283,
+    "longitude": 103.7029442,
+    "price": 27.6,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3369176,
+    "longitude": 103.6972198,
+    "price": 25.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 6 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3413414,
+    "longitude": 103.7014976,
+    "price": 27.6,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Elantra (5th Gen)",
+    "seats": 5,
+    "latitude": 1.3403898,
+    "longitude": 103.7089875,
+    "price": 18.8,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Axio (Facelift)",
+    "seats": 5,
+    "latitude": 1.3405785,
+    "longitude": 103.7062591,
+    "price": 22.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3440511,
+    "longitude": 103.7134162,
+    "price": 25.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "NV200 (Petrol)",
+    "seats": 2,
+    "latitude": 1.339014,
+    "longitude": 103.697349,
+    "price": 22.0,
+    "rent_company": "CarLite"
+  }
+]
