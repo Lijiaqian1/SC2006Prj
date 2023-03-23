@@ -34,8 +34,21 @@ const ListofRoutes = () => {
   } = usePlacesAutocomplete();
 
   const [duration,setDuration] = useState(null);
+  const [totalDuration,setTotalDuration] = useState(null);
+ 
 
   const [todos, setTodos ] = useState([]);
+
+  const [timeValue, setTimevalue] = useState(null);
+
+  const handleAddTime = async(e) => {
+    e.preventDefault();
+    console.log(timeValue);
+
+    setTotalDuration(timeValue);
+    console.log(totalDuration);
+
+  };
 
 
   //HANDLE CALCULATE DOSEN"T WORK
@@ -88,10 +101,11 @@ const ListofRoutes = () => {
         
       }
 
-  }
-
+    }
     
   }
+
+
 
 
   const handleSelect = async(address) => {
@@ -118,6 +132,15 @@ const ListofRoutes = () => {
         newTodos.splice(index,1);
         setTodos(newTodos);
     }
+
+    const addTiming = () => {
+
+      let totalTime = totalDuration + duration;
+
+      return totalTime;
+    }
+
+
 
     return (
       <div>
@@ -157,34 +180,36 @@ const ListofRoutes = () => {
                         
                         
                         <button className="deletebutton position-absolute top-50 end-0 translate-middle-y mx-2"onClick={() => handleDeleteTodo(index)}>Delete</button>
+
                     </div>
 
-                    <div class="input-group mb-3 mt-2">
-                      <input type="text" class="form-control" placeholder="Enter Time needed... (in minutes)" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-                      <button class="btn btn-info" type="button" id="button-addon2">Add Time</button>
-                    </div>
-
+                    
+                    {/*<div class="input-group mb-3 mt-2">
+                          <input type="text" class="form-control" placeholder="Enter Time needed... (in minutes)" aria-label="Recipient's username" aria-describedby="button-addon2"
+                          value={timeValue} onChange={e=>setTimevalue(e.target.value)}/>
+                          <button onClick = {handleAddTime} class="btn btn-info" type="button" id="button-addon2">Add Time</button>
+                  </div>*/}
 
                 </div>
               </li>
             ))}
           </ul>
 
+          <div class="input-group mb-3 mt-2 p-2">
+                  <input type="text" class="form-control" placeholder="Enter Time needed... (in minutes)" aria-label="Recipient's username" aria-describedby="button-addon2"
+                    value={timeValue} onChange={e=>setTimevalue(e.target.value)}/>
+                  <button onClick = {handleAddTime} class="btn btn-info" type="button" id="button-addon2">Add Time</button>
+          </div>
+
         {duration? <div className="badge bg-primary text-wrap ms-3 mt-3 p-3">
               <h3>Total Travelling Duration : {duration} mins</h3>
+              <h3>Total Travelling Duration : {parseInt(totalDuration) + parseInt(duration)} mins</h3>
         </div>: 
         <div className="position-relative">
           <button type="submit" className="btn btn-primary calculateButton" onClick = {handleCalculate}>Calculate Duration!</button>
         </div>
 
         }
-
-        
-
-
-
-
-
   
       </div>
      
