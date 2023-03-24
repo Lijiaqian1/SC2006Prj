@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../Results/Results.css';
@@ -13,22 +13,22 @@ const Results = () => {
 
     const Navigate = useNavigate();
 
-    /*Need to connect with backend to get dynamic result*/
-    const Cars = {
-      model: 'BMW',
-      location: 'Nanyang Avenue 24, 639811',
-      price: 'SGD 45',
-      seats: '4',
-      rent_company: 'CarLite',
-    }
+    const [carsResults,setCarsResults] = useState([]);
+    const [CarArray, setCarArray] = useState([]);
+
+    useEffect(() => {
+      const items = JSON.parse(localStorage.getItem('carsResults'));
+      if(items){
+        setCarsResults(items);
+      }
+    },[]);
+
+
 
     const [selectedDate,setSelectedDate] = useState(null);
     const [location, setLocation] = useState('');
     const [estimateTime, setEstimateTime] = useState('');
     const [typeofcar, setTypeofcar] = useState('All');
-    
-    const CarArray = [Cars,Cars];
- 
 
     
     /*Fetch function*/
@@ -47,7 +47,7 @@ const Results = () => {
       let intDuration = parseInt(estimateTime);
       console.log(intDuration);
 
-      let result = await fetch("http://localhost:5000/scrape", {
+      let result = await fetch("http://localhost:5000/search", {
         method: 'POST',
         body: JSON.stringify({
           location : location,
@@ -60,7 +60,14 @@ const Results = () => {
         }
       });
 
-      Navigate('/results');
+      result = await result.json();
+
+      if(result){
+        setCarsResults(result);
+        localStorage.setItem('carsResults',JSON.stringify(carsResults));
+        Navigate('/results');
+      }
+
     }
 
     return(
@@ -118,7 +125,7 @@ const Results = () => {
 
     </form>
 
-    <ResultList CarArray = {CarArray}/>
+    <ResultList CarArray = {carsResults}/>
 
   </div>
 )

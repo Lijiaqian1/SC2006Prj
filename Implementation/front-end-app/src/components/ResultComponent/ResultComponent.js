@@ -12,6 +12,7 @@ import MazdaLogo from '../ResultComponent/Mazda.jpg';
 import CarLogo from '../ResultComponent/CarLogo.jpg';
 import BMWLogo from '../ResultComponent/BMW.png';
 import MercedesLogo from '../ResultComponent/Mercedes-Logo.png';
+import { Link } from 'react-router-dom';
 
 
 const ResultComponent = (props) => {
@@ -118,8 +119,17 @@ const ResultComponent = (props) => {
 
         </Row>
 
-        <Row>
-            <Button className="col-md-3 mx-auto" variant="primary">Let's Go!</Button>
+        <Row className="mx-auto">
+            {props.carsdata.rent_company === 'TribeCar'? 
+            <a href="https://www.tribecar.com/" target="_blank">
+                <Button className="d-grid col-3 mx-auto" variant="primary">Let's Go!</Button>
+            </a> : props.carsdata.rent_company === 'GetGo' ?
+            <a href="https://getgo.sg/" target="_blank">
+                <Button className="d-grid col-3 mx-auto" variant="primary">Let's Go!</Button>
+            </a> : <a href="https://www.carlite.sg/" target="_blank">
+                <Button className="d-grid col-3 mx-auto" variant="primary">Let's Go!</Button>
+            </a>}
+            
         </Row>
 
       </Card.Body>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import '../Search/Search.css';
 import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -14,6 +14,13 @@ const Search = () => {
   const [location, setLocation] = useState('');
   const [estimateTime, setEstimateTime] = useState('');
   const [typeofcar, setTypeofcar] = useState('All');
+
+  const [carsResults, setCarResults] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('carsResults',JSON.stringify(carsResults));
+  });
+
 
 
   const handleSubmit = async (e) => {
@@ -31,7 +38,7 @@ const Search = () => {
     let intDuration = parseInt(estimateTime);
     console.log(intDuration);
 
-    let result = await fetch("http://localhost:5000/scrape", {
+    let result = await fetch("http://localhost:5000/search", {
       method: 'POST',
       body: JSON.stringify({
         location : location,
@@ -44,10 +51,15 @@ const Search = () => {
       }
     });
 
-    console.log(result);
+    result = await result.json();
+    //console.log(result);
 
+    if(result){
+      setCarResults(result);
+      console.log(carsResults);
+      Navigate('/results');
+    }
 
-    {/*Navigate('/results');*/}
   }
 
 
@@ -111,9 +123,7 @@ const Search = () => {
             
             <div className="row mt-4 justify-content-center">
               <div className="col-auto">
-                <NavLink to ="/results">
                   <button type="submit" className="btn btn-primary px-5">Submit</button>
-                </NavLink>
               </div>
             </div>
 

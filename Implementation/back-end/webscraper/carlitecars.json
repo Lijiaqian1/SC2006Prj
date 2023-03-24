@@ -1,18 +1,18 @@
 [
   {
-    "model": "Axio (Facelift)",
+    "model": "Mazda CX-3",
     "seats": 5,
-    "latitude": 1.3451469,
-    "longitude": 103.8548685,
-    "price": 12.4,
+    "latitude": 1.343024,
+    "longitude": 103.699529,
+    "price": 16.4,
     "rent_company": "CarLite"
   },
   {
-    "model": "Mazda 3 Skyactiv",
+    "model": "Kia K3 (3rd Gen)",
     "seats": 5,
-    "latitude": 1.3491165,
-    "longitude": 103.8490029,
-    "price": 13.8,
+    "latitude": 1.3465492,
+    "longitude": 103.7143488,
+    "price": 15.2,
     "rent_company": "CarLite"
   }
 ]
