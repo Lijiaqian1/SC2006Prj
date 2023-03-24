@@ -159,16 +159,18 @@ app.post("/updatePassword", async(req,res)=>{
 app.post("/register", async(req,res)=>{
     const {name,email,cemail,pwd,cpwd} = req.body;
     //console.log(email);
-
+    
+    // Hashing the password using bcrypt with salt rounds of 10
     const encryptedPassword = await bcrypt.hash(pwd,10);
     try{
         if(email===cemail){
             if(pwd===cpwd){
                 const oldUser = await User.findOne({email});
-
+                // If user already exists, return an error message
                 if(oldUser){
                     return res.send({error:"User Exists"});
                 }
+                // If user doesn't exist, create a new user with entered name, email and encrypted password
                 await User.create(
                     {
                         name,
