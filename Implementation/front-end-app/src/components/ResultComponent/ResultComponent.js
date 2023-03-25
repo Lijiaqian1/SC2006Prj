@@ -13,6 +13,12 @@ import CarLogo from '../ResultComponent/CarLogo.jpg';
 import BMWLogo from '../ResultComponent/BMW.png';
 import MercedesLogo from '../ResultComponent/Mercedes-Logo.png';
 import { Link } from 'react-router-dom';
+import {GoogleMap, useLoadScript, MarkerF} from '@react-google-maps/api';
+import usePlacesAutocomplete, {
+    getGeocode,
+    getLatLng,
+  } from "use-places-autocomplete";
+import { useMemo, useState } from 'react';
 
 
 const ResultComponent = (props) => {
