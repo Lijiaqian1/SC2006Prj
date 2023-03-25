@@ -14,7 +14,7 @@ const Results = () => {
     const Navigate = useNavigate();
 
     const [carsResults,setCarsResults] = useState([]);
-    const [CarArray, setCarArray] = useState([]);
+    //const [CarArray, setCarArray] = useState([]);
 
     useEffect(() => {
       const items = JSON.parse(localStorage.getItem('carsResults'));
@@ -109,7 +109,10 @@ const Results = () => {
           <div className="input-group col mt-4">
             <input type="text" class="form-control" placeholder="Estimated Duration (In hours)" aria-label="Recipient's username" aria-describedby="button-addon2"
               value = {estimateTime} onChange={(e)=>setEstimateTime(e.target.value)}/>
-            <button class="btn btn-dark" type="button" id="button-addon2">Calculate</button>
+                <NavLink to='/calculatedistance'>
+              <button class="btn btn-dark" type="button" id="button-addon2">Calculate</button>
+              </NavLink>
+            
           </div>
 
       </div>

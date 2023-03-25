@@ -16,6 +16,7 @@ const Search = () => {
   const [typeofcar, setTypeofcar] = useState('All');
 
   const [carsResults, setCarResults] = useState([]);
+  const [doneResults, setDoneResults] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('carsResults',JSON.stringify(carsResults));
@@ -57,6 +58,8 @@ const Search = () => {
     if(result){
       setCarResults(result);
       console.log(carsResults);
+      localStorage.setItem('carsResults',JSON.stringify(result));
+      
       Navigate('/results');
     }
 
@@ -111,8 +114,8 @@ const Search = () => {
               <div className="input-group col mt-4">
             <input type="number" class="form-control" placeholder="Estimated Duration (In hours)" aria-label="Recipient's username" aria-describedby="button-addon2"
               value = {estimateTime} onChange={(e)=>setEstimateTime(e.target.value)}/>
-              <NavLink to="/calculatedistance">
-            <button class="btn btn-dark" type="button" id="button-addon2">Calculate</button>
+              <NavLink to='/calculatedistance'>
+              <button class="btn btn-dark" type="button" id="button-addon2">Calculate</button>
               </NavLink>
           </div>
 
