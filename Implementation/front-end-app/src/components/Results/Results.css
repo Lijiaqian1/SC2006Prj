@@ -8,12 +8,13 @@ label{
 
 .priceNumber{
     font-family: Gill Sans, Verdana;
-	font-size: 24px;
+	font-size: 2rem;
 	line-height: 20px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-weight: bold;
     color: #F15A28;
+    margin-top: 3rem;
 }
 
 .header{

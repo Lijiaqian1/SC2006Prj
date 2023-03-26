@@ -13,6 +13,7 @@ import CarLogo from '../ResultComponent/CarLogo.jpg';
 import BMWLogo from '../ResultComponent/BMW.png';
 import MercedesLogo from '../ResultComponent/Mercedes-Logo.png';
 import { Link } from 'react-router-dom';
+import '../ResultComponent/ResultComponent.css';
 import {GoogleMap, useLoadScript, MarkerF} from '@react-google-maps/api';
 import usePlacesAutocomplete, {
     getGeocode,
@@ -85,6 +86,11 @@ const ResultComponent = (props) => {
 
     }
 
+    const center = {
+        lat: parseFloat(props.carsdata.latitude),
+        lng: props.carsdata.longitude
+      };
+
     return(
     <Card className="mx-4 mt-5 mb-3">
       <Card.Header className="header" as="h5">{props.carsdata.model}</Card.Header>
@@ -100,25 +106,30 @@ const ResultComponent = (props) => {
             <Col>
                 <h3>Details</h3>
                 <Row>
-                    <p>Seats: {props.carsdata.seats}</p>
+                    <p className="resultsdetails">Seats: {props.carsdata.seats}</p>
                 </Row>
 
                 <Row>
-                    <p>Rent Company: {props.carsdata.rent_company}</p>
+                    <p className="resultsdetails">Rent Company: {props.carsdata.rent_company}</p>
                 </Row>
             </Col>
 
             <Col>
                 <h3>Pick-up Location</h3>
-                <Row>
-                    <p>{props.carsdata.location}</p>
-                </Row>
+
+                <GoogleMap
+                    zoom={15}
+                    center={center}
+                    mapContainerClassName="map-container-results"
+                >
+                <MarkerF position={center} />
+                </GoogleMap>
             </Col>
 
             <Col>
                 <h3>Price</h3>
                 <Row>
-                    <p className='priceNumber'>{props.carsdata.price}</p>
+                    <p className='priceNumber'> ${props.carsdata.price}</p>
                 </Row>
             </Col>
 
@@ -142,5 +153,7 @@ const ResultComponent = (props) => {
     </Card>
     )
 }
+
+
 
 export default ResultComponent;

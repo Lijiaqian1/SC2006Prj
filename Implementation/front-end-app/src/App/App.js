@@ -36,8 +36,7 @@ export default function App() {
           {/*Protected Routes*/}
           <Routes>
             <Route element={<PrivateComponent />}>
-            <Route path="results" element={<Results />} />
-            <Route path="search" element={<Search />} />
+
             <Route path="calculatedistance" element={<CalculateDistance />} />
 
             </Route>
@@ -51,6 +50,8 @@ export default function App() {
             <Route path='forgetpassword' element={<ForgetPassword />} />
             <Route path='recoverpassword' element={<RecoverPassword />} />
             <Route path='enterotp' element={<EnterOTP />} />
+            <Route path="results" element={<Results />} />
+            <Route path="search" element={<Search />} />
 
           </Routes>
           <Footer />
