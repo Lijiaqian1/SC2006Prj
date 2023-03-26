@@ -14,11 +14,11 @@ const { spawn } = require('child_process');
 const searchRouter = require('./routers/search');
 app.use('/', searchRouter);
 
-const saveRouter = require('./routers/save');
-app.use('/',saveRouter);
+const saveRouter = require('./routers/saveinfo');
+app.use('/', saveRouter);
 
 const retrieveRouter = require('./routers/retriever');
-app.use('/',retrieveRouter);
+app.use('/', retrieveRouter);
 
 //Comment out if needed
 const pythonpath= "C:/Python310/python.exe";
