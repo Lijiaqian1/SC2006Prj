@@ -20,7 +20,6 @@ const RegisterForm = () =>{
         
     })
 
-    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -38,7 +37,10 @@ const RegisterForm = () =>{
         result = await result.json();
         console.warn(result);
         //Need to show alert for error 
-        if(result.error === "User Exists"){
+        if(result.error === "Password do not meet requirement"){
+            alert("Password do not meet requirement, length of 8 and consists of both numbers and alphabet");
+        }
+        else if(result.error === "User Exists"){
             alert("User Exists, Try again with another email");
         }
 

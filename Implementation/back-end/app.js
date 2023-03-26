@@ -91,14 +91,29 @@ function sendEmail(recipient_email, OTP){
     })
 }
 
-app.post('/sendEmail',(req,res) => {
+app.post('/sendEmail',async(req,res) => {
     const {email,OTP} = req.body;
     console.log(email,OTP);
-    sendEmail(email,OTP)
+    const oldUser = await User.findOne({email});
+    // If user already exists, return an error message
+    console.log(oldUser);
+    if(oldUser===null){
+        console.log("User does not exists");
+        return res.send({error:"User Not Found"});
+
+    }
+    else{
+        sendEmail(email,OTP)
         .then(response => {
-            return res.send(response.message)
+            return res.send({status:"Successfully sent"})
         })
         .catch(error => res.status(500).send(error.message))
+
+    }
+
+    
+
+ 
 })
 
 app.post('/sendRecoverEmail',(req,res) => {
@@ -163,9 +178,31 @@ app.post("/updatePassword", async(req,res)=>{
 
 });
 
+function isAlphanumeric(str){
+        return /^[a-zA-Z0-9]+$/.test(str);
+}
+function checkPassword(pwd){
+        if(pwd.length < 8){
+            return "Length less than 8";
+        }
+
+        else if(!isAlphanumeric(pwd)){
+            return "no alphanumric"
+        }
+
+        return "success"
+}
+
+
+
+
 app.post("/register", async(req,res)=>{
     const {name,email,cemail,pwd,cpwd} = req.body;
     //console.log(email);
+
+    if(checkPassword(pwd)!="success"){
+        return res.send({error:"Password do not meet requirement"});
+    }
     
     // Hashing the password using bcrypt with salt rounds of 10
     const encryptedPassword = await bcrypt.hash(pwd,10);

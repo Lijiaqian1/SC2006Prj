@@ -9,6 +9,31 @@ const NavigationBar = () => {
         localStorage.clear();
         Navigate('/');
     }
+
+    const handleBookmarks = async(e) => {
+        e.preventDefault();
+        const email = JSON.parse(localStorage.getItem('Email'));
+        console.log(email);
+    
+        let result = await fetch("http://localhost:5000/retrieve", {
+            method: 'POST',
+            body: JSON.stringify({
+                email: email,
+            }),
+            headers:{
+                'Content-Type' : 'application/json'
+              }
+        });
+
+        result = await result.json();
+
+        if(result){
+            console.log(JSON.stringify(result));
+            localStorage.setItem('bookmarkPlaces', JSON.stringify(result));
+            Navigate('bookmarks');
+        }
+        //console.log(result);
+    }
     return(
         <>
              <nav className="navbar navbar-expand-lg " id="navBar">
@@ -32,7 +57,7 @@ const NavigationBar = () => {
                     </li>
 
                     <li className="nav-item">
-                        <NavLink to="/bookmarks" className="nav-link" id="nav-desc">Bookmarks</NavLink>
+                        <NavLink to="/bookmarks" onClick = {handleBookmarks} className="nav-link" id="nav-desc">Bookmarks</NavLink>
                     </li>
                     <li className="nav-item">
                         {auth? <NavLink onClick={logout} to="/"><button type="button" className="btn btn-primary" id="orange-btn">Logout</button></NavLink>: 

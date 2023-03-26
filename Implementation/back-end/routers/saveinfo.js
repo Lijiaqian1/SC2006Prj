@@ -11,6 +11,7 @@ const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology:
 router.post('/save', (req, res) => {
   // Extract user's info from request body
   const { email, pickupLocation, duration } = req.body;
+  console.log(email,pickupLocation,duration);
 
   client.connect((err) => {
     if (err) {

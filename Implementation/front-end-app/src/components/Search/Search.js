@@ -65,6 +65,39 @@ const Search = () => {
 
   }
 
+  const handleSave = async(e) => {
+    e.preventDefault();
+    console.log(location,estimateTime);
+
+    const email = JSON.parse(localStorage.getItem('Email'));
+    console.log(email);
+
+    const saveInfo = {email,location,estimateTime}
+
+    let result = await fetch("http://localhost:5000/save" , {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+        pickupLocation : location,
+        duration: estimateTime
+      }),
+      headers:{
+        'Content-Type' : 'application/json'
+      }
+    });
+
+    console.log(result);
+    if(result.status === 200){
+      alert("Location is saved");
+    }
+
+    else{
+      alert("Error, location is not save");
+    }
+
+
+  }
+
 
        return(
         <div style={{ 
@@ -132,7 +165,7 @@ const Search = () => {
 
           <div className = "row mt-4 justify-content-center">
             <div className="col-auto">
-                <button type="submit" className="btn btn-primary px-5">Save Location</button>
+                <button onClick = {handleSave} type="submit" className="btn btn-primary px-5">Save Location</button>
             </div>
           </div>
           

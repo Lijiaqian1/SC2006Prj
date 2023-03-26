@@ -36,14 +36,25 @@ const Login = () => {
                     'Content-Type' : 'application/json'
                 }
             });
-            
-            console.log(result.statusText);
 
-            if(result.statusText==="OK"){
+            result = await result.json();
+            
+            console.log(result.status);
+
+            console.log(result.error);
+
+            if(result.error === "User Not Found"){
+                return alert('User does not exists, enter another email');
+            }
+
+            if(result.status==="Successfully sent"){
                 //localStorage.setItem("OTP", JSON.stringify(otp));
                 Navigate('/enterotp');
+                return;
             }
-            return;
+
+
+            //return;
         }
 
         return alert("Please enter your email");
