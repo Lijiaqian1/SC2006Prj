@@ -57,7 +57,7 @@ const NavigationBar = () => {
                     </li>
 
                     <li className="nav-item">
-                        <NavLink to="/bookmarks" onClick = {handleBookmarks} className="nav-link" id="nav-desc">Bookmarks</NavLink>
+                        {auth? <NavLink to="/bookmarks" onClick = {handleBookmarks} className="nav-link" id="nav-desc">Bookmarks</NavLink> : <NavLink></NavLink>}
                     </li>
                     <li className="nav-item">
                         {auth? <NavLink onClick={logout} to="/"><button type="button" className="btn btn-primary" id="orange-btn">Logout</button></NavLink>: 

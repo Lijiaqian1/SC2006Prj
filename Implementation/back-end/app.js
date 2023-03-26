@@ -40,13 +40,13 @@ function sendEmail(recipient_email, OTP){
         var transporter = nodemailer.createTransport({
             service:'gmail',
             auth:{
-                user:'keenlim12@gmail.com',
-                pass:'rwkzvnxeygjsbeol'
+                user:'ccrental35@gmail.com',
+                pass:'pjwgbwjdilrosqsa'
             }
         })
 
         const mail_configs = {
-            from: 'keenlim12@gmail.com',
+            from: 'ccrental35@gmail.com',
             to: recipient_email,
             subject:'Reset password verification for CCRental',
             html: `<!DOCTYPE html>
