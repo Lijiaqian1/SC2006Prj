@@ -4,12 +4,10 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb+srv://Lim:Lim123@cluster0.4ejvdiv.mongodb.net/CC_Rental?retryWrites=true&w=majority';
-//const dbName = CC_Rental;
+const dbName = 'CC_Rental';
 
-router.get('/save', (req, res)=> {
-  res.status(200).send('<h1>save get!</h1>');
-});
 
+const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 router.post('/save', (req, res) => {
   // Extract user's info from request body
   const { email, pickupLocation, duration } = req.body;
