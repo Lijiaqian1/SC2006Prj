@@ -33,4 +33,4 @@ router.post('/retrieve', (req, res) => {
   });
 });
 
-module.exports = retrieveRouter;
+module.exports = router;

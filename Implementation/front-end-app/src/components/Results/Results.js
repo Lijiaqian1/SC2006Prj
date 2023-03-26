@@ -14,6 +14,7 @@ const Results = () => {
     const Navigate = useNavigate();
 
     const [carsResults,setCarsResults] = useState([]);
+    let carResult = [];
     //const [CarArray, setCarArray] = useState([]);
 
     useEffect(() => {

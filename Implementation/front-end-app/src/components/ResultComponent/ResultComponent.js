@@ -24,6 +24,7 @@ import { useMemo, useState } from 'react';
 
 const ResultComponent = (props) => {
 
+
     let carName = props.carsdata.model;
 
     function CarPicture({model}){

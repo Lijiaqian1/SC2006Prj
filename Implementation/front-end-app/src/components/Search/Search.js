@@ -76,7 +76,7 @@ const Search = () => {
         }} className="position-relative">
 
           <form className="vw-100 position-absolute top-50 start-50 translate-middle background-darkblue text-emphasis-dark px-5 py-2"
-          onSubmit = {handleSubmit}>
+          >
             <div className="row">
 
             <div className="col-4">
@@ -126,9 +126,16 @@ const Search = () => {
             
             <div className="row mt-4 justify-content-center">
               <div className="col-auto">
-                  <button type="submit" className="btn btn-primary px-5">Submit</button>
+                  <button onClick = {handleSubmit} type="submit" className="btn btn-primary px-5" >Submit</button>
               </div>
             </div>
+
+          <div className = "row mt-4 justify-content-center">
+            <div className="col-auto">
+                <button type="submit" className="btn btn-primary px-5">Save Location</button>
+            </div>
+          </div>
+          
 
           </form>
 

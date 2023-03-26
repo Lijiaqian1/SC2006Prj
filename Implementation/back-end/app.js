@@ -14,6 +14,12 @@ const { spawn } = require('child_process');
 const searchRouter = require('./routers/search');
 app.use('/', searchRouter);
 
+const saveRouter = require('./routers/save');
+app.use('/',saveRouter);
+
+const retrieveRouter = require('./routers/retriever');
+app.use('/',retrieveRouter);
+
 //Comment out if needed
 const pythonpath= "C:/Python310/python.exe";
 
@@ -25,6 +31,7 @@ const jwtKey = 'CCRental';
 //Require the mongoDB schema
 require("./models/accounts");
 const User = mongoose.model("Account");
+
 
 //Function to send email 
 function sendEmail(recipient_email, OTP){

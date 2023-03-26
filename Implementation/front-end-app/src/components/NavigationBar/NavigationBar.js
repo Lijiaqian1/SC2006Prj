@@ -30,6 +30,10 @@ const NavigationBar = () => {
                     <li className="nav-item">
                         <NavLink to="/help" className="nav-link" id="nav-desc">FAQ</NavLink>
                     </li>
+
+                    <li className="nav-item">
+                        <NavLink to="/bookmarks" className="nav-link" id="nav-desc">Bookmarks</NavLink>
+                    </li>
                     <li className="nav-item">
                         {auth? <NavLink onClick={logout} to="/"><button type="button" className="btn btn-primary" id="orange-btn">Logout</button></NavLink>: 
                         <NavLink to="/login"><button type="button" className="btn btn-primary" id="orange-btn">Login</button></NavLink>}

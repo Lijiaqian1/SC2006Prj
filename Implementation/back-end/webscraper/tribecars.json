@@ -4,7 +4,7 @@
     "seats": 5,
     "latitude": 1.3403898,
     "longitude": 103.7089875,
-    "price": 7.8,
+    "price": 4.5,
     "rent_company": "TribeCar"
   },
   {
@@ -12,7 +12,7 @@
     "seats": 5,
     "latitude": 1.3403898,
     "longitude": 103.7089875,
-    "price": 9.9,
+    "price": 6.0,
     "rent_company": "TribeCar"
   },
   {
@@ -20,7 +20,7 @@
     "seats": 5,
     "latitude": 1.3403898,
     "longitude": 103.7089875,
-    "price": 9.6,
+    "price": 5.5,
     "rent_company": "TribeCar"
   },
   {
@@ -28,15 +28,15 @@
     "seats": 7,
     "latitude": 1.3403898,
     "longitude": 103.7089875,
-    "price": 7.8,
+    "price": 4.5,
     "rent_company": "TribeCar"
   },
   {
-    "model": "Nissan NV100",
+    "model": "Nissan NV200 (Diesel, Manual, Class 3 Licence ONLY)",
     "seats": 2,
     "latitude": 1.3403898,
     "longitude": 103.7089875,
-    "price": 7.5,
+    "price": 5.0,
     "rent_company": "TribeCar"
   }
 ]

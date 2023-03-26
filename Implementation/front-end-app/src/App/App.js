@@ -18,6 +18,7 @@ import Results from '../components/Results/Results';
 import Footer from '../components/Footer/Footer';
 import CalculateDistance from '../components/CalculateDistance/CalculateDistance';
 import Map from '../components/Map/Map';
+import Bookmarklocation from '../components/BookmarkLocation/BookmarkLocation';
 
 export const RecoveryContext = createContext();
 
@@ -52,6 +53,7 @@ export default function App() {
             <Route path='enterotp' element={<EnterOTP />} />
             <Route path="results" element={<Results />} />
             <Route path="search" element={<Search />} />
+            <Route path="bookmarks" element={<Bookmarklocation />} />
 
           </Routes>
           <Footer />
