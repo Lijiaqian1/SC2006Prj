@@ -1,42 +1,42 @@
 [
   {
-    "model": "MitsubishiAttrage",
-    "seats": 5,
-    "latitude": 1.3416050746,
-    "longitude": 103.7080875361,
-    "price": 7,
-    "rent_company": "GetGo"
-  },
-  {
-    "model": "Mazda3",
-    "seats": 5,
-    "latitude": 1.3417196472,
-    "longitude": 103.7071505685,
-    "price": 9,
+    "model": "RenaultGrand Scenic",
+    "seats": 7,
+    "latitude": 1.3406932266,
+    "longitude": 103.6878155509,
+    "price": 30,
     "rent_company": "GetGo"
   },
   {
     "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3428212428,
-    "longitude": 103.7104610741,
-    "price": 9,
+    "latitude": 1.3398786193,
+    "longitude": 103.6865476455,
+    "price": 30,
     "rent_company": "GetGo"
   },
   {
-    "model": "Mazda3",
+    "model": "HyundaiAvante CN7",
     "seats": 5,
-    "latitude": 1.3423655158,
-    "longitude": 103.7058385359,
-    "price": 9,
+    "latitude": 1.3421036932,
+    "longitude": 103.6898088231,
+    "price": 30,
     "rent_company": "GetGo"
   },
   {
-    "model": "SsangyongTivoli",
+    "model": "HyundaiKona Hybrid",
     "seats": 5,
-    "latitude": 1.3437656891,
-    "longitude": 103.7121640329,
-    "price": 9,
+    "latitude": 1.3421036932,
+    "longitude": 103.6898088231,
+    "price": 30,
+    "rent_company": "GetGo"
+  },
+  {
+    "model": "SsangyongStavic",
+    "seats": 9,
+    "latitude": 1.3459016814,
+    "longitude": 103.6924558801,
+    "price": 45,
     "rent_company": "GetGo"
   }
 ]

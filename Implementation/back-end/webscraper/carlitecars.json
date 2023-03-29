@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "model": "Lancer Ex",
+    "seats": 5,
+    "latitude": 1.3390798,
+    "longitude": 103.7219436,
+    "price": 24.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Wish",
+    "seats": 7,
+    "latitude": 1.3394283,
+    "longitude": 103.7029442,
+    "price": 31.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3369176,
+    "longitude": 103.6972198,
+    "price": 28.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3447719,
+    "longitude": 103.7026019,
+    "price": 28.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Altis (10th Gen)",
+    "seats": 5,
+    "latitude": 1.3451776,
+    "longitude": 103.7204385,
+    "price": 20.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 6 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3413414,
+    "longitude": 103.7014976,
+    "price": 31.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Kia K3 (3rd Gen)",
+    "seats": 5,
+    "latitude": 1.3385893,
+    "longitude": 103.6984964,
+    "price": 24.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "Mazda 3 Skyactiv",
+    "seats": 5,
+    "latitude": 1.3440511,
+    "longitude": 103.7134162,
+    "price": 28.0,
+    "rent_company": "CarLite"
+  },
+  {
+    "model": "NV200 (Petrol)",
+    "seats": 2,
+    "latitude": 1.339014,
+    "longitude": 103.697349,
+    "price": 24.0,
+    "rent_company": "CarLite"
+  }
+]

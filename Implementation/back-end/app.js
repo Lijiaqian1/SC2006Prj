@@ -33,15 +33,19 @@ require("./models/accounts");
 const User = mongoose.model("Account");
 
 
-//Function to send email 
+//Function to send email. Parameters are Email : String, OTP : String.
+//Uses the nodemailer module to send email to the users
+//Require the user of a GMAIL account
+//Return message "Successfully sent" to the frontend to indicate that email is sent successfully
+//Return message "An error has occured" to the frontend to indicate that there is an error
 function sendEmail(recipient_email, OTP){
     console.log(recipient_email);
     return new Promise((resolve, reject) => {
         var transporter = nodemailer.createTransport({
             service:'gmail',
             auth:{
-                user:'ccrental35@gmail.com',
-                pass:'pjwgbwjdilrosqsa'
+                user:'keenlim12@gmail.com',
+                pass:'oneqgqgjarjiecmv'
             }
         })
 
@@ -91,6 +95,9 @@ function sendEmail(recipient_email, OTP){
     })
 }
 
+/*app.post(sendEmail) will use the sendEmail function to send an email to the users.
+Parameters will contains of the request body from frontend where request body will 
+contain the recipient email and OTP*/
 app.post('/sendEmail',async(req,res) => {
     const {email,OTP} = req.body;
     console.log(email,OTP);
@@ -110,11 +117,10 @@ app.post('/sendEmail',async(req,res) => {
         .catch(error => res.status(500).send(error.message))
 
     }
-
-    
-
  
 })
+
+/*app.post(Sendrecoveremail) will send the email to the user if frontend request for a recoveremail */
 
 app.post('/sendRecoverEmail',(req,res) => {
     const {email,otp} = req.body;
@@ -143,6 +149,10 @@ app.get('/register', (req, res) =>{
 app.get('/login', (req, res) =>{
     res.render('login');
 });
+
+/*app.post(updatepassword) will help to update the corresponding passowrd in the mongoDB
+Require the use of bcrypt module to encrypt the password in order to set the encrypted
+password in MongoDB*/
 
 app.post("/updatePassword", async(req,res)=>{
     const {email,pwd,cpwd} = req.body;
@@ -178,9 +188,13 @@ app.post("/updatePassword", async(req,res)=>{
 
 });
 
+
+//Function isAlphanumeric will check if the string consists of both alphabets and numbers
 function isAlphanumeric(str){
         return /^[a-zA-Z0-9]+$/.test(str);
 }
+
+//Function checkPassword will make sure that the password is at least a length of 8 and is alphanumeric
 function checkPassword(pwd){
         if(pwd.length < 8){
             return "Length less than 8";
@@ -194,7 +208,8 @@ function checkPassword(pwd){
 }
 
 
-
+/*app.post(register) will help to check if the email exist in the MongoDB
+If email does not exist in MongoDB, it will create a new input field in the MongoDB accounts database */
 
 app.post("/register", async(req,res)=>{
     const {name,email,cemail,pwd,cpwd} = req.body;
@@ -238,6 +253,8 @@ app.post("/register", async(req,res)=>{
     }
 });
 
+/*app.post(login) will find the email and check with the corresponding password
+If both email and password matches, users will successfully login into the account. */
 
 app.post('/login', async(req, res)=> {
     console.log(req.body);
