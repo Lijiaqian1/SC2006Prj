@@ -18,6 +18,7 @@ import "@reach/combobox/styles.css";
 import './Map.css';
 
 const Map = () => {
+
     const{isLoaded} = useLoadScript({
         googleMapsApiKey: "AIzaSyDmxoahopqb0E8q4PF8KqOft6Q0uRNQJEU",
         libraries: ['places']
@@ -27,6 +28,7 @@ const Map = () => {
         return <div>Loading</div>
     }
 
+    console.log(process.env.REACT_APP_GOOGLE_MAP_API_KEY);
     return(
         <div>
             <Maps />

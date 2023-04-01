@@ -1,42 +1,42 @@
 [
   {
-    "model": "RenaultGrand Scenic",
+    "model": "ToyotaSienta Hybrid",
     "seats": 7,
-    "latitude": 1.3406932266,
-    "longitude": 103.6878155509,
-    "price": 30,
+    "latitude": 1.3251913039,
+    "longitude": 103.9308668288,
+    "price": 45,
     "rent_company": "GetGo"
   },
   {
     "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3398786193,
-    "longitude": 103.6865476455,
-    "price": 30,
-    "rent_company": "GetGo"
-  },
-  {
-    "model": "HyundaiAvante CN7",
-    "seats": 5,
-    "latitude": 1.3421036932,
-    "longitude": 103.6898088231,
-    "price": 30,
-    "rent_company": "GetGo"
-  },
-  {
-    "model": "HyundaiKona Hybrid",
-    "seats": 5,
-    "latitude": 1.3421036932,
-    "longitude": 103.6898088231,
-    "price": 30,
-    "rent_company": "GetGo"
-  },
-  {
-    "model": "SsangyongStavic",
-    "seats": 9,
-    "latitude": 1.3459016814,
-    "longitude": 103.6924558801,
+    "latitude": 1.3277446788,
+    "longitude": 103.9288743904,
     "price": 45,
+    "rent_company": "GetGo"
+  },
+  {
+    "model": "ToyotaSienta Hybrid",
+    "seats": 7,
+    "latitude": 1.3277446788,
+    "longitude": 103.9288743904,
+    "price": 45,
+    "rent_company": "GetGo"
+  },
+  {
+    "model": "ToyotaSienta Hybrid",
+    "seats": 7,
+    "latitude": 1.3250058527,
+    "longitude": 103.9329543501,
+    "price": 45,
+    "rent_company": "GetGo"
+  },
+  {
+    "model": "BYDT3",
+    "seats": 2,
+    "latitude": 1.3250058527,
+    "longitude": 103.9329543501,
+    "price": 60,
     "rent_company": "GetGo"
   }
 ]
