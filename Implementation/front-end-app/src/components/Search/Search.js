@@ -28,6 +28,16 @@ const Search = () => {
     e.preventDefault();
     console.log(selectedDate,location,estimateTime,typeofcar);
 
+    if(estimateTime<1){
+      alert("Minimum amount of time is 1 hour, please enter again!");
+      return;
+    }
+
+    if(estimateTime>24){
+      alert("Maximum amount of time is 24 hours, please enter again!");
+      return;
+    }
+
     //Time formatting 
     //Correct date formatting
     let dateformatting = format(new Date(selectedDate), 'yyyy-MM-dd');
@@ -68,6 +78,16 @@ const Search = () => {
   const handleSave = async(e) => {
     e.preventDefault();
     console.log(location,estimateTime);
+
+    if(location===''){
+      alert('Location field is empty, Please enter a location');
+      return;
+    }
+
+    if(estimateTime===''){
+      alert('Estimate Time field is empty, Please enter the estimate time');
+      return;
+    }
 
     const email = JSON.parse(localStorage.getItem('Email'));
     console.log(email);

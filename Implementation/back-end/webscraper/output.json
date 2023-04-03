@@ -1,47 +1,47 @@
 [
   {
-    "model": "ToyotaSienta Hybrid",
-    "seats": 7,
-    "latitude": 1.3251913039,
-    "longitude": 103.9308668288,
-    "price": 45,
+    "model": "MitsubishiAttrage",
+    "seats": 5,
+    "latitude": 1.3416050746,
+    "longitude": 103.7080875361,
+    "price": 0,
     "rent_company": "GetGo",
-    "search_id": "9617fae5e2b82a71cab113569649652f04696bd705b8d5a8167a5c7b10b2ca84"
+    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
+  },
+  {
+    "model": "Mazda3",
+    "seats": 5,
+    "latitude": 1.3417196472,
+    "longitude": 103.7071505685,
+    "price": 0,
+    "rent_company": "GetGo",
+    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
   },
   {
     "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3277446788,
-    "longitude": 103.9288743904,
-    "price": 45,
+    "latitude": 1.3428212428,
+    "longitude": 103.7104610741,
+    "price": 0,
     "rent_company": "GetGo",
-    "search_id": "9617fae5e2b82a71cab113569649652f04696bd705b8d5a8167a5c7b10b2ca84"
+    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
   },
   {
-    "model": "ToyotaSienta Hybrid",
-    "seats": 7,
-    "latitude": 1.3277446788,
-    "longitude": 103.9288743904,
-    "price": 45,
+    "model": "Mazda3",
+    "seats": 5,
+    "latitude": 1.3423655158,
+    "longitude": 103.7058385359,
+    "price": 0,
     "rent_company": "GetGo",
-    "search_id": "9617fae5e2b82a71cab113569649652f04696bd705b8d5a8167a5c7b10b2ca84"
+    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
   },
   {
-    "model": "ToyotaSienta Hybrid",
-    "seats": 7,
-    "latitude": 1.3250058527,
-    "longitude": 103.9329543501,
-    "price": 45,
+    "model": "SsangyongTivoli",
+    "seats": 5,
+    "latitude": 1.3437656891,
+    "longitude": 103.7121640329,
+    "price": 0,
     "rent_company": "GetGo",
-    "search_id": "9617fae5e2b82a71cab113569649652f04696bd705b8d5a8167a5c7b10b2ca84"
-  },
-  {
-    "model": "BYDT3",
-    "seats": 2,
-    "latitude": 1.3250058527,
-    "longitude": 103.9329543501,
-    "price": 60,
-    "rent_company": "GetGo",
-    "search_id": "9617fae5e2b82a71cab113569649652f04696bd705b8d5a8167a5c7b10b2ca84"
+    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
   }
 ]
