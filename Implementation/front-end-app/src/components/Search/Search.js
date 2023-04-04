@@ -28,6 +28,11 @@ const Search = () => {
     e.preventDefault();
     console.log(selectedDate,location,estimateTime,typeofcar);
 
+    if(location===''){
+      alert("Please enter the all fields");
+      return;
+    }
+
     if(estimateTime<1){
       alert("Minimum amount of time is 1 hour, please enter again!");
       return;

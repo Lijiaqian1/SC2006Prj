@@ -1,47 +1,47 @@
 [
   {
-    "model": "MitsubishiAttrage",
-    "seats": 5,
-    "latitude": 1.3416050746,
-    "longitude": 103.7080875361,
-    "price": 0,
+    "model": "RenaultGrand Scenic",
+    "seats": 7,
+    "latitude": 1.3406932266,
+    "longitude": 103.6878155509,
+    "price": 36,
     "rent_company": "GetGo",
-    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
-  },
-  {
-    "model": "Mazda3",
-    "seats": 5,
-    "latitude": 1.3417196472,
-    "longitude": 103.7071505685,
-    "price": 0,
-    "rent_company": "GetGo",
-    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
+    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
   },
   {
     "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3428212428,
-    "longitude": 103.7104610741,
-    "price": 0,
+    "latitude": 1.3398786193,
+    "longitude": 103.6865476455,
+    "price": 36,
     "rent_company": "GetGo",
-    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
+    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
   },
   {
-    "model": "Mazda3",
+    "model": "HyundaiAvante CN7",
     "seats": 5,
-    "latitude": 1.3423655158,
-    "longitude": 103.7058385359,
-    "price": 0,
+    "latitude": 1.3421036932,
+    "longitude": 103.6898088231,
+    "price": 36,
     "rent_company": "GetGo",
-    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
+    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
   },
   {
-    "model": "SsangyongTivoli",
+    "model": "HyundaiKona Hybrid",
     "seats": 5,
-    "latitude": 1.3437656891,
-    "longitude": 103.7121640329,
-    "price": 0,
+    "latitude": 1.3421036932,
+    "longitude": 103.6898088231,
+    "price": 36,
     "rent_company": "GetGo",
-    "search_id": "5fe4498f22eb5fc0348ab1d13f9b3da222354e30df6095b515c712d90839e7cd"
+    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
+  },
+  {
+    "model": "SsangyongStavic",
+    "seats": 9,
+    "latitude": 1.3459016814,
+    "longitude": 103.6924558801,
+    "price": 48,
+    "rent_company": "GetGo",
+    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
   }
 ]

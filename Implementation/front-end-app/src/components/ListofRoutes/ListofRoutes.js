@@ -74,6 +74,12 @@ const ListofRoutes = () => {
       alert("Add more routes before calculating the distance!")
     }
 
+    else if(timeValue === null){
+      alert("Please enter the amount of time needed");
+      return;
+
+    }
+
     else{
 
       for(let i = 0; i<length-1; i++){
