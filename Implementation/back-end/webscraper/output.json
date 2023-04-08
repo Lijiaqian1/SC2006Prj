@@ -1,47 +1,92 @@
 [
   {
-    "model": "RenaultGrand Scenic",
+    "model": "HondaVezel",
+    "seats": 5,
+    "latitude": 1.3087784366,
+    "longitude": 103.8877227217,
+    "price": 27,
+    "rent_company": "GetGo",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "Mazda3",
+    "seats": 5,
+    "latitude": 1.3087784366,
+    "longitude": 103.8877227217,
+    "price": 27,
+    "rent_company": "GetGo",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "DFSKEC35",
+    "seats": 2,
+    "latitude": 1.3085093258,
+    "longitude": 103.8853462264,
+    "price": 36,
+    "rent_company": "GetGo",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "HyundaiKona EV",
+    "seats": 5,
+    "latitude": 1.3085093258,
+    "longitude": 103.8853462264,
+    "price": 30,
+    "rent_company": "GetGo",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "HondaShuttle Hybrid",
+    "seats": 5,
+    "latitude": 1.3100480055,
+    "longitude": 103.8846781981,
+    "price": 27,
+    "rent_company": "GetGo",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "Toyota Vios (2007-2013)",
+    "seats": 5,
+    "latitude": 1.3200544,
+    "longitude": 103.8917746,
+    "price": 23.4,
+    "rent_company": "TribeCar",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "Mazda 2 Sedan (2016-2020)",
+    "seats": 5,
+    "latitude": 1.3200544,
+    "longitude": 103.8917746,
+    "price": 29.700000000000003,
+    "rent_company": "TribeCar",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "Opel Astra",
+    "seats": 5,
+    "latitude": 1.3200544,
+    "longitude": 103.8917746,
+    "price": 28.799999999999997,
+    "rent_company": "TribeCar",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+  },
+  {
+    "model": "Toyota Wish (2003-2009)",
     "seats": 7,
-    "latitude": 1.3406932266,
-    "longitude": 103.6878155509,
-    "price": 36,
-    "rent_company": "GetGo",
-    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
+    "latitude": 1.3200544,
+    "longitude": 103.8917746,
+    "price": 23.4,
+    "rent_company": "TribeCar",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
   },
   {
-    "model": "SsangyongTivoli",
+    "model": "Honda Fit (2021 onwards)",
     "seats": 5,
-    "latitude": 1.3398786193,
-    "longitude": 103.6865476455,
-    "price": 36,
-    "rent_company": "GetGo",
-    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
-  },
-  {
-    "model": "HyundaiAvante CN7",
-    "seats": 5,
-    "latitude": 1.3421036932,
-    "longitude": 103.6898088231,
-    "price": 36,
-    "rent_company": "GetGo",
-    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
-  },
-  {
-    "model": "HyundaiKona Hybrid",
-    "seats": 5,
-    "latitude": 1.3421036932,
-    "longitude": 103.6898088231,
-    "price": 36,
-    "rent_company": "GetGo",
-    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
-  },
-  {
-    "model": "SsangyongStavic",
-    "seats": 9,
-    "latitude": 1.3459016814,
-    "longitude": 103.6924558801,
-    "price": 48,
-    "rent_company": "GetGo",
-    "search_id": "44257390d4b588fb8f304b332f5a5e833e34f1b2d8890704ec8971261e23569b"
+    "latitude": 1.3200544,
+    "longitude": 103.8917746,
+    "price": 25.200000000000003,
+    "rent_company": "TribeCar",
+    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
   }
 ]

@@ -130,7 +130,7 @@ const ResultComponent = (props) => {
             <Col>
                 <h3>Price</h3>
                 <Row>
-                    <p className='priceNumber'> ${props.carsdata.price}</p>
+                    <p className='priceNumber'> ${(props.carsdata.price).substring(0,5)}</p>
                 </Row>
             </Col>
 
