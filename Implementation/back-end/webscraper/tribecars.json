@@ -2,41 +2,41 @@
   {
     "model": "Toyota Vios (2007-2013)",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 23.4,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 46.8,
     "rent_company": "TribeCar"
   },
   {
     "model": "Mazda 2 Sedan (2016-2020)",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 29.700000000000003,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 59.400000000000006,
     "rent_company": "TribeCar"
   },
   {
     "model": "Opel Astra",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 28.799999999999997,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 57.599999999999994,
     "rent_company": "TribeCar"
   },
   {
     "model": "Toyota Wish (2003-2009)",
     "seats": 7,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 23.4,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 46.8,
     "rent_company": "TribeCar"
   },
   {
     "model": "Honda Fit (2021 onwards)",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 25.200000000000003,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 50.400000000000006,
     "rent_company": "TribeCar"
   }
 ]

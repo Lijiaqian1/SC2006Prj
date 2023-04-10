@@ -1,92 +1,92 @@
 [
   {
-    "model": "HondaVezel",
+    "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3087784366,
-    "longitude": 103.8877227217,
-    "price": 27,
+    "latitude": 1.3598144675,
+    "longitude": 103.9697005661,
+    "price": 54,
     "rent_company": "GetGo",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
-    "model": "Mazda3",
-    "seats": 5,
-    "latitude": 1.3087784366,
-    "longitude": 103.8877227217,
-    "price": 27,
+    "model": "ToyotaSienta Hybrid",
+    "seats": 7,
+    "latitude": 1.364915572,
+    "longitude": 103.9650337427,
+    "price": 54,
     "rent_company": "GetGo",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
-    "model": "DFSKEC35",
-    "seats": 2,
-    "latitude": 1.3085093258,
-    "longitude": 103.8853462264,
-    "price": 36,
+    "model": "SsangyongTivoli",
+    "seats": 5,
+    "latitude": 1.364915572,
+    "longitude": 103.9650337427,
+    "price": 54,
     "rent_company": "GetGo",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
-    "model": "HyundaiKona EV",
+    "model": "ToyotaAxio",
     "seats": 5,
-    "latitude": 1.3085093258,
-    "longitude": 103.8853462264,
-    "price": 30,
+    "latitude": 1.3708325284,
+    "longitude": 103.963392169,
+    "price": 54,
     "rent_company": "GetGo",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
-    "model": "HondaShuttle Hybrid",
+    "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3100480055,
-    "longitude": 103.8846781981,
-    "price": 27,
+    "latitude": 1.3708325284,
+    "longitude": 103.963392169,
+    "price": 54,
     "rent_company": "GetGo",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
     "model": "Toyota Vios (2007-2013)",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 23.4,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 46.8,
     "rent_company": "TribeCar",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
     "model": "Mazda 2 Sedan (2016-2020)",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 29.700000000000003,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 59.400000000000006,
     "rent_company": "TribeCar",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
     "model": "Opel Astra",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 28.799999999999997,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 57.599999999999994,
     "rent_company": "TribeCar",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
     "model": "Toyota Wish (2003-2009)",
     "seats": 7,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 23.4,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 46.8,
     "rent_company": "TribeCar",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   },
   {
     "model": "Honda Fit (2021 onwards)",
     "seats": 5,
-    "latitude": 1.3200544,
-    "longitude": 103.8917746,
-    "price": 25.200000000000003,
+    "latitude": 1.3720937,
+    "longitude": 103.9473728,
+    "price": 50.400000000000006,
     "rent_company": "TribeCar",
-    "search_id": "665a81d8a364fbeb8f24f6bfc0b4f9c55cc982d5d12ce00cd9ff6e039792c1d5"
+    "search_id": "6529f9674c203add4ab38b71700d6ff2ba64f3fc844686604ad6558ec12e7fa7"
   }
 ]

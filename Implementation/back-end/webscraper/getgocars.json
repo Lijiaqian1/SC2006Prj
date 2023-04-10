@@ -1,42 +1,42 @@
 [
   {
-    "model": "HondaVezel",
+    "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3087784366,
-    "longitude": 103.8877227217,
-    "price": 27,
+    "latitude": 1.3598144675,
+    "longitude": 103.9697005661,
+    "price": 54,
     "rent_company": "GetGo"
   },
   {
-    "model": "Mazda3",
-    "seats": 5,
-    "latitude": 1.3087784366,
-    "longitude": 103.8877227217,
-    "price": 27,
+    "model": "ToyotaSienta Hybrid",
+    "seats": 7,
+    "latitude": 1.364915572,
+    "longitude": 103.9650337427,
+    "price": 54,
     "rent_company": "GetGo"
   },
   {
-    "model": "DFSKEC35",
-    "seats": 2,
-    "latitude": 1.3085093258,
-    "longitude": 103.8853462264,
-    "price": 36,
+    "model": "SsangyongTivoli",
+    "seats": 5,
+    "latitude": 1.364915572,
+    "longitude": 103.9650337427,
+    "price": 54,
     "rent_company": "GetGo"
   },
   {
-    "model": "HyundaiKona EV",
+    "model": "ToyotaAxio",
     "seats": 5,
-    "latitude": 1.3085093258,
-    "longitude": 103.8853462264,
-    "price": 30,
+    "latitude": 1.3708325284,
+    "longitude": 103.963392169,
+    "price": 54,
     "rent_company": "GetGo"
   },
   {
-    "model": "HondaShuttle Hybrid",
+    "model": "SsangyongTivoli",
     "seats": 5,
-    "latitude": 1.3100480055,
-    "longitude": 103.8846781981,
-    "price": 27,
+    "latitude": 1.3708325284,
+    "longitude": 103.963392169,
+    "price": 54,
     "rent_company": "GetGo"
   }
 ]
