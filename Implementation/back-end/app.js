@@ -40,6 +40,7 @@ const User = mongoose.model("Account");
 //Return message "An error has occured" to the frontend to indicate that there is an error
 function sendEmail(recipient_email, OTP){
     console.log(recipient_email);
+    console.log("Sending email");
     return new Promise((resolve, reject) => {
         var transporter = nodemailer.createTransport({
             service:'gmail',
