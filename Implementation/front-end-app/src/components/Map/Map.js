@@ -20,7 +20,7 @@ import './Map.css';
 const Map = () => {
 
     const{isLoaded} = useLoadScript({
-        googleMapsApiKey: "AIzaSyDmxoahopqb0E8q4PF8KqOft6Q0uRNQJEU",
+        googleMapsApiKey: "Google_MAP_API_KEY",
         libraries: ['places']
     });
 
